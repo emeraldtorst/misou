@@ -1,0 +1,6 @@
+# Ignore the large raw menu PDF
+*.pdf
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
