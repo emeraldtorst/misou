@@ -35,7 +35,7 @@ export const Header: React.FC = () => {
             <a href="#contact" className="nav-link">{t('nav.details')}</a>
           </nav>
 
-          <div className="header-cta" style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+          <div className="header-cta">
             {/* Language Switcher Toggle */}
             <div className="lang-switcher" style={{ display: 'flex', gap: '0.5rem', fontFamily: 'var(--font-sans)', fontSize: '0.8rem', fontWeight: 500, letterSpacing: '0.05em' }}>
               <button 

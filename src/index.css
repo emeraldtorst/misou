@@ -1907,6 +1907,12 @@ body.mouse-active .custom-cursor-dot {
     font-weight: 500;
 }
 
+.header-cta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
 /* --- Media Queries (Responsiveness) --- */
 @media (max-width: 1024px) {
     :root {
