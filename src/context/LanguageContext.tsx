@@ -7,6 +7,7 @@ interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
+  tArray: (key: string) => string[];
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -49,8 +50,35 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     return typeof result === 'string' ? result : key;
   };
 
+  const tArray = (key: string): string[] => {
+    const keys = key.split('.');
+    let result: any = translations[language];
+    
+    for (const k of keys) {
+      if (result && k in result) {
+        result = result[k];
+      } else {
+        // Fallback to English dictionary if key is missing in German
+        if (language === 'de') {
+          let enResult: any = translations['en'];
+          for (const ek of keys) {
+            if (enResult && ek in enResult) {
+              enResult = enResult[ek];
+            } else {
+              enResult = null;
+              break;
+            }
+          }
+          if (enResult && Array.isArray(enResult)) return enResult;
+        }
+        return [];
+      }
+    }
+    return Array.isArray(result) ? result : [];
+  };
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, tArray }}>
       {children}
     </LanguageContext.Provider>
   );

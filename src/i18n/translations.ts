@@ -81,6 +81,10 @@ export const translations: Record<string, any> = {
       viewMenu: "View Lunch Menu",
       timeInfo: "Served Monday–Friday, 11:11 – 15:00"
     },
+    marquee: {
+      items1: ["Truffle Tuna Roll", "Black Cod Miso", "Flame-Seared Salmon", "Wagyu Ribeye", "Bluefin Sashimi"],
+      items2: ["Signature Cocktails", "Uji Matcha Mochi", "Premium Sake Flights", "Aromatic Duck Gyoza", "Seared Tuna Tartare"]
+    },
     reviews: {
       title: "The Guest Chronicles",
       subtitle: "Hear from our guests who have experienced our modern Asian dining journey in the heart of Vienna.",
@@ -221,6 +225,10 @@ export const translations: Record<string, any> = {
       dish3: "Bulgogi Rindfleisch Bento-Set",
       viewMenu: "Mittagskarte ansehen",
       timeInfo: "Serviert Montag–Freitag, 11:11 – 15:00"
+    },
+    marquee: {
+      items1: ["Trüffel-Thunfisch-Rolle", "Schwarzer Kohlenfisch Miso", "Flambierter Lachs", "Wagyu Ribeye", "Blauflossen-Sashimi"],
+      items2: ["Signature-Cocktails", "Uji Matcha Mochi", "Premium Sake-Flüge", "Enten-Gyoza", "Thunfisch-Tatar"]
     },
     reviews: {
       title: "Gästebewertungen",

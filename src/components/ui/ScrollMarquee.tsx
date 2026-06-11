@@ -1,41 +1,67 @@
 import React from 'react';
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-
-const items = [
-  'Asian Fusion', '·', 'Marc Aurel Straße', '·', 'Vienna', '·',
-  'Finest Sushi', '·', 'Sake Pairings', '·', 'Since 2021', '·',
-  'Asian Fusion', '·', 'Marc Aurel Straße', '·', 'Vienna', '·',
-  'Finest Sushi', '·', 'Sake Pairings', '·', 'Since 2021', '·',
-];
+import { motion } from 'framer-motion';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const ScrollMarquee: React.FC = () => {
-  const { scrollY } = useScroll();
-  const x = useTransform(scrollY, [0, 5000], [0, -1200]);
-  const xSmooth = useSpring(x, { damping: 50, stiffness: 200, mass: 0.5 });
+  const { tArray } = useLanguage();
 
-  const xReverse = useTransform(scrollY, [0, 5000], [0, 1200]);
-  const xReverseSmooth = useSpring(xReverse, { damping: 50, stiffness: 200, mass: 0.5 });
+  const items1: string[] = tArray('marquee.items1') || [];
+  const items2: string[] = tArray('marquee.items2') || [];
 
   return (
-    <div className="scroll-marquee-wrapper" aria-hidden="true">
+    <div className="scroll-marquee-wrapper" aria-hidden="true" style={{ overflow: 'hidden' }}>
       {/* Forward marquee */}
       <div className="marquee-track">
-        <motion.div className="marquee-inner" style={{ x: xSmooth }}>
-          {items.map((item, i) => (
-            <span key={i} className={`marquee-item ${item === '·' ? 'marquee-dot' : ''}`}>
-              {item}
-            </span>
+        <motion.div 
+          className="marquee-inner"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            ease: "linear",
+            duration: 25,
+            repeat: Infinity
+          }}
+        >
+          {/* First set */}
+          {items1.map((item, i) => (
+            <React.Fragment key={`items1-1-${i}`}>
+              <span className="marquee-item">{item}</span>
+              <span className="marquee-item marquee-dot">·</span>
+            </React.Fragment>
+          ))}
+          {/* Duplicate set for seamless looping */}
+          {items1.map((item, i) => (
+            <React.Fragment key={`items1-2-${i}`}>
+              <span className="marquee-item">{item}</span>
+              <span className="marquee-item marquee-dot">·</span>
+            </React.Fragment>
           ))}
         </motion.div>
       </div>
 
       {/* Reverse marquee */}
       <div className="marquee-track marquee-track-reverse">
-        <motion.div className="marquee-inner" style={{ x: xReverseSmooth }}>
-          {[...items].reverse().map((item, i) => (
-            <span key={i} className={`marquee-item ${item === '·' ? 'marquee-dot' : ''}`}>
-              {item}
-            </span>
+        <motion.div 
+          className="marquee-inner"
+          animate={{ x: ["-50%", "0%"] }}
+          transition={{
+            ease: "linear",
+            duration: 25,
+            repeat: Infinity
+          }}
+        >
+          {/* First set */}
+          {items2.map((item, i) => (
+            <React.Fragment key={`items2-1-${i}`}>
+              <span className="marquee-item">{item}</span>
+              <span className="marquee-item marquee-dot">·</span>
+            </React.Fragment>
+          ))}
+          {/* Duplicate set for seamless looping */}
+          {items2.map((item, i) => (
+            <React.Fragment key={`items2-2-${i}`}>
+              <span className="marquee-item">{item}</span>
+              <span className="marquee-item marquee-dot">·</span>
+            </React.Fragment>
           ))}
         </motion.div>
       </div>
