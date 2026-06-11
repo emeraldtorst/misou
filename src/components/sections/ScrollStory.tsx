@@ -74,9 +74,6 @@ export const ScrollStory: React.FC = () => {
             />
           ))}
         </div>
-        <div className="scroll-story-skip">
-          <a href="#ambience" className="scroll-story-skip-btn">Skip the story ↓</a>
-        </div>
       </div>
     </div>
   );

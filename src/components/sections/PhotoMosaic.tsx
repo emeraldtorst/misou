@@ -136,6 +136,23 @@ const MosaicHeadline: React.FC<{ scrollYProgress: MotionValue<number> }> = ({ sc
     >
       <span className="mosaic-eyebrow">The Experience</span>
       <h2 className="mosaic-title">Every plate.<br />Every moment.</h2>
+      <p 
+        className="mosaic-subtext"
+        style={{
+          fontFamily: 'var(--font-sans)',
+          fontSize: '0.85rem',
+          color: 'var(--color-text-secondary)',
+          letterSpacing: '0.2em',
+          textTransform: 'uppercase',
+          marginTop: '1.5rem',
+          textAlign: 'center',
+          fontWeight: 300,
+          maxWidth: '320px',
+          lineHeight: 1.6
+        }}
+      >
+        A visual archive of culinary craftsmanship and architectural atmosphere.
+      </p>
     </motion.div>
   );
 };
