@@ -33,10 +33,12 @@ export const Contact: React.FC = () => {
             <div className="contact-block">
               <span className="contact-label">Opening Hours</span>
               <div className="hours-grid">
-                <span className="hours-days">Sunday – Thursday</span>
-                <span className="hours-time">11:11 – 22:22</span>
-                <span className="hours-days">Friday – Saturday</span>
-                <span className="hours-time">11:11 – 23:23</span>
+                <span className="hours-days">Tuesday – Friday</span>
+                <span className="hours-time">11:00 am – 10:00 pm</span>
+                <span className="hours-days">Saturday – Sunday</span>
+                <span className="hours-time">12:00 pm – 10:00 pm</span>
+                <span className="hours-days">Monday</span>
+                <span className="hours-time" style={{ color: 'var(--color-crimson)' }}>Closed</span>
               </div>
             </div>
           </motion.div>
