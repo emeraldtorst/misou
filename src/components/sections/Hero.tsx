@@ -1,0 +1,53 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { MagneticButton } from '../ui/MagneticButton';
+
+export const Hero: React.FC = () => {
+  return (
+    <section className="hero-section" id="hero">
+      <div className="hero-bg-wrapper">
+        <video autoPlay loop muted playsInline className="hero-parallax-bg">
+          <source src="videos/hero_bg.mp4" type="video/mp4" />
+        </video>
+        <div className="hero-overlay"></div>
+      </div>
+
+      <div className="hero-content-container">
+        <motion.div 
+          className="hero-branding"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
+        >
+          <span className="hero-tagline">Vienna’s Elevated Destination</span>
+          <h1 className="hero-title">
+            <span>MISO<span className="gold-dot">•</span>U</span>
+          </h1>
+          <p className="hero-subtext">
+            A cinematic synthesis of Eastern culinary heritage and Viennese refinement.
+          </p>
+        </motion.div>
+
+        <motion.div 
+          className="hero-actions"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+        >
+          <div className="hero-btn-group" style={{ display: 'flex', gap: '1.5rem', marginBottom: '2rem' }}>
+            <MagneticButton as="a" href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-large">Reserve a Table</MagneticButton>
+            <MagneticButton as="a" href="#menu" className="btn btn-outline btn-large">View Full Menu</MagneticButton>
+          </div>
+          <a href="#ambience" className="explore-btn-link" aria-label="Scroll to introduction">
+            <span className="explore-text">Explore the Journey</span>
+            <div className="scroll-arrow-line"></div>
+          </a>
+        </motion.div>
+      </div>
+
+      <div className="scroll-indicator" aria-hidden="true">
+        <div className="indicator-line"></div>
+      </div>
+    </section>
+  );
+};

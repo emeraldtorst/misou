@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISO·U | Finest Asian Fusion Restaurant | Vienna</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Experience elevated Asian fusion dining in the heart of Vienna. MISO·U combines contemporary Eastern culinary heritage with Viennese sophistication at Marc Aurel Straße 2A.">
+    <meta name="keywords"
+        content="Asian fusion, Vienna fine dining, restaurant 1010 Wien, luxury restaurant Vienna, Miso U, Miso-U, elevated Asian food, Vienna central restaurant">
+    <meta name="author" content="MISO·U Finest Asian Fusion">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://misou.online/">
+    <meta property="og:title" content="MISO·U | Finest Asian Fusion Restaurant | Vienna">
+    <meta property="og:description"
+        content="A cinematic dining experience blending contemporary Asian artistry with Viennese elegance. Book your table at Marc Aurel Straße 2A.">
+    <meta property="og:image" content="images/hero_ambient.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://misou.online/">
+    <meta property="twitter:title" content="MISO·U | Finest Asian Fusion Restaurant | Vienna">
+    <meta property="twitter:description"
+        content="A cinematic dining experience blending contemporary Asian artistry with Viennese elegance. Book your table at Marc Aurel Straße 2A.">
+    <meta property="twitter:image" content="images/hero_ambient.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom Styling -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "MISO·U Finest Asian Fusion Restaurant",
+      "image": [
+        "images/hero_ambient.png",
+        "images/dish_tartare.png",
+        "images/dish_cod.png",
+        "images/wine_lounge.png",
+        "images/lunch_box.png"
+      ],
+      "priceRange": "$$$$",
+      "telephone": "+436601288953",
+      "email": "office@misou.online",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Marc Aurel Straße 2A",
+        "addressLocality": "Wien",
+        "postalCode": "1010",
+        "addressCountry": "AT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "48.2117",
+        "longitude": "16.3725"
+      },
+      "url": "https://misou.online",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ],
+          "opens": "11:11",
+          "closes": "22:22"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "11:11",
+          "closes": "23:23"
+        }
+      ],
+      "servesCuisine": "Asian Fusion, Fine Dining"
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- Ambient Lighting & Layered Background (Custom motion elements) -->
+    <div class="ambient-glow" id="glow1"></div>
+    <div class="ambient-glow" id="glow2"></div>
+    <div class="noise-overlay"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="custom-cursor-dot" id="customCursorDot"></div>
+
+    <!-- Scroll Aware Navigation Header -->
+    <header class="main-header" id="mainHeader">
+        <div class="header-container">
+            <a href="#" class="logo-link" id="logoLink" aria-label="MISO·U Homepage">
+                <span class="logo-text">MISO<span class="dot">•</span>U</span>
+                <span class="logo-sub">FINEST ASIAN FUSION</span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <a href="#ambience" class="nav-link">Ambience</a>
+                <a href="#highlights" class="nav-link">Signature Dishes</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#lounge" class="nav-link">Drinks Lounge</a>
+                <a href="#lunch" class="nav-link">Midday</a>
+                <a href="#contact" class="nav-link">Details</a>
+            </nav>
+
+            <div class="header-cta">
+                <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-outline" id="headerBookBtn" aria-label="Reserve a Table">Reserve a Table</a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu"
+                aria-expanded="false">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <nav class="mobile-nav-links" aria-label="Mobile Navigation">
+            <a href="#ambience" class="mobile-nav-link">The Ambience</a>
+            <a href="#highlights" class="mobile-nav-link">Signature Culinary</a>
+            <a href="#menu" class="mobile-nav-link">The Menu</a>
+            <a href="#lounge" class="mobile-nav-link">Wine & Drinks</a>
+            <a href="#lunch" class="mobile-nav-link">Lunch Menu</a>
+            <a href="#contact" class="mobile-nav-link">Hours & Location</a>
+            <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary" id="mobileBookBtn">Reserve Table</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-bg-wrapper">
+                <video autoplay loop muted playsinline class="hero-parallax-bg">
+                    <source src="videos/hero_bg.mp4" type="video/mp4">
+                    <source
+                        src="https://assets.mixkit.co/videos/preview/mixkit-slow-motion-of-gold-glitter-dust-particles-42352-large.mp4"
+                        type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+
+            <div class="hero-content-container">
+                <div class="hero-branding">
+                    <span class="hero-tagline animate-fade">Vienna’s Elevated Destination</span>
+                    <h1 class="hero-title animate-title">
+                        <span>MISO<span class="gold-dot">•</span>U</span>
+                    </h1>
+                    <p class="hero-subtext animate-fade">
+                        A cinematic synthesis of Eastern culinary heritage and Viennese refinement.
+                    </p>
+                </div>
+
+                <div class="hero-actions animate-fade">
+                    <div class="hero-btn-group">
+                        <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-primary btn-large" id="heroBookBtn">Reserve a Table</a>
+                        <a href="#menu" class="btn btn-outline btn-large" id="heroMenuBtn">View Full Menu</a>
+                    </div>
+                    <a href="#ambience" class="explore-btn-link" id="exploreBtn" aria-label="Scroll to introduction">
+                        <span class="explore-text">Explore the Journey</span>
+                        <div class="scroll-arrow-line"></div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Ambient scroll indicator -->
+            <div class="scroll-indicator" aria-hidden="true">
+                <div class="indicator-line"></div>
+            </div>
+        </section>
+
+        <!-- Short Introduction (Ambience) -->
+        <section class="intro-section" id="ambience">
+            <div class="section-container">
+                <div class="intro-layout">
+                    <div class="intro-meta-col scroll-reveal">
+                        <span class="section-number">01</span>
+                        <h2 class="section-title-alt">The Philosophy</h2>
+                    </div>
+                    <div class="intro-text-col scroll-reveal">
+                        <p class="intro-lead-text">
+                            Reshaping boundaries. Located in the historic heart of Vienna’s first district, <strong
+                                class="text-gold">MISO·U</strong> represents a curated dining destination where
+                            contemporary Asian techniques intersect with classic European elegance.
+                        </p>
+                        <p class="intro-body-text">
+                            Our culinary canvas is defined by contrast. From the quiet warmth of brushed dark slate and
+                            smoked amber glass to the bold complexity of fermented misos, local Austrian ingredients,
+                            and rare Eastern botanicals, we craft an atmosphere that is sensory, spacious, and deeply
+                            cinematic.
+                        </p>
+                        <div class="philosophical-divider"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Culinary Highlights -->
+        <section class="highlights-section" id="highlights">
+            <div class="section-container">
+                <div class="section-header scroll-reveal">
+                    <div class="header-number-wrap">
+                        <span class="section-number">02</span>
+                        <h2 class="section-title">Culinary Signature</h2>
+                    </div>
+                    <p class="section-subtitle">
+                        An editorial presentation of our signature creations. Resolute focus on depth, texture, and
+                        visual balance.
+                    </p>
+                </div>
+
+                <!-- Editorial Dish Presentation (Asymmetric Layout) -->
+                <div class="dish-showcase">
+
+                    <!-- Dish 1: Left Image, Right Text -->
+                    <!-- Dish 1: Left Image, Right Text -->
+                    <div class="dish-panel scroll-reveal">
+                        <div class="dish-image-wrapper">
+                            <img src="images/dish_cod.png" alt="Salmon a la Miso with bok choy and jasmine rice"
+                                class="dish-img">
+                            <div class="dish-image-overlay"></div>
+                        </div>
+                        <div class="dish-details-wrapper">
+                            <span class="dish-category">Signature Sea</span>
+                            <h3 class="dish-name">Salmon A La Miso</h3>
+                            <p class="dish-desc">
+                                Grilled salmon fillet served with baby pak choi, sliced onion, crisp carrots, zucchini,
+                                broccoli, and snow peas, drizzled in our house specialty miso reduction, served with
+                                steamed jasmine rice.
+                            </p>
+                            <span class="dish-pairing"><strong class="pairing-label">Pairing:</strong> Grüner Veltliner
+                                Smaragd, Domäne Wachau</span>
+                        </div>
+                    </div>
+
+                    <!-- Dish 2: Right Image, Left Text (Reversed layout in CSS/DOM) -->
+                    <div class="dish-panel panel-reversed scroll-reveal">
+                        <div class="dish-details-wrapper">
+                            <span class="dish-category">Signature Land</span>
+                            <h3 class="dish-name">Crispy Soy Duck</h3>
+                            <p class="dish-desc">
+                                Oven-roasted duck breast with a crispy skin, resting on a bed of fresh pak choi, tender
+                                onions, and soy sprouts, topped with a rich caramelized soy reduction, served with
+                                steamed jasmine rice.
+                            </p>
+                            <span class="dish-pairing"><strong class="pairing-label">Pairing:</strong> Pinot Noir
+                                Bourgogne Rouge, Faiveley</span>
+                        </div>
+                        <div class="dish-image-wrapper">
+                            <img src="images/dish_duck.png"
+                                alt="Crispy roasted soy duck plated with pak choi and sesame" class="dish-img">
+                            <div class="dish-image-overlay"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="highlights-footer scroll-reveal">
+                    <a href="#menu" class="btn btn-outline menu-trigger-btn" data-menu="food" id="foodMenuBtn">View Full Menu</a>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- Section 03: The Full Menu (Inline) -->
+        <section class="menu-section" id="menu">
+            <div class="section-container">
+                <div class="section-header scroll-reveal">
+                    <div class="header-number-wrap">
+                        <span class="section-number">03</span>
+                        <h2 class="section-title">The Culinary Archives</h2>
+                    </div>
+                    <p class="section-subtitle">
+                        Explore our comprehensive archives of hand-crafted Asian fusion plates, organic wine pairings, and midday lunch sets.
+                    </p>
+                </div>
+
+                <div class="menu-inline-container scroll-reveal">
+                    <div class="menu-inline-tabs">
+                        <button type="button" class="menu-tab-btn active" data-target="food">Food Menu</button>
+                        <button type="button" class="menu-tab-btn" data-target="drinks">Drinks & Wine</button>
+                        <button type="button" class="menu-tab-btn" data-target="lunch">Lunch Bento</button>
+                    </div>
+
+                    <div class="menu-inline-content">
+                        <!-- Food Menu -->
+                        <div class="menu-panel-content active" id="menu-food">
+                            <!-- Section: Starters -->
+                    <div class="menu-category-section">
+                        <h3 class="menu-cat-title">Starters & Rolls</h3>
+                        <div class="menu-items-grid">
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Kimchijeon <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">A,C,F,N</span></h4>
+                                    <span class="item-price">€ 7.00</span>
+                                </div>
+                                <p class="item-desc">Savory Korean pancake with kimchi, spring onion, zucchini, and egg.
+                                </p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Tteokbokki <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">A,C,D,F</span></h4>
+                                    <span class="item-price">€ 7.00</span>
+                                </div>
+                                <p class="item-desc">Spicy simmered rice cakes with fish cake, onion, and egg.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Gyoza (Chicken / Veggie) <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">A,F,N</span></h4>
+                                    <span class="item-price">€ 6.00</span>
+                                </div>
+                                <p class="item-desc">Steamed and pan-fried dumplings with chicken or veggie, served with
+                                    mandu sauce.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Crispy Wan Tan <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">A,B</span></h4>
+                                    <span class="item-price">€ 7.00</span>
+                                </div>
+                                <p class="item-desc">Knusprige hausgemachte Teigtaschen stuffed with chicken, shrimps,
+                                    and shiitake.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Summerroll Shrimps <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">B,E</span></h4>
+                                    <span class="item-price">€ 7.00</span>
+                                </div>
+                                <p class="item-desc">Fresh rice paper with shrimp, rice noodles, coriander, and mint.
+                                </p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Summerroll Tofu & Avocado <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">F</span></h4>
+                                    <span class="item-price">€ 6.00</span>
+                                </div>
+                                <p class="item-desc">Fresh rice paper with tofu, avocado, rice noodles, coriander, and
+                                    mint.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Crispy Roll Veggie <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">F</span></h4>
+                                    <span class="item-price">€ 7.00</span>
+                                </div>
+                                <p class="item-desc">Deep-fried rolls with glass noodles, white cabbage, carrot, tofu,
+                                    shiitake, and green beans.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Crispy Roll Chicken</h4>
+                                    <span class="item-price">€ 6.00</span>
+                                </div>
+                                <p class="item-desc">Deep-fried rolls with chicken, glass noodles, white cabbage, and
+                                    carrot.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section: Ramen & Soups -->
+                    <div class="menu-category-section">
+                        <h3 class="menu-cat-title">Ramen & Soups</h3>
+                        <div class="menu-items-grid">
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Beef Ramen <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">C,F</span></h4>
+                                    <span class="item-price">€ 16.00</span>
+                                </div>
+                                <p class="item-desc">Hearty noodle soup with beef, spinach, soy sprouts, mushrooms, egg,
+                                    and bok choy.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Tiger-Shrimps Ramen <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">B,C,F</span></h4>
+                                    <span class="item-price">€ 16.00</span>
+                                </div>
+                                <p class="item-desc">Ramen with prawns, spinach, soy sprouts, mushrooms, egg, and bok
+                                    choy.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Veggie Ramen <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">F</span></h4>
+                                    <span class="item-price">€ 13.00</span>
+                                </div>
+                                <p class="item-desc">Ramen with tofu, bok choy, soy sprouts, spinach, and mushrooms.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Bun Curry Tofu <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">F</span></h4>
+                                    <span class="item-price">€ 14.00</span>
+                                </div>
+                                <p class="item-desc">Potato, carrots, and taro simmered in red curry coconut milk. <span
+                                        class="text-gold" style="font-size:0.75rem;">+Shrimps / Duck / Chicken: +€
+                                        2</span></p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Miso Suppe <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">F</span></h4>
+                                    <span class="item-price">€ 5.00</span>
+                                </div>
+                                <p class="item-desc">Classic soybean broth with young spring onion and fresh tofu cubes.
+                                </p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Wan Tan Suppe <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">A</span></h4>
+                                    <span class="item-price">€ 6.00</span>
+                                </div>
+                                <p class="item-desc">Filled chicken dumplings, fresh seasonal vegetables, and chicken
+                                    broth.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section: Signatures & Mains -->
+                    <div class="menu-category-section">
+                        <h3 class="menu-cat-title">Signature Dishes & Mains</h3>
+                        <div class="menu-items-grid">
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Salmon A La Miso <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">D,F</span></h4>
+                                    <span class="item-price">€ 20.00</span>
+                                </div>
+                                <p class="item-desc">Grilled salmon, carrots, bok choy, zucchini, onion, broccoli, snow
+                                    peas, rice.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Crispy Soy Duck <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">F</span></h4>
+                                    <span class="item-price">€ 20.00</span>
+                                </div>
+                                <p class="item-desc">Crispy duck, pak choi, onion, bean sprouts, served with rice.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Bulgogi <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">F</span></h4>
+                                    <span class="item-price">€ 16.00</span>
+                                </div>
+                                <p class="item-desc">Marinated beef stir-fry with onions, carrots, mushrooms, zucchini,
+                                    rice.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Korean Fried Chicken <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">A,F,N</span></h4>
+                                    <span class="item-price">€ 15.00</span>
+                                </div>
+                                <p class="item-desc">Crispy chicken tossed in Sweet Cheese or Chili Garlic glaze, served
+                                    with rice.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Orange Chicken <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">N</span></h4>
+                                    <span class="item-price">€ 16.00</span>
+                                </div>
+                                <p class="item-desc">Sautéed chicken with onion, bok choy, carrots, zucchini, and
+                                    sesame, with rice.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Tofu Basil <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">F</span></h4>
+                                    <span class="item-price">€ 14.00</span>
+                                </div>
+                                <p class="item-desc">Sautéed tofu cubes with fresh sweet basil and seasonal wok
+                                    vegetables, served with rice.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section: Sushi & Rolls -->
+                    <div class="menu-category-section">
+                        <h3 class="menu-cat-title">Sushi Craft & 8pcs Rolls</h3>
+                        <div class="menu-items-grid">
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Chong Li Masterplate <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">A,B,C,D,F,N,R</span></h4>
+                                    <span class="item-price">€ 59 / € 99</span>
+                                </div>
+                                <p class="item-desc">2 Pax. 36 or 72 pieces of hand-selected premium sushi, served with
+                                    miso soups or edamame.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Sake Set <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">D,N</span></h4>
+                                    <span class="item-price">€ 16 / € 28</span>
+                                </div>
+                                <p class="item-desc">Premium salmon box: 8 Nigiris & 3 Makis or 16 Nigiris & 3 Makis.
+                                </p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Sake Sashimi <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">D</span></h4>
+                                    <span class="item-price">€ 18 / € 27</span>
+                                </div>
+                                <p class="item-desc">Slices of fresh premium raw salmon (9 or 15 slices).</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Surf n Turf <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">A,B,C</span></h4>
+                                    <span class="item-price">€ 18.00</span>
+                                </div>
+                                <p class="item-desc">Tender beef, asparagus, chives, and crispy ebi tempura roll.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Rainbow Roll <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">B,D,N</span></h4>
+                                    <span class="item-price">€ 15.00</span>
+                                </div>
+                                <p class="item-desc">An elegant roll decorated with a selection of different types of
+                                    fresh fish.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Spicy Tuna Roll <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">B</span></h4>
+                                    <span class="item-price">€ 15.00</span>
+                                </div>
+                                <p class="item-desc">Spicy tuna blend, special creation by our sushi master Chong Li.
+                                </p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Beetroot Roll <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">N</span></h4>
+                                    <span class="item-price">€ 13.00</span>
+                                </div>
+                                <p class="item-desc">Fresh avocado, crisp cucumber, and traditional pickled radish
+                                    (oshinko).</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Dragon Roll <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">A,F,N</span></h4>
+                                    <span class="item-price">€ 14.00</span>
+                                </div>
+                                <p class="item-desc">Crispy duck, spring onions, and avocado rolled with premium rice.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section: Desserts -->
+                    <div class="menu-category-section">
+                        <h3 class="menu-cat-title">Desserts</h3>
+                        <div class="menu-items-grid">
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Matcha Tiramisu <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">A,B,D,C</span></h4>
+                                    <span class="item-price">€ 9.00</span>
+                                </div>
+                                <p class="item-desc">Mascarpone, ladyfingers, white chocolate, and premium stone-ground
+                                    matcha.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Mochi Eis <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">F,G,N</span></h4>
+                                    <span class="item-price">€ 3.50</span>
+                                </div>
+                                <p class="item-desc">Sweet glutinous rice dumpling filled with creamy Coconut or Mango
+                                    ice cream.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Gyoza Apple <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">C,F,L,N</span></h4>
+                                    <span class="item-price">€ 7.00</span>
+                                </div>
+                                <p class="item-desc">Sweet crispy dumplings filled with cinnamon apple compote.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drinks Menu -->
+                <div class="menu-panel-content" id="menu-drinks">
+                    <!-- Aperitifs & Cocktails -->
+                    <div class="menu-category-section">
+                        <h3 class="menu-cat-title">Aperitifs & Signature Cocktails</h3>
+                        <div class="menu-items-grid">
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Lychee Spritz</h4>
+                                    <span class="item-price">€ 8.00</span>
+                                </div>
+                                <p class="item-desc">Lychee liqueur, Prosecco, fresh lemon juice.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Yuzu Tea Spritz</h4>
+                                    <span class="item-price">€ 8.00</span>
+                                </div>
+                                <p class="item-desc">Yuzu sake, home-brewed yuzu tea, Prosecco, soda.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Sakura Spritz</h4>
+                                    <span class="item-price">€ 8.00</span>
+                                </div>
+                                <p class="item-desc">Sakura tea, Korean soju, Prosecco, soda.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Seoul Meets Tequila</h4>
+                                    <span class="item-price">€ 12.00</span>
+                                </div>
+                                <p class="item-desc">Tequila, soju, blue curacao, fresh lime, simple syrup.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Tokyo Glow</h4>
+                                    <span class="item-price">€ 12.00</span>
+                                </div>
+                                <p class="item-desc">Midori melon liqueur, pineapple juice, lemon, eggwhite.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Yuzu Negroni</h4>
+                                    <span class="item-price">€ 12.00</span>
+                                </div>
+                                <p class="item-desc">Campari, sweet martini vermouth, gin, yuzu sake, yuzu bitters.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Virgin Sunrise <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">0% ABV</span></h4>
+                                    <span class="item-price">€ 9.00</span>
+                                </div>
+                                <p class="item-desc">Non-alcoholic gin, sweet pineapple, orange, lime, grenadine.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Virgin Amaretto <span class="text-gold"
+                                            style="font-size:0.65rem; font-weight:300;">0% ABV</span></h4>
+                                    <span class="item-price">€ 9.00</span>
+                                </div>
+                                <p class="item-desc">Non-alcoholic amaretto, fresh lime juice, eggwhite foam.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cellar & Sparkling -->
+                    <div class="menu-category-section">
+                        <h3 class="menu-cat-title">Wines & Sparkling (750ml)</h3>
+                        <div class="menu-items-grid">
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Grüner Veltliner Smaragd 2024</h4>
+                                    <span class="item-price">€ 33.00</span>
+                                </div>
+                                <p class="item-desc">Domäne Wachau Federspiel Ried Kaiserberg DAC | 12.5% ABV</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Sauvignon Blanc Tement 2024</h4>
+                                    <span class="item-price">€ 33.00</span>
+                                </div>
+                                <p class="item-desc">Kalk & Kreide, Südsteiermark DAC Bio | 12.5% ABV</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Chardonnay Sabathi 2022</h4>
+                                    <span class="item-price">€ 70.00</span>
+                                </div>
+                                <p class="item-desc">Ried Pössnitzberg Alte Reben Bio, Südsteiermark | 13.5% ABV</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Puligny Montrachet 2022</h4>
+                                    <span class="item-price">€ 135.00</span>
+                                </div>
+                                <p class="item-desc">Faiveley 1er Cru Les Champgains, Burgund | 13.5% ABV</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Zweigelt Reinisch 2023</h4>
+                                    <span class="item-price">€ 33.00</span>
+                                </div>
+                                <p class="item-desc">Familie Reinisch Bio, Thermenregion | 13% ABV</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Chateauneuf du Pape 2020</h4>
+                                    <span class="item-price">€ 150.00</span>
+                                </div>
+                                <p class="item-desc">Chateau du Beaucastel, Rhône | 14.5% ABV</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Cremant Brut / Rose</h4>
+                                    <span class="item-price">€ 44.00</span>
+                                </div>
+                                <p class="item-desc">Crisp French sparkling wine served in bottle.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Roederer 246 Champagne</h4>
+                                    <span class="item-price">€ 100.00</span>
+                                </div>
+                                <p class="item-desc">Grand Cru prestige Champagne.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Beers & Non-Alcoholic -->
+                    <div class="menu-category-section">
+                        <h3 class="menu-cat-title">Beers & Soft Beverages</h3>
+                        <div class="menu-items-grid">
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Stiegl Helles Draught</h4>
+                                    <span class="item-price">€ 4.50 / € 5.50</span>
+                                </div>
+                                <p class="item-desc">Local Austrian draught beer (0.3l / 0.5l).</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Asahi / Kirin / Saigon (0.33l)</h4>
+                                    <span class="item-price">€ 4.50</span>
+                                </div>
+                                <p class="item-desc">Imported premium Asian bottled beers.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Iced Misou Tea (500ml)</h4>
+                                    <span class="item-price">€ 6.00</span>
+                                </div>
+                                <p class="item-desc">Jasmine tea brewed with yuja (yuzu) citrus and goji berries.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Iced Sakura Tea (500ml)</h4>
+                                    <span class="item-price">€ 6.00</span>
+                                </div>
+                                <p class="item-desc">Cherry blossom tea with jasmine essence and natural honey.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Matcha Latte / Classic</h4>
+                                    <span class="item-price">€ 6.00</span>
+                                </div>
+                                <p class="item-desc">Premium green matcha served hot with steamed milk or classic
+                                    whisked.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Vöslauer Mineralwater</h4>
+                                    <span class="item-price">€ 4.00 / € 6.00</span>
+                                </div>
+                                <p class="item-desc">Austrian spring mineral water, Still or Sparkling (0.33l / 0.75l).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lunch Menu -->
+                <div class="menu-panel-content" id="menu-lunch">
+                    <div class="menu-category-section">
+                        <h3 class="menu-cat-title">Midday Bento Selections</h3>
+                        <p class="menu-section-desc">Served Monday–Friday, 11:11 – 15:00. Includes a side of traditional
+                            miso soup.</p>
+                        <div class="menu-items-grid">
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Salmon A La Miso Bento Set</h4>
+                                    <span class="item-price">€ 19.00</span>
+                                </div>
+                                <p class="item-desc">Miso-glazed grilled salmon fillet, wok vegetables, jasmine rice,
+                                    and a fresh summer roll starter.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Bulgogi Beef Bento Set</h4>
+                                    <span class="item-price">€ 16.50</span>
+                                </div>
+                                <p class="item-desc">Marinated bulgogi beef stir-fried with onion and carrots, served
+                                    with rice and salted edamame.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Veggie Udon & Gyoza Combo (v)</h4>
+                                    <span class="item-price">€ 14.50</span>
+                                </div>
+                                <p class="item-desc">Thick udon noodles sautéed with garden vegetables, paired with
+                                    three crispy pan-fried veggie gyozas.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="item-title-price">
+                                    <h4 class="item-name">Midday Sushi Mix Set</h4>
+                                    <span class="item-price">€ 15.00</span>
+                                </div>
+                                <p class="item-desc">A selection of chef's midday sushi rolls: 4 pieces of Nigiri, 3
+                                    pieces of Maki, served with salted edamame.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Wine and Drinks Lounge -->
+        <section class="lounge-section" id="lounge">
+            <div class="lounge-bg-wrapper">
+                <div class="lounge-parallax-bg" style="background-image: url('images/wine_lounge.png');"></div>
+                <div class="lounge-overlay"></div>
+            </div>
+
+            <div class="section-container">
+                <div class="lounge-content-layout">
+                    <div class="lounge-text-panel scroll-reveal">
+                        <span class="section-number text-gold">04</span>
+                        <h2 class="section-title">The Lounge & Libations</h2>
+                        <p class="lounge-lead">
+                            An evening dining experience extends far beyond the plate. Our lounge offers a quiet
+                            sanctuary of smoked glass, warm metal accents, and rare vintages.
+                        </p>
+                        <p class="lounge-body">
+                            Our cellar bridges continents. Discover an extraordinary selection of organic Austrian
+                            wines, Grand Cru Champagnes, and small-batch Japanese sakes sourced directly from boutique
+                            brewers in Kyoto and Niigata. Each sake is selected for its clean minerality to complement
+                            our rich fusion flavors.
+                        </p>
+
+                        <div class="lounge-features">
+                            <div class="lounge-feature-item">
+                                <span class="feature-title">East-West Pairings</span>
+                                <span class="feature-desc">Curated sake & wine flights adjusted weekly.</span>
+                            </div>
+                            <div class="lounge-feature-item">
+                                <span class="feature-title">Botanical Cocktails</span>
+                                <span class="feature-desc">House infusions using fresh shiso leaf, yuzu juice, and
+                                    smoked wood.</span>
+                            </div>
+                        </div>
+
+                        <a href="#menu" class="btn btn-outline btn-gold menu-trigger-btn" data-menu="drinks" id="drinksMenuBtn">Explore Drinks</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lunch Menu Highlight -->
+        <section class="lunch-section" id="lunch">
+            <div class="section-container">
+                <div class="lunch-layout">
+                    <div class="lunch-image-col scroll-reveal">
+                        <div class="lunch-image-container">
+                            <img src="images/lunch_box.png" alt="Premium modern bento-style lunch lunch box"
+                                class="lunch-img">
+                            <div class="lunch-image-frame"></div>
+                        </div>
+                    </div>
+
+                    <div class="lunch-text-col scroll-reveal">
+                        <span class="section-number">05</span>
+                        <h2 class="section-title">The Midday Escape</h2>
+                        <span class="lunch-tag">Weekday Lunch Ritual</span>
+                        <p class="lunch-desc">
+                            Designed for the Viennese professional, our midday lunch offers elevated speed without
+                            compromising culinary integrity. A curated rotation of refined bento sets, dynamic hand
+                            rolls, and warm bowls.
+                        </p>
+
+                        <div class="lunch-preview-box">
+                            <h4 class="lunch-preview-title">This Week's Selection</h4>
+                            <ul class="lunch-preview-list">
+                                <li>
+                                    <span class="lunch-dish">Salmon A La Miso Bento Set</span>
+                                    <span class="lunch-price">€ 19.00</span>
+                                </li>
+                                <li>
+                                    <span class="lunch-dish">Veggie Udon & Gyoza Combo</span>
+                                    <span class="lunch-price">€ 14.50</span>
+                                </li>
+                                <li>
+                                    <span class="lunch-dish">Bulgogi Beef Bento Set</span>
+                                    <span class="lunch-price">€ 16.50</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="lunch-actions">
+                            <a href="#menu" class="btn btn-outline menu-trigger-btn" data-menu="lunch" id="lunchMenuBtn">View Lunch Menu</a>
+                            <span class="lunch-time-info">Served Monday–Friday, 11:11 – 15:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservation CTA -->
+        <section class="booking-cta-section">
+            <div class="booking-cta-overlay"></div>
+            <div class="section-container">
+                <div class="booking-cta-content scroll-reveal">
+                    <span class="booking-sub">EXPERIENCE MISO·U</span>
+                    <h2 class="booking-title">Secure Your Seat at the Table</h2>
+                    <p class="booking-text">
+                        Due to intimate seating layout, we highly recommend planning your reservation in advance. Enjoy
+                        custom-tailored dinner tasting journeys or custom drink pairings.
+                    </p>
+                    <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank"
+                        rel="noopener noreferrer" class="btn btn-primary btn-large" id="ctaBookBtn">Create
+                        Reservation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact, Location & Hours -->
+        <section class="contact-section" id="contact">
+            <div class="section-container">
+                <div class="contact-layout">
+
+                    <!-- Left: Details -->
+                    <div class="contact-details-col scroll-reveal">
+                        <span class="section-number">06</span>
+                        <h2 class="section-title">Location & Contact</h2>
+
+                        <div class="contact-block">
+                            <span class="contact-label">Address</span>
+                            <a href="https://maps.google.com/?q=Marc+Aurel+Straße+2A,+1010+Wien" target="_blank"
+                                rel="noopener noreferrer" class="contact-value link-underline">
+                                Marc Aurel Straße 2A<br>1010 Wien, Austria
+                            </a>
+                        </div>
+
+                        <div class="contact-block">
+                            <span class="contact-label">Reservations & Enquiries</span>
+                            <a href="tel:+436601288953" class="contact-value link-underline">+43 660 12 88 953</a>
+                            <a href="mailto:office@misou.online"
+                                class="contact-value link-underline">office@misou.online</a>
+                        </div>
+
+                        <div class="contact-block">
+                            <span class="contact-label">Opening Hours</span>
+                            <div class="hours-grid">
+                                <span class="hours-days">Sunday – Thursday</span>
+                                <span class="hours-time">11:11 – 22:22</span>
+                                <span class="hours-days">Friday – Saturday</span>
+                                <span class="hours-time">11:11 – 23:23</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Styled Dark Map Frame -->
+                    <div class="contact-map-col scroll-reveal">
+                        <div class="map-frame-container">
+                            <!-- High-fidelity aesthetic vector representation of 1st district layout -->
+                            <div class="map-placeholder">
+                                <svg class="map-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <radialGradient id="mapGlow" cx="50%" cy="50%" r="50%">
+                                            <stop offset="0%" stop-color="#dfc193" stop-opacity="0.3" />
+                                            <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0" />
+                                        </radialGradient>
+                                    </defs>
+                                    <!-- Stylized abstract streets -->
+                                    <path d="M 50 0 L 120 400" stroke="#1d1d1d" stroke-width="3" fill="none" />
+                                    <path d="M 150 0 L 220 400" stroke="#1d1d1d" stroke-width="2" fill="none" />
+                                    <path d="M 300 0 L 350 400" stroke="#1d1d1d" stroke-width="3.5" fill="none" />
+                                    <path d="M 0 100 L 400 130" stroke="#1d1d1d" stroke-width="3" fill="none" />
+                                    <path d="M 0 220 L 400 180" stroke="#1d1d1d" stroke-width="4.5" fill="none" />
+                                    <path d="M 0 320 L 400 350" stroke="#1d1d1d" stroke-width="2" fill="none" />
+
+                                    <!-- Danube Canal curve -->
+                                    <path d="M 0 40 Q 200 80 400 30" stroke="#162a22" stroke-width="8" fill="none"
+                                        opacity="0.6" />
+                                    <path d="M 0 40 Q 200 80 400 30" stroke="#cca06a" stroke-width="1" fill="none"
+                                        opacity="0.3" />
+
+                                    <!-- Marc Aurel Strasse -->
+                                    <path class="target-street" d="M 180 50 L 210 240" stroke="#cca06a" stroke-width="3"
+                                        fill="none" opacity="0.7" />
+
+                                    <!-- Ringstrasse indicator -->
+                                    <path d="M 10 380 Q 200 300 390 380" stroke="#2a2a2a" stroke-width="5" fill="none"
+                                        stroke-dasharray="10 5" />
+
+                                    <!-- Spot Highlight -->
+                                    <circle cx="197" cy="148" r="40" fill="url(#mapGlow)" />
+                                    <circle class="map-pulse" cx="197" cy="148" r="8" fill="#dfc193" />
+                                    <circle cx="197" cy="148" r="4" fill="#0a0a0a" />
+                                </svg>
+                                <div class="map-label">
+                                    <span class="map-label-title">MISO•U</span>
+                                    <span class="map-label-desc">Marc Aurel Straße 2A</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="section-container">
+            <div class="footer-grid-luxury">
+                
+                <!-- Brand / Story Info -->
+                <div class="footer-col brand-col">
+                    <span class="footer-logo">MISO<span class="dot">•</span>U</span>
+                    <p class="footer-tagline">Elevated Asian Fusion dining in the historic heart of Vienna’s 1st District.</p>
+                    <div class="footer-socials">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="social-icon">IG</span></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span class="social-icon">FB</span></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Hours -->
+                <div class="footer-col">
+                    <h5 class="footer-col-title">Hours</h5>
+                    <div class="footer-hours-list">
+                        <div class="hours-item">
+                            <span class="days">Sunday – Thursday</span>
+                            <span class="time">11:11 – 22:22</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="days">Friday – Saturday</span>
+                            <span class="time">11:11 – 23:23</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Location -->
+                <div class="footer-col">
+                    <h5 class="footer-col-title">Location</h5>
+                    <p class="footer-address">
+                        Marc Aurel Straße 2A<br>
+                        1010 Wien, Austria
+                    </p>
+                    <a href="https://maps.google.com/?q=Marc+Aurel+Straße+2A,+1010+Wien" target="_blank" rel="noopener noreferrer" class="footer-map-link link-underline">Get Directions</a>
+                </div>
+
+                <!-- Column 4: Reservations -->
+                <div class="footer-col">
+                    <h5 class="footer-col-title">Inquiries</h5>
+                    <a href="tel:+436601288953" class="footer-contact-link link-underline">+43 660 12 88 953</a>
+                    <a href="mailto:office@misou.online" class="footer-contact-link link-underline">office@misou.online</a>
+                    <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-gold btn-sm footer-book-btn">Book Table</a>
+                </div>
+
+            </div>
+
+            <!-- Bottom Subfooter -->
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 MISO·U. All rights reserved. YUNA GMBH.</p>
+                <div class="legal-links">
+                    <button class="footer-link link-underline" id="imprintLink">Imprint / Impressum</button>
+                    <button class="footer-link link-underline" id="privacyLink">Privacy Policy / DSGVO</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Menu Modals -->
+    <!-- Legal Modal (Privacy & Imprint) -->
+    <div class="legal-modal-overlay" id="legalModal">
+        <div class="legal-modal-container">
+            <button class="legal-close-btn" id="legalCloseBtn" aria-label="Close legal panel">&times;</button>
+
+            <div class="legal-modal-tabs">
+                <button class="legal-tab-btn active" data-target="privacy">Datenschutzerklärung</button>
+                <button class="legal-tab-btn" data-target="imprint">Impressum</button>
+            </div>
+
+            <div class="legal-modal-content">
+                <!-- Privacy Content -->
+                <div class="legal-panel-content active" id="legal-privacy">
+                    <h2>Erklärung zur Informationspflicht</h2>
+                    <h3 class="text-gold"
+                        style="font-family:var(--font-serif); font-style:italic; font-size:1.4rem; margin:15px 0;">
+                        Datenschutzerklärung</h3>
+                    <p>In folgender Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der
+                        Datenverarbeitung im Rahmen unserer Webseite. Wir erheben und verarbeiten personenbezogene Daten
+                        nur auf Grundlage der gesetzlichen Bestimmungen (Datenschutzgrundverordnung,
+                        Telekommunikationsgesetz 2003).</p>
+                    <p>Sobald Sie als Benutzer auf unsere Webseite zugreifen oder diese besuchen wird Ihre IP-Adresse,
+                        Beginn sowie Beginn und Ende der Sitzung erfasst. Dies ist technisch bedingt und stellt somit
+                        ein berechtigtes Interesse iSv Art 6 Abs 1 lit f DSGVO.</p>
+
+                    <h3>Kontakt mit uns</h3>
+                    <p>Wenn Sie uns, entweder über unser Kontaktformular auf unserer Webseite, oder per Email
+                        kontaktieren, dann werden die von Ihnen an uns übermittelten Daten zwecks Bearbeitung Ihrer
+                        Anfrage oder für den Fall von weiteren Anschlussfragen für sechs Monate bei uns gespeichert. Es
+                        erfolgt, ohne Ihre Einwilligung, keine Weitergabe Ihrer übermittelten Daten.</p>
+
+                    <h3>Cookies</h3>
+                    <p>Unsere Website verwendet so genannte Cookies. Dabei handelt es sich um kleine Textdateien, die
+                        mit Hilfe des Browsers auf Ihrem Endgerät abgelegt werden. Sie richten keinen Schaden an. Wir
+                        nutzen Cookies dazu, unser Angebot nutzerfreundlich zu gestalten. Einige Cookies bleiben auf
+                        Ihrem Endgerät gespeichert, bis Sie diese löschen. Sie ermöglichen es uns, Ihren Browser beim
+                        nächsten Besuch wiederzuerkennen. Wenn Sie dies nicht wünschen, so können Sie Ihren Browser so
+                        einrichten, dass er Sie über das Setzen von Cookies informiert und Sie dies nur im Einzelfall
+                        erlauben. Bei der Deaktivierung von Cookies kann die Funktionalität unserer Website
+                        eingeschränkt sein.</p>
+
+                    <h3>Google Maps</h3>
+                    <p>Unsere Website verwendet Funktionen des Webkartendienstes „Google Maps“. Der Dienstanbieter
+                        dieser Funktion ist:
+                        <br><strong>Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. Tel: +353 1
+                            543 1000</strong>
+                    </p>
+                    <p>Im Zuge der Nutzung von Google Maps ist es notwendig Ihre IP-Adresse zu speichern und zu
+                        verarbeiten. Google überträgt in der Regel an einen Server in den USA und speichert die Daten
+                        dort. Die Verarbeitung geschieht durch den Diensteanbieter (oben genannt), der Betreiber dieser
+                        Homepage hat keinen Einfluss auf die Übertragung der Daten.</p>
+                    <p>Die Datenverarbeitung erfolgt auf Basis der gesetzlichen Bestimmungen des § 96 Abs 3 TKG sowie
+                        des Art 6 Abs 1 lit f (berechtigtes Interesse) der DSGVO. Die Nutzung von Google Maps erhöht die
+                        Auffindbarkeit der Orte, welche auf unserer Webseite bereitgestellt werden.</p>
+                    <p>Weitere Informationen über den Umgang mit Nutzerdaten des Diensteanbieters „Google“ können Sie
+                        der Datenschutzerklärung entnehmen:
+                        <br><a href="https://policies.google.com/privacy?hl=de" target="_blank"
+                            rel="noopener noreferrer"
+                            class="link-underline">https://policies.google.com/privacy?hl=de</a>.
+                    </p>
+                    <p>Google verarbeitet die Daten auch in den USA, hat sich jedoch dem EU-US Privacy-Shield
+                        unterworfen:
+                        <br><a href="https://www.privacyshield.gov/EU-US-Framework" target="_blank"
+                            rel="noopener noreferrer"
+                            class="link-underline">https://www.privacyshield.gov/EU-US-Framework</a>.
+                    </p>
+
+                    <h3>Google Fonts</h3>
+                    <p>Unsere Website verwendet Schriftarten von „Google Fonts“. Der Dienstanbieter dieser Funktion ist:
+                        <br><strong>Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. Tel: +353 1
+                            543 1000</strong>
+                    </p>
+                    <p>Beim Aufrufen dieser Webseite lädt Ihr Browser Schriftarten und speichert diese in den Cache. Da
+                        Sie, als Besucher der Webseite, Daten des Dienstanbieters empfangen kann Google unter Umständen
+                        Cookies auf Ihrem Rechner setzen oder analysieren.</p>
+                    <p>Die Nutzung von „Google-Fonts“ dient der Optimierung unserer Dienstleistung und der einheitlichen
+                        Darstellung von Inhalten. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit.
+                        f DSGVO dar.</p>
+                    <p>Weitere Informationen zu Google Fonts erhalten Sie unter folgendem Link:
+                        <br><a href="https://developers.google.com/fonts/faq" target="_blank" rel="noopener noreferrer"
+                            class="link-underline">https://developers.google.com/fonts/faq</a>.
+                        <br>Weitere Informationen über den Umgang mit Nutzerdaten von Google können Sie der
+                        Datenschutzerklärung entnehmen:
+                        <br><a href="https://policies.google.com/privacy?hl=de" target="_blank"
+                            rel="noopener noreferrer"
+                            class="link-underline">https://policies.google.com/privacy?hl=de</a>.
+                        <br>Google verarbeitet die Daten auch in den USA, hat sich jedoch dem EU-US Privacy-Shield
+                        unterworfen:
+                        <br><a href="https://www.privacyshield.gov/EU-US-Framework" target="_blank"
+                            rel="noopener noreferrer"
+                            class="link-underline">https://www.privacyshield.gov/EU-US-Framework</a>.
+                    </p>
+
+                    <h3>Server-Log Files</h3>
+                    <p>Diese Webseite und der damit verbundene Provider erhebt im Zuge der Webseitennutzung automatisch
+                        Informationen im Rahmen sogenannter „Server-Log Files“. Dies betrifft insbesondere:</p>
+                    <ul
+                        style="margin: 10px 0 20px 20px; line-height: 1.8; color: var(--color-text-secondary); font-size: 0.9rem;">
+                        <li>IP-Adresse oder Hostname</li>
+                        <li>den verwendeten Browser</li>
+                        <li>Aufenthaltsdauer auf der Webseite sowie Datum und Uhrzeit</li>
+                        <li>aufgerufene Seiten der Webseite</li>
+                        <li>Spracheinstellungen und Betriebssystem</li>
+                        <li>„Leaving-Page“ (auf welcher URL hat der Benutzer die Webseite verlassen)</li>
+                        <li>ISP (Internet Service Provider)</li>
+                    </ul>
+                    <p>Diese erhobenen Informationen werden nicht personenbezogen verarbeitet oder mit personenbezogenen
+                        Daten in Verbindung gebracht.</p>
+                    <p>Der Webseitenbetreiber behält es sich vor, im Falle von Bekanntwerden rechtswidriger Tätigkeiten,
+                        diese Daten auszuwerten oder zu überprüfen.</p>
+
+                    <h3>Ihre Rechte als Betroffener</h3>
+                    <p>Sie als Betroffener haben bezüglich Ihrer Daten, welche bei uns gespeichert sind grundsätzlich
+                        ein Recht auf:</p>
+                    <ul
+                        style="margin: 10px 0 20px 20px; line-height: 1.8; color: var(--color-text-secondary); font-size: 0.9rem;">
+                        <li>Auskunft</li>
+                        <li>Löschung der Daten</li>
+                        <li>Berichtigung der Daten</li>
+                        <li>Übertragbarkeit der Daten</li>
+                        <li>Wiederruf und Widerspruch zur Datenverarbeitung</li>
+                        <li>Einschränkung</li>
+                    </ul>
+                    <p>Wenn sie vermuten, dass im Zuge der Verarbeitung Ihrer Daten Verstöße gegen das Datenschutzrecht
+                        passiert sind, so haben Sie die Möglichkeit sich bei uns (<a href="mailto:office@misou.online"
+                            class="link-underline">office@misou.online</a>) oder der Datenschutzbehörde zu beschweren.
+                    </p>
+                </div>
+
+                <!-- Imprint Content -->
+                <div class="legal-panel-content" id="legal-imprint">
+                    <h2>Impressum</h2>
+                    <h3 class="text-gold"
+                        style="font-family:var(--font-serif); font-style:italic; font-size:1.4rem; margin:15px 0;">
+                        Informationen und Offenlegung gemäß §5 (1) ECG, § 25 MedienG, § 63 GewO und § 14 UGB</h3>
+                    <p><strong>Webseitenbetreiber:</strong> YUNA GMBH</p>
+                    <p><strong>Firmenbuchnummer:</strong> FN 579185 v</p>
+                    <p><strong>Firmenbuchgericht:</strong> HANDELSGERICHT WIEN</p>
+                    <p><strong>Anschrift:</strong> MARC AUREL STRASSE 2A, 1010 Wien</p>
+                    <p><strong>Gewerbeaufsichtsbehörde:</strong> MAGISTRAT WIEN</p>
+                    <p><strong>Mitgliedschaften:</strong> MITGLIED BEI DER WKO</p>
+
+                    <h3 class="text-gold"
+                        style="font-family:var(--font-serif); font-style:italic; font-size:1.4rem; margin:25px 0 15px 0;">
+                        Kontaktdaten</h3>
+                    <p><strong>Telefon:</strong> <a href="tel:066022834765" class="link-underline">066022834765</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:office@misou.online"
+                            class="link-underline">office@misou.online</a></p>
+
+                    <h3 class="text-gold"
+                        style="font-family:var(--font-serif); font-style:italic; font-size:1.4rem; margin:25px 0 15px 0;">
+                        Rechtliche Hinweise</h3>
+                    <p><strong>Anwendbare Rechtsvorschrift:</strong> <a href="https://www.ris.bka.gv.at" target="_blank"
+                            rel="noopener noreferrer" class="link-underline">www.ris.bka.gv.at</a></p>
+                    <p style="margin-top: 15px;"><strong>Online Streitbeilegung:</strong> Verbraucher, welche in
+                        Österreich oder in einem sonstigen Vertragsstaat der ODR-VO niedergelassen sind, haben die
+                        Möglichkeit Probleme bezüglich dem entgeltlichen Kauf von Waren oder Dienstleistungen im Rahmen
+                        einer Online-Streitbeilegung (nach OS, AStG) zu lösen. Die Europäische Kommission stellt eine
+                        Plattform hierfür bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank"
+                            rel="noopener noreferrer" class="link-underline">https://ec.europa.eu/consumers/odr</a></p>
+
+                    <p style="margin-top: 15px;"><strong>Urheberrecht:</strong> Die Inhalte dieser Webseite unterliegen,
+                        soweit dies rechtlich möglich ist, diversen Schutzrechten (z.B dem Urheberrecht). Jegliche
+                        Verwendung/Verbreitung von bereitgestelltem Material, welche urheberrechtlich untersagt ist,
+                        bedarf schriftlicher Zustimmung des Webseitenbetreibers.</p>
+
+                    <p style="margin-top: 15px;"><strong>Haftungsausschluss:</strong> Trotz sorgfältiger inhaltlicher
+                        Kontrolle übernimmt der Webseitenbetreiber dieser Webseite keine Haftung für die Inhalte
+                        externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber
+                        verantwortlich. Sollten Sie dennoch auf ausgehende Links aufmerksam werden, welche auf eine
+                        Webseite mit rechtswidriger Tätigkeit/Information verweisen, ersuchen wir um dementsprechenden
+                        Hinweis, um diese nach § 17 Abs. 2 ECG umgehend zu entfernen.</p>
+                    <p style="margin-top: 15px;">Die Urheberrechte Dritter werden vom Betreiber dieser Webseite mit
+                        größter Sorgfalt beachtet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam
+                        werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden derartiger
+                        Rechtsverletzungen werden wir den betroffenen Inhalt umgehend entfernen.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Entrypoint -->
+    <script src="app.js"></script>
+</body>
+
+</html>
