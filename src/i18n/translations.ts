@@ -82,8 +82,8 @@ export const translations: Record<string, any> = {
       timeInfo: "Served Monday–Friday, 11:11 – 15:00"
     },
     marquee: {
-      items1: ["Truffle Tuna Roll", "Black Cod Miso", "Flame-Seared Salmon", "Wagyu Ribeye", "Bluefin Sashimi"],
-      items2: ["Signature Cocktails", "Uji Matcha Mochi", "Premium Sake Flights", "Aromatic Duck Gyoza", "Seared Tuna Tartare"]
+      items1: ["Asia's Finest", "Since 2021", "Elevated Asian Fusion", "Nocturnal Exclusivity", "Curated Wine & Sake"],
+      items2: ["Modern Craftsmanship", "Sensory Dining Experience", "Steps From Stephansdom", "Progressive Techniques", "Curated Atmosphere"]
     },
     reviews: {
       title: "The Guest Chronicles",
@@ -227,8 +227,8 @@ export const translations: Record<string, any> = {
       timeInfo: "Serviert Montag–Freitag, 11:11 – 15:00"
     },
     marquee: {
-      items1: ["Trüffel-Thunfisch-Rolle", "Schwarzer Kohlenfisch Miso", "Flambierter Lachs", "Wagyu Ribeye", "Blauflossen-Sashimi"],
-      items2: ["Signature-Cocktails", "Uji Matcha Mochi", "Premium Sake-Flüge", "Enten-Gyoza", "Thunfisch-Tatar"]
+      items1: ["Asiens Feinstes", "Seit 2021", "Gehobene Asian Fusion", "Nächtliche Exklusivität", "Kuratiert Wein & Sake"],
+      items2: ["Moderne Handwerkskunst", "Sensorisches Esserlebnis", "Schritte Vom Stephansdom", "Progressive Techniken", "Kuratierte Atmosphäre"]
     },
     reviews: {
       title: "Gästebewertungen",
