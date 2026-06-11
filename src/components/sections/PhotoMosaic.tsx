@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { useScroll, useTransform, motion, MotionValue } from 'framer-motion';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface MosaicImage {
   src: string;
@@ -189,6 +190,7 @@ const MosaicImage: React.FC<{
 
 // ─── Sub-component: the central headline ─────────────────────────────────────
 const MosaicHeadline: React.FC<{ scrollYProgress: MotionValue<number> }> = ({ scrollYProgress }) => {
+  const { t } = useLanguage();
   const opacity = useTransform(scrollYProgress, [0.1, 0.35], [0, 1]);
   const scale   = useTransform(scrollYProgress, [0.1, 0.35], [0.85, 1]);
 
@@ -197,8 +199,15 @@ const MosaicHeadline: React.FC<{ scrollYProgress: MotionValue<number> }> = ({ sc
       className="photo-mosaic-headline"
       style={{ opacity, scale }}
     >
-      <span className="mosaic-eyebrow">The Experience</span>
-      <h2 className="mosaic-title">Every plate.<br />Every moment.</h2>
+      <span className="mosaic-eyebrow">{t('mosaic.eyebrow')}</span>
+      <h2 className="mosaic-title">
+        {t('mosaic.title').split('\n').map((line, i) => (
+          <React.Fragment key={i}>
+            {i > 0 && <br />}
+            {line}
+          </React.Fragment>
+        ))}
+      </h2>
       <p 
         className="mosaic-subtext"
         style={{
@@ -214,7 +223,7 @@ const MosaicHeadline: React.FC<{ scrollYProgress: MotionValue<number> }> = ({ sc
           lineHeight: 1.6
         }}
       >
-        A visual archive of culinary craftsmanship and architectural atmosphere.
+        {t('mosaic.subtext')}
       </p>
     </motion.div>
   );

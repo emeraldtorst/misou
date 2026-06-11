@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const Contact: React.FC = () => {
+  const { t } = useLanguage();
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
 
@@ -35,30 +37,30 @@ export const Contact: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="section-number">06</span>
-            <h2 className="section-title">Location & Contact</h2>
+            <h2 className="section-title">{t('contact.title')}</h2>
 
             <div className="contact-block">
-              <span className="contact-label">Address</span>
+              <span className="contact-label">{t('contact.labelAddress')}</span>
               <a href="https://maps.google.com/?q=Marc+Aurel+Straße+2A,+1010+Wien" target="_blank" rel="noopener noreferrer" className="contact-value link-underline">
                 Marc Aurel Straße 2A<br/>1010 Wien, Austria
               </a>
             </div>
 
             <div className="contact-block">
-              <span className="contact-label">Reservations & Enquiries</span>
+              <span className="contact-label">{t('contact.labelReservations')}</span>
               <a href="tel:+436601288953" className="contact-value link-underline">+43 660 12 88 953</a>
               <a href="mailto:office@misou.online" className="contact-value link-underline">office@misou.online</a>
             </div>
 
             <div className="contact-block">
-              <span className="contact-label">Opening Hours</span>
+              <span className="contact-label">{t('contact.labelHours')}</span>
               <div className="hours-grid">
-                <span className="hours-days">Tuesday – Friday</span>
-                <span className="hours-time">11:00 am – 10:00 pm</span>
-                <span className="hours-days">Saturday – Sunday</span>
-                <span className="hours-time">12:00 pm – 10:00 pm</span>
-                <span className="hours-days">Monday</span>
-                <span className="hours-time" style={{ color: 'var(--color-crimson)' }}>Closed</span>
+                <span className="hours-days">{t('contact.daysWeek')}</span>
+                <span className="hours-time">{t('contact.timeWeek')}</span>
+                <span className="hours-days">{t('contact.daysWeekend')}</span>
+                <span className="hours-time">{t('contact.timeWeekend')}</span>
+                <span className="hours-days">{t('contact.dayMonday')}</span>
+                <span className="hours-time" style={{ color: 'var(--color-crimson)' }}>{t('contact.closed')}</span>
               </div>
             </div>
           </motion.div>

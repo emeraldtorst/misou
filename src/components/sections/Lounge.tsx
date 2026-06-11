@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const Lounge: React.FC = () => {
+  const { t } = useLanguage();
   const { scrollYProgress } = useScroll();
   // Simplified parallax for the background image
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
@@ -36,26 +38,26 @@ export const Lounge: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="section-number text-gold">03</span>
-            <h2 className="section-title">The Lounge & Libations</h2>
+            <h2 className="section-title">{t('lounge.title')}</h2>
             <p className="lounge-lead">
-              An evening dining experience extends far beyond the plate. Our lounge offers a quiet sanctuary of smoked glass, warm metal accents, and rare vintages.
+              {t('lounge.lead')}
             </p>
             <p className="lounge-body">
-              Our cellar bridges continents. Discover an extraordinary selection of organic Austrian wines, Grand Cru Champagnes, and small-batch Japanese sakes sourced directly from boutique brewers in Kyoto and Niigata. Each sake is selected for its clean minerality to complement our rich fusion flavors.
+              {t('lounge.body')}
             </p>
 
             <div className="lounge-features">
               <div className="lounge-feature-item">
-                <span className="feature-title">East-West Pairings</span>
-                <span className="feature-desc">Curated sake & wine flights adjusted weekly.</span>
+                <span className="feature-title">{t('lounge.feature1Title')}</span>
+                <span className="feature-desc">{t('lounge.feature1Desc')}</span>
               </div>
               <div className="lounge-feature-item">
-                <span className="feature-title">Botanical Cocktails</span>
-                <span className="feature-desc">House infusions using fresh shiso leaf, yuzu juice, and smoked wood.</span>
+                <span className="feature-title">{t('lounge.feature2Title')}</span>
+                <span className="feature-desc">{t('lounge.feature2Desc')}</span>
               </div>
             </div>
 
-            <a href="#menu" className="btn btn-outline btn-gold" style={{ marginTop: '20px', display: 'inline-block' }}>Explore Drinks</a>
+            <a href="#menu" className="btn btn-outline btn-gold" style={{ marginTop: '20px', display: 'inline-block' }}>{t('lounge.explore')}</a>
           </motion.div>
         </div>
       </div>

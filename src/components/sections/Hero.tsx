@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../../context/LanguageContext';
 import { MagneticButton } from '../ui/MagneticButton';
 
 export const Hero: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="hero-section" id="hero">
       <div className="hero-bg-wrapper">
@@ -19,12 +22,12 @@ export const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          <span className="hero-tagline">Vienna’s Elevated Destination</span>
+          <span className="hero-tagline">{t('hero.tagline')}</span>
           <h1 className="hero-title">
             <span>MISO<span className="gold-dot">•</span>U</span>
           </h1>
           <p className="hero-subtext">
-            A cinematic synthesis of Eastern culinary heritage and Viennese refinement.
+            {t('hero.subtext')}
           </p>
         </motion.div>
 
@@ -35,11 +38,11 @@ export const Hero: React.FC = () => {
           transition={{ duration: 1, delay: 0.6 }}
         >
           <div className="hero-btn-group" style={{ display: 'flex', gap: '1.5rem', marginBottom: '2rem' }}>
-            <MagneticButton as="a" href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-large">Reserve a Table</MagneticButton>
-            <MagneticButton as="a" href="#menu" className="btn btn-outline btn-large">View Full Menu</MagneticButton>
+            <MagneticButton as="a" href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-large">{t('hero.reserve')}</MagneticButton>
+            <MagneticButton as="a" href="#menu" className="btn btn-outline btn-large">{t('hero.viewMenu')}</MagneticButton>
           </div>
           <a href="#ambience" className="explore-btn-link" aria-label="Scroll to introduction">
-            <span className="explore-text">Explore the Journey</span>
+            <span className="explore-text">{t('hero.explore')}</span>
             <div className="scroll-arrow-line"></div>
           </a>
         </motion.div>

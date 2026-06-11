@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const Midday: React.FC = () => {
+  const { t } = useLanguage();
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
 
@@ -48,33 +50,33 @@ export const Midday: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <span className="section-number text-gold">04</span>
-            <h2 className="section-title">The Midday Escape</h2>
-            <span className="lunch-tag">Weekday Lunch Ritual</span>
+            <h2 className="section-title">{t('midday.title')}</h2>
+            <span className="lunch-tag">{t('midday.tag')}</span>
             <p className="lunch-desc">
-              Designed for the Viennese professional, our midday lunch offers elevated speed without compromising culinary integrity. A curated rotation of refined bento sets, dynamic hand rolls, and warm bowls.
+              {t('midday.desc')}
             </p>
 
             <div className="lunch-preview-box">
-              <h4 className="lunch-preview-title">This Week's Selection</h4>
+              <h4 className="lunch-preview-title">{t('midday.selectionTitle')}</h4>
               <ul className="lunch-preview-list">
                 <li>
-                  <span className="lunch-dish">Salmon A La Miso Bento Set</span>
+                  <span className="lunch-dish">{t('midday.dish1')}</span>
                   <span className="lunch-price">€ 19.00</span>
                 </li>
                 <li>
-                  <span className="lunch-dish">Veggie Udon & Gyoza Combo</span>
+                  <span className="lunch-dish">{t('midday.dish2')}</span>
                   <span className="lunch-price">€ 14.50</span>
                 </li>
                 <li>
-                  <span className="lunch-dish">Bulgogi Beef Bento Set</span>
+                  <span className="lunch-dish">{t('midday.dish3')}</span>
                   <span className="lunch-price">€ 16.50</span>
                 </li>
               </ul>
             </div>
 
             <div className="lunch-actions">
-              <a href="#menu" className="btn btn-outline">View Lunch Menu</a>
-              <span className="lunch-time-info">Served Monday–Friday, 11:11 – 15:00</span>
+              <a href="#menu" className="btn btn-outline">{t('midday.viewMenu')}</a>
+              <span className="lunch-time-info">{t('midday.timeInfo')}</span>
             </div>
           </motion.div>
 

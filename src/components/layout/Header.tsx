@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,16 +27,49 @@ export const Header: React.FC = () => {
           </a>
 
           <nav className="desktop-nav">
-            <a href="#ambience" className="nav-link">Ambience</a>
-            <a href="#menu" className="nav-link">Menu</a>
-            <a href="#lounge" className="nav-link">Drinks Lounge</a>
-            <a href="#lunch" className="nav-link">Midday</a>
-            <a href="#reviews" className="nav-link">Reviews</a>
-            <a href="#contact" className="nav-link">Details</a>
+            <a href="#ambience" className="nav-link">{t('nav.ambience')}</a>
+            <a href="#menu" className="nav-link">{t('nav.menu')}</a>
+            <a href="#lounge" className="nav-link">{t('nav.lounge')}</a>
+            <a href="#lunch" className="nav-link">{t('nav.lunch')}</a>
+            <a href="#reviews" className="nav-link">{t('nav.reviews')}</a>
+            <a href="#contact" className="nav-link">{t('nav.details')}</a>
           </nav>
 
-          <div className="header-cta">
-            <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" className="btn btn-outline">Reserve a Table</a>
+          <div className="header-cta" style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+            {/* Language Switcher Toggle */}
+            <div className="lang-switcher" style={{ display: 'flex', gap: '0.5rem', fontFamily: 'var(--font-sans)', fontSize: '0.8rem', fontWeight: 500, letterSpacing: '0.05em' }}>
+              <button 
+                onClick={() => setLanguage('en')}
+                style={{ 
+                  background: 'none', 
+                  border: 'none', 
+                  color: language === 'en' ? 'var(--color-gold)' : 'var(--color-text-secondary)',
+                  cursor: 'pointer',
+                  padding: '0.2rem',
+                  textShadow: language === 'en' ? '0 0 8px rgba(223, 193, 147, 0.4)' : 'none',
+                  transition: 'color 0.3s ease'
+                }}
+              >
+                EN
+              </button>
+              <span style={{ color: 'rgba(255,255,255,0.2)' }}>/</span>
+              <button 
+                onClick={() => setLanguage('de')}
+                style={{ 
+                  background: 'none', 
+                  border: 'none', 
+                  color: language === 'de' ? 'var(--color-gold)' : 'var(--color-text-secondary)',
+                  cursor: 'pointer',
+                  padding: '0.2rem',
+                  textShadow: language === 'de' ? '0 0 8px rgba(223, 193, 147, 0.4)' : 'none',
+                  transition: 'color 0.3s ease'
+                }}
+              >
+                DE
+              </button>
+            </div>
+
+            <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" className="btn btn-outline">{t('nav.reserve')}</a>
           </div>
 
           <button 
@@ -79,12 +114,12 @@ export const Header: React.FC = () => {
               style={{ zIndex: 1 }}
             >
               {[
-                { name: 'The Ambience', href: '#ambience' },
-                { name: 'The Menu', href: '#menu' },
-                { name: 'Wine & Drinks', href: '#lounge' },
-                { name: 'Lunch Menu', href: '#lunch' },
-                { name: 'Guest Reviews', href: '#reviews' },
-                { name: 'Hours & Location', href: '#contact' },
+                { name: t('nav.ambience'), href: '#ambience' },
+                { name: t('nav.menu'), href: '#menu' },
+                { name: t('nav.lounge'), href: '#lounge' },
+                { name: t('nav.lunch'), href: '#lunch' },
+                { name: t('nav.reviews'), href: '#reviews' },
+                { name: t('nav.details'), href: '#contact' },
               ].map((link, i) => (
                 <motion.a 
                   key={i}
@@ -101,6 +136,43 @@ export const Header: React.FC = () => {
                   {link.name}
                 </motion.a>
               ))}
+
+              {/* Mobile Language Switcher */}
+              <motion.div 
+                className="mobile-lang-switcher"
+                variants={{
+                  hidden: { opacity: 0, y: 15 },
+                  visible: { opacity: 1, y: 0 }
+                }}
+                style={{ display: 'flex', gap: '1rem', marginTop: '2rem', fontFamily: 'var(--font-sans)', fontSize: '0.9rem', justifyContent: 'center' }}
+              >
+                <button 
+                  onClick={() => { setLanguage('en'); closeMenu(); }}
+                  style={{ 
+                    background: 'none', 
+                    border: 'none', 
+                    color: language === 'en' ? 'var(--color-gold)' : 'var(--color-text-secondary)',
+                    fontWeight: language === 'en' ? 700 : 400,
+                    cursor: 'pointer'
+                  }}
+                >
+                  EN
+                </button>
+                <span style={{ color: 'rgba(255,255,255,0.2)' }}>|</span>
+                <button 
+                  onClick={() => { setLanguage('de'); closeMenu(); }}
+                  style={{ 
+                    background: 'none', 
+                    border: 'none', 
+                    color: language === 'de' ? 'var(--color-gold)' : 'var(--color-text-secondary)',
+                    fontWeight: language === 'de' ? 700 : 400,
+                    cursor: 'pointer'
+                  }}
+                >
+                  DE
+                </button>
+              </motion.div>
+
               <motion.a 
                 href="https://www.quandoo.at/en/place/miso-u-103470/menu" 
                 target="_blank" 
@@ -113,7 +185,7 @@ export const Header: React.FC = () => {
                   visible: { opacity: 1, y: 0 }
                 }}
               >
-                Reserve Table
+                {t('nav.reserve')}
               </motion.a>
             </motion.nav>
           </motion.div>

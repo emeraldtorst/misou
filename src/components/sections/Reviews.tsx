@@ -1,48 +1,50 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface Review {
   author: string;
-  role: string;
-  text: string;
+  roleKey: string;
+  textKey: string;
   rating: number;
-  date: string;
+  dateKey: string;
 }
 
-const reviewsData: Review[] = [
-  {
-    author: "Maximilian H.",
-    role: "Google Local Guide",
-    text: "Uncompromising quality. The sushi mix and flamed mains were outstanding. The dark, modern interior with the glowing moon accent is absolutely stunning.",
-    rating: 5,
-    date: "1 week ago"
-  },
-  {
-    author: "Sophie B.",
-    role: "Google Reviews",
-    text: "Mere steps from St. Stephen's. Incredible service, extremely attentive staff, and the sake pairing was a revelation. A perfect fine-dining fusion experience in Vienna.",
-    rating: 5,
-    date: "2 weeks ago"
-  },
-  {
-    author: "Ji-Woo Kim",
-    role: "Google Reviews",
-    text: "A masterpiece of Asian fusion. The beef ramen has incredible depth of flavor and the chicken dumplings were handmade perfection. Highly recommended!",
-    rating: 5,
-    date: "3 weeks ago"
-  },
-  {
-    author: "Andreas M.",
-    role: "Google Local Guide",
-    text: "Elegant, intimate, and modern. We sat in the lovely outdoor street terrace. Everything from the sushi rice to the matcha dessert was executed flawlessly.",
-    rating: 5,
-    date: "1 month ago"
-  }
-];
-
 export const Reviews: React.FC = () => {
+  const { t } = useLanguage();
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
+
+  const reviewsData: Review[] = [
+    {
+      author: "Maximilian H.",
+      roleKey: "reviews.r1Role",
+      textKey: "reviews.r1",
+      rating: 5,
+      dateKey: "reviews.r1Date"
+    },
+    {
+      author: "Sophie B.",
+      roleKey: "reviews.r2Role",
+      textKey: "reviews.r2",
+      rating: 5,
+      dateKey: "reviews.r2Date"
+    },
+    {
+      author: "Ji-Woo Kim",
+      roleKey: "reviews.r3Role",
+      textKey: "reviews.r3",
+      rating: 5,
+      dateKey: "reviews.r3Date"
+    },
+    {
+      author: "Andreas M.",
+      roleKey: "reviews.r4Role",
+      textKey: "reviews.r4",
+      rating: 5,
+      dateKey: "reviews.r4Date"
+    }
+  ];
 
   return (
     <section className="reviews-section" id="reviews" style={{ position: 'relative', overflow: 'hidden' }}>
@@ -74,9 +76,9 @@ export const Reviews: React.FC = () => {
           style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '4rem' }}
         >
           <span className="section-number">05</span>
-          <h2 className="section-title">The Guest Chronicles</h2>
+          <h2 className="section-title">{t('reviews.title')}</h2>
           <p className="section-subtitle" style={{ maxWidth: '600px', margin: '0 auto' }}>
-            Hear from our guests who have experienced our modern Asian dining journey in the heart of Vienna.
+            {t('reviews.subtitle')}
           </p>
         </motion.div>
 
@@ -93,9 +95,9 @@ export const Reviews: React.FC = () => {
               <div className="review-header">
                 <div className="review-meta">
                   <span className="review-author">{review.author}</span>
-                  <span className="review-role">{review.role}</span>
+                  <span className="review-role">{t(review.roleKey)}</span>
                 </div>
-                <span className="review-date">{review.date}</span>
+                <span className="review-date">{t(review.dateKey)}</span>
               </div>
               
               <div className="review-stars">
@@ -106,7 +108,7 @@ export const Reviews: React.FC = () => {
                 ))}
               </div>
 
-              <p className="review-text">“{review.text}”</p>
+              <p className="review-text">“{t(review.textKey)}”</p>
             </motion.div>
           ))}
         </div>
@@ -125,7 +127,7 @@ export const Reviews: React.FC = () => {
             rel="noopener noreferrer" 
             className="btn btn-outline"
           >
-            Read All Google Reviews
+            {t('reviews.readMore')}
           </a>
         </motion.div>
 

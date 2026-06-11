@@ -1,5 +1,6 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { LanguageProvider, useLanguage } from './context/LanguageContext';
 import { CustomCursor } from './components/ui/CustomCursor';
 import { ScrollMarquee } from './components/ui/ScrollMarquee';
 import { Header } from './components/layout/Header';
@@ -13,7 +14,8 @@ import { Midday } from './components/sections/Midday';
 import { Reviews } from './components/sections/Reviews';
 import { Contact } from './components/sections/Contact';
 
-function App() {
+function AppContent() {
+  const { t } = useLanguage();
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
 
@@ -58,12 +60,12 @@ function App() {
           </div>
           <div className="section-container" style={{ position: 'relative', zIndex: 1 }}>
             <div className="booking-cta-content">
-              <span className="booking-sub">EXPERIENCE MISO·U</span>
-              <h2 className="booking-title">Secure Your Seat at the Table</h2>
+              <span className="booking-sub">{t('booking.sub')}</span>
+              <h2 className="booking-title">{t('booking.title')}</h2>
               <p className="booking-text">
-                Due to intimate seating layout, we highly recommend planning your reservation in advance. Enjoy custom-tailored dinner tasting journeys or custom drink pairings.
+                {t('booking.text')}
               </p>
-              <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-large">Create Reservation</a>
+              <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-large">{t('booking.reserve')}</a>
             </div>
           </div>
         </section>
@@ -72,6 +74,14 @@ function App() {
 
       <Footer />
     </>
+  );
+}
+
+function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   );
 }
 

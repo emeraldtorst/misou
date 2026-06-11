@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const Footer: React.FC = () => {
+  const { t } = useLanguage();
   const [legalModalOpen, setLegalModalOpen] = useState(false);
   const [legalTab, setLegalTab] = useState<'privacy' | 'imprint'>('privacy');
   const { scrollYProgress } = useScroll();
@@ -37,7 +39,7 @@ export const Footer: React.FC = () => {
             
             <div className="footer-col brand-col">
               <span className="footer-logo">MISO<span className="dot">•</span>U</span>
-              <p className="footer-tagline">Elevated Asian Fusion dining in the historic heart of Vienna’s 1st District.</p>
+              <p className="footer-tagline">{t('footer.tagline')}</p>
               <div className="footer-socials">
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span className="social-icon">IG</span></a>
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span className="social-icon">FB</span></a>
@@ -45,45 +47,45 @@ export const Footer: React.FC = () => {
             </div>
 
             <div className="footer-col">
-              <h5 className="footer-col-title">Hours</h5>
+              <h5 className="footer-col-title">{t('footer.hours')}</h5>
               <div className="footer-hours-list">
                 <div className="hours-item">
-                  <span className="days">Tuesday – Friday</span>
-                  <span className="time">11:00 am – 10:00 pm</span>
+                  <span className="days">{t('contact.daysWeek')}</span>
+                  <span className="time">{t('contact.timeWeek')}</span>
                 </div>
                 <div className="hours-item">
-                  <span className="days">Saturday – Sunday</span>
-                  <span className="time">12:00 pm – 10:00 pm</span>
+                  <span className="days">{t('contact.daysWeekend')}</span>
+                  <span className="time">{t('contact.timeWeekend')}</span>
                 </div>
                 <div className="hours-item">
-                  <span className="days">Monday</span>
-                  <span className="time" style={{ color: 'var(--color-crimson)' }}>Closed</span>
+                  <span className="days">{t('contact.dayMonday')}</span>
+                  <span className="time" style={{ color: 'var(--color-crimson)' }}>{t('contact.closed')}</span>
                 </div>
               </div>
             </div>
 
             <div className="footer-col">
-              <h5 className="footer-col-title">Location</h5>
+              <h5 className="footer-col-title">{t('footer.location')}</h5>
               <p className="footer-address">
                 Marc Aurel Straße 2A<br/>
                 1010 Wien, Austria
               </p>
-              <a href="https://maps.google.com/?q=Marc+Aurel+Straße+2A,+1010+Wien" target="_blank" rel="noopener noreferrer" className="footer-map-link link-underline">Get Directions</a>
+              <a href="https://maps.google.com/?q=Marc+Aurel+Straße+2A,+1010+Wien" target="_blank" rel="noopener noreferrer" className="footer-map-link link-underline">{t('footer.directions')}</a>
             </div>
 
             <div className="footer-col">
-              <h5 className="footer-col-title">Inquiries</h5>
+              <h5 className="footer-col-title">{t('footer.inquiries')}</h5>
               <a href="tel:+436601288953" className="footer-contact-link link-underline">+43 660 12 88 953</a>
               <a href="mailto:office@misou.online" className="footer-contact-link link-underline">office@misou.online</a>
-              <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-gold btn-sm footer-book-btn">Book Table</a>
+              <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-gold btn-sm footer-book-btn">{t('footer.book')}</a>
             </div>
           </div>
 
           <div className="footer-bottom">
-            <p className="copyright">© 2026 MISO·U. All rights reserved. YUNA GMBH.</p>
+            <p className="copyright">{t('footer.copyright')}</p>
             <div className="legal-links">
-              <button className="footer-link link-underline" onClick={() => openModal('imprint')}>Imprint / Impressum</button>
-              <button className="footer-link link-underline" onClick={() => openModal('privacy')}>Privacy Policy / DSGVO</button>
+              <button className="footer-link link-underline" onClick={() => openModal('imprint')}>{t('footer.imprint')}</button>
+              <button className="footer-link link-underline" onClick={() => openModal('privacy')}>{t('footer.privacy')}</button>
             </div>
           </div>
         </div>
@@ -111,36 +113,35 @@ export const Footer: React.FC = () => {
                   className={`legal-tab-btn ${legalTab === 'privacy' ? 'active' : ''}`} 
                   onClick={() => setLegalTab('privacy')}
                 >
-                  Datenschutzerklärung
+                  {t('footer.privacy')}
                 </button>
                 <button 
                   className={`legal-tab-btn ${legalTab === 'imprint' ? 'active' : ''}`} 
                   onClick={() => setLegalTab('imprint')}
                 >
-                  Impressum
+                  {t('footer.imprint')}
                 </button>
               </div>
 
               <div className="legal-modal-content">
                 {legalTab === 'privacy' ? (
                   <div className="legal-panel-content active">
-                    <h2>Erklärung zur Informationspflicht</h2>
-                    <h3 className="text-gold" style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: '1.4rem', margin: '15px 0' }}>Datenschutzerklärung</h3>
-                    <p>In folgender Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Webseite. Wir erheben und verarbeiten personenbezogene Daten nur auf Grundlage der gesetzlichen Bestimmungen.</p>
-                    <p>Sobald Sie als Benutzer auf unsere Webseite zugreifen oder diese besuchen wird Ihre IP-Adresse, Beginn sowie Beginn und Ende der Sitzung erfasst. Dies ist technisch bedingt und stellt somit ein berechtigtes Interesse iSv Art 6 Abs 1 lit f DSGVO.</p>
-                    {/* Placeholder for privacy - keeping it concise in component for brevity */}
+                    <h2>{t('footer.privacyTitle')}</h2>
+                    <h3 className="text-gold" style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: '1.4rem', margin: '15px 0' }}>{t('footer.privacy')}</h3>
+                    <p>{t('footer.privacyIntro1')}</p>
+                    <p>{t('footer.privacyIntro2')}</p>
                   </div>
                 ) : (
                   <div className="legal-panel-content active">
-                    <h2>Impressum</h2>
-                    <h3 className="text-gold" style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: '1.4rem', margin: '15px 0' }}>Informationen und Offenlegung</h3>
-                    <p>gemäß §5 (1) ECG, § 25 MedienG, § 63 GewO und § 14 UGB</p>
-                    <p><strong>Webseitenbetreiber:</strong> YUNA GMBH<br/>
-                    <strong>Firmenbuchnummer:</strong> FN 579185 v<br/>
-                    <strong>Firmenbuchgericht:</strong> HANDELSGERICHT WIEN</p>
-                    <p><strong>Anschrift:</strong> MARC AUREL STRASSE 2A, 1010 Wien</p>
-                    <p><strong>Gewerbeaufsichtbehörde:</strong> MAGISTRAT WIEN<br/>
-                    <strong>Mitgliedschaften:</strong> MITGLIED BEI DER WKO</p>
+                    <h2>{t('footer.imprintTitle')}</h2>
+                    <h3 className="text-gold" style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: '1.4rem', margin: '15px 0' }}>{t('footer.imprintSub')}</h3>
+                    <p>{t('footer.imprintECG')}</p>
+                    <p><strong>{t('footer.operator')}:</strong> YUNA GMBH<br/>
+                    <strong>{t('footer.regNumber')}:</strong> FN 579185 v<br/>
+                    <strong>{t('footer.court')}:</strong> HANDELSGERICHT WIEN</p>
+                    <p><strong>{t('footer.address')}:</strong> MARC AUREL STRASSE 2A, 1010 Wien</p>
+                    <p><strong>{t('footer.authority')}:</strong> MAGISTRAT WIEN<br/>
+                    <strong>{t('footer.memberships')}:</strong> MITGLIED BEI DER WKO</p>
                     <p><strong>Telefon:</strong> 066022834765<br/>
                     <strong>Email:</strong> office@misou.online</p>
                   </div>
