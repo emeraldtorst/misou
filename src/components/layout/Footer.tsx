@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 
 export const Footer: React.FC = () => {
   const [legalModalOpen, setLegalModalOpen] = useState(false);
   const [legalTab, setLegalTab] = useState<'privacy' | 'imprint'>('privacy');
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
 
   const openModal = (tab: 'privacy' | 'imprint') => {
     setLegalTab(tab);
@@ -12,8 +14,25 @@ export const Footer: React.FC = () => {
 
   return (
     <>
-      <footer className="main-footer">
-        <div className="section-container">
+      <footer className="main-footer" style={{ position: 'relative', overflow: 'hidden' }}>
+        <div className="section-bg-wrapper" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
+          <motion.div 
+            style={{ 
+              backgroundImage: "url('images/bar3.jpeg')", 
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              position: 'absolute',
+              top: '-10%',
+              left: 0,
+              width: '100%',
+              height: '120%',
+              y 
+            }}
+          />
+          <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(6, 6, 6, 0.92)' }}></div>
+        </div>
+
+        <div className="section-container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="footer-grid-luxury">
             
             <div className="footer-col brand-col">
@@ -29,12 +48,16 @@ export const Footer: React.FC = () => {
               <h5 className="footer-col-title">Hours</h5>
               <div className="footer-hours-list">
                 <div className="hours-item">
-                  <span className="days">Sunday – Thursday</span>
-                  <span className="time">11:11 – 22:22</span>
+                  <span className="days">Tuesday – Friday</span>
+                  <span className="time">11:00 am – 10:00 pm</span>
                 </div>
                 <div className="hours-item">
-                  <span className="days">Friday – Saturday</span>
-                  <span className="time">11:11 – 23:23</span>
+                  <span className="days">Saturday – Sunday</span>
+                  <span className="time">12:00 pm – 10:00 pm</span>
+                </div>
+                <div className="hours-item">
+                  <span className="days">Monday</span>
+                  <span className="time" style={{ color: 'var(--color-crimson)' }}>Closed</span>
                 </div>
               </div>
             </div>
