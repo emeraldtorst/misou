@@ -1,10 +1,30 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export const Midday: React.FC = () => {
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
+
   return (
-    <section className="lunch-section" id="lunch">
-      <div className="section-container">
+    <section className="lunch-section" id="lunch" style={{ position: 'relative', overflow: 'hidden' }}>
+      <div className="section-bg-wrapper" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
+        <motion.div 
+          style={{ 
+            backgroundImage: "url('images/res2.jpeg')", 
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            position: 'absolute',
+            top: '-10%',
+            left: 0,
+            width: '100%',
+            height: '120%',
+            y 
+          }}
+        />
+        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(6, 6, 6, 0.85)' }}></div>
+      </div>
+
+      <div className="section-container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="lunch-layout">
           
           <motion.div 
