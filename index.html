@@ -124,8 +124,7 @@
             </nav>
 
             <div class="header-cta">
-                <button class="btn btn-outline" id="headerBookBtn" aria-label="Open Booking Panel">Reserve a
-                    Table</button>
+                <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="headerBookBtn" aria-label="Reserve a Table">Reserve a Table</a>
             </div>
 
             <!-- Hamburger Button -->
@@ -146,7 +145,7 @@
             <a href="#lounge" class="mobile-nav-link">Wine & Drinks</a>
             <a href="#lunch" class="mobile-nav-link">Lunch Menu</a>
             <a href="#contact" class="mobile-nav-link">Hours & Location</a>
-            <button class="btn btn-primary" id="mobileBookBtn">Reserve Table</button>
+            <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="mobileBookBtn">Reserve Table</a>
         </nav>
     </div>
 
@@ -172,8 +171,7 @@
                 </div>
 
                 <div class="hero-actions animate-fade">
-                    <button class="btn btn-primary btn-large trigger-booking-modal" id="heroBookBtn">Book
-                        Experience</button>
+                    <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large" id="heroBookBtn">Book Experience</a>
                     <a href="#ambience" class="explore-btn-link" id="exploreBtn" aria-label="Scroll to introduction">
                         <span class="explore-text">Explore the Journey</span>
                         <div class="scroll-arrow-line"></div>
@@ -377,8 +375,7 @@
                         Due to intimate seating layout, we highly recommend planning your reservation in advance. Enjoy
                         custom-tailored dinner tasting journeys or custom drink pairings.
                     </p>
-                    <button class="btn btn-primary btn-large trigger-booking-modal" id="ctaBookBtn">Create
-                        Reservation</button>
+                    <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large" id="ctaBookBtn">Create Reservation</a>
                 </div>
             </div>
         </section>
@@ -981,133 +978,7 @@
         </div>
     </div>
 
-    <!-- Booking Wizard Modal -->
-    <div class="booking-modal-overlay" id="bookingModal">
-        <div class="booking-modal-container">
-            <button class="booking-close-btn" id="bookingCloseBtn" aria-label="Close booking modal">&times;</button>
 
-            <div class="booking-wizard-header">
-                <h3>RESERVATION</h3>
-                <div class="booking-steps-indicator">
-                    <span class="step-dot active" data-step="1"></span>
-                    <span class="step-dot" data-step="2"></span>
-                    <span class="step-dot" data-step="3"></span>
-                </div>
-            </div>
-
-            <!-- Booking Form Wizard -->
-            <form class="booking-wizard-form" id="bookingForm" onsubmit="return false;">
-
-                <!-- Step 1: Details -->
-                <div class="booking-step active" id="step-1">
-                    <h4 class="step-title">Select Table Specifics</h4>
-                    <div class="booking-input-group">
-                        <label for="bookingGuests">Number of Guests</label>
-                        <div class="guests-selector">
-                            <button type="button" class="guest-btn active" data-value="2">2 Guests</button>
-                            <button type="button" class="guest-btn" data-value="3">3 Guests</button>
-                            <button type="button" class="guest-btn" data-value="4">4 Guests</button>
-                            <button type="button" class="guest-btn" data-value="5">5+</button>
-                        </div>
-                        <input type="hidden" name="guests" id="bookingGuests" value="2">
-                    </div>
-
-                    <div class="booking-input-row">
-                        <div class="booking-input-group">
-                            <label for="bookingDate">Date</label>
-                            <input type="date" id="bookingDate" required min="2026-06-11">
-                        </div>
-                        <div class="booking-input-group">
-                            <label for="bookingTime">Preferred Hour</label>
-                            <select id="bookingTime" required>
-                                <option value="" disabled selected>Select Time</option>
-                                <option value="12:00">12:00 (Lunch)</option>
-                                <option value="13:30">13:30 (Lunch)</option>
-                                <option value="17:30">17:30 (Dinner)</option>
-                                <option value="18:30">18:30 (Dinner)</option>
-                                <option value="19:30">19:30 (Dinner)</option>
-                                <option value="20:30">20:30 (Dinner)</option>
-                                <option value="21:15">21:15 (Late Night)</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <button type="button" class="btn btn-primary next-step-btn" id="nextToStep2">Continue
-                        Booking</button>
-                </div>
-
-                <!-- Step 2: Contact Info -->
-                <div class="booking-step" id="step-2">
-                    <h4 class="step-title">Contact Information</h4>
-                    <div class="booking-input-group">
-                        <label for="bookingName">Full Name</label>
-                        <input type="text" id="bookingName" required placeholder="e.g. Alexander von Wien">
-                    </div>
-
-                    <div class="booking-input-row">
-                        <div class="booking-input-group">
-                            <label for="bookingPhone">Phone Number</label>
-                            <input type="tel" id="bookingPhone" required placeholder="+43 660...">
-                        </div>
-                        <div class="booking-input-group">
-                            <label for="bookingEmail">Email Address</label>
-                            <input type="email" id="bookingEmail" required placeholder="name@domain.com">
-                        </div>
-                    </div>
-
-                    <div class="booking-input-group">
-                        <label for="bookingRequests">Special Arrangements / Dietary Preferences</label>
-                        <textarea id="bookingRequests" rows="3"
-                            placeholder="Allergies, wheelchair access, high chairs, romantic corner request..."></textarea>
-                    </div>
-
-                    <div class="booking-navigation-row">
-                        <button type="button" class="btn btn-outline prev-step-btn" id="backToStep1">Back</button>
-                        <button type="button" class="btn btn-primary" id="submitBooking">Confirm Reservation</button>
-                    </div>
-                </div>
-
-                <!-- Step 3: Success Confirmation -->
-                <div class="booking-step" id="step-3">
-                    <div class="booking-success-wrap">
-                        <div class="success-icon-wrap">
-                            <svg class="success-check-svg" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
-                                <circle class="success-circle" cx="26" cy="26" r="25" fill="none" />
-                                <path class="success-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
-                            </svg>
-                        </div>
-                        <h4 class="success-title">Your Table is Prepared</h4>
-                        <p class="success-text">
-                            Thank you. We have secured your reservation at <strong class="text-gold">MISO·U</strong>. A
-                            confirmation email and SMS receipt have been sent.
-                        </p>
-
-                        <div class="success-details-card">
-                            <div class="success-detail-item">
-                                <span class="s-label">Confirmation ID</span>
-                                <span class="s-val text-gold" id="confirmId">MU-8910-A</span>
-                            </div>
-                            <div class="success-detail-item">
-                                <span class="s-label">Date & Time</span>
-                                <span class="s-val" id="confirmDateTime">June 20, 2026 at 19:30</span>
-                            </div>
-                            <div class="success-detail-item">
-                                <span class="s-label">Party Size</span>
-                                <span class="s-val" id="confirmParty">2 Guests</span>
-                            </div>
-                            <div class="success-detail-item">
-                                <span class="s-label">Address</span>
-                                <span class="s-val">Marc Aurel Straße 2A, 1010 Wien</span>
-                            </div>
-                        </div>
-
-                        <button type="button" class="btn btn-outline" id="closeSuccessBtn">Done</button>
-                    </div>
-                </div>
-
-            </form>
-        </div>
-    </div>
 
     <!-- Legal Modal (Privacy & Imprint) -->
     <div class="legal-modal-overlay" id="legalModal">
