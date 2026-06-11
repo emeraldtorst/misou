@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { CustomCursor } from './components/ui/CustomCursor';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
