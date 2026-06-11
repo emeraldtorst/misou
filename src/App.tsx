@@ -4,7 +4,6 @@ import { ScrollMarquee } from './components/ui/ScrollMarquee';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { Hero } from './components/sections/Hero';
-import { ScrollStory } from './components/sections/ScrollStory';
 import { PhotoMosaic } from './components/sections/PhotoMosaic';
 import { Ambience } from './components/sections/Ambience';
 import { Menu } from './components/sections/Menu';
@@ -29,7 +28,6 @@ function App() {
       
       <main>
         <Hero />
-        <ScrollStory />
         <ScrollMarquee />
         <Ambience />
         <PhotoMosaic />
