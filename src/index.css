@@ -2157,26 +2157,225 @@ body.mouse-active .custom-cursor-dot {
 /* Enhanced UX Interactions */
 .menu-item { transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s; padding: 1rem; border-radius: 8px; cursor: pointer; border: 1px solid transparent; } .menu-item:hover { transform: translateY(-5px); background-color: rgba(223, 193, 147, 0.03); border-color: rgba(223, 193, 147, 0.1); } .menu-item:hover .item-name { color: var(--color-gold); }
 
-/* --- NEO-ASIAN / ANIME ELEGANT MOBILE UPGRADES --- */
-:root { --color-crimson: #d90429; --color-neon-red: #ff2a2a; }
+/* --- NEO-ASIAN / ANIME ELEGANT UPGRADES --- */
+:root { 
+    --color-crimson: #d90429; 
+    --color-neon-red: #ff2a2a; 
+}
+
+body { 
+    position: relative; 
+}
+
+/* Katana Spines - Left & Right */
+.katana-spine { 
+    position: fixed; 
+    top: 0; 
+    width: 1px; 
+    height: 100vh; 
+    background: linear-gradient(to bottom, transparent, var(--color-crimson) 20%, var(--color-gold) 80%, transparent); 
+    z-index: 10; 
+    pointer-events: none; 
+    opacity: 0.4; 
+    box-shadow: 0 0 10px rgba(217, 4, 41, 0.3);
+    transition: opacity 0.3s, left 0.3s, right 0.3s;
+}
+.katana-spine-left { 
+    left: 40px; 
+}
+.katana-spine-right { 
+    right: 40px; 
+}
+
+/* Clear Spacing for Spines globally */
+.section-container { 
+    padding: 0 calc(var(--space-md) + 40px) !important; 
+}
+
+/* Section Numbers - Cyber/Anime Glowing Vibe (Global) */
+.section-number { 
+    font-family: var(--font-sans) !important; 
+    font-size: 0.8rem !important; 
+    font-weight: 700 !important; 
+    color: var(--color-crimson) !important; 
+    letter-spacing: 0.3em !important; 
+    text-shadow: 0 0 10px rgba(217,4,41,0.5) !important; 
+    text-transform: uppercase;
+}
+
+/* Buttons - Sharper Katana Edges (Global) */
+.btn { 
+    border-radius: 0 !important; 
+    letter-spacing: 0.3em !important; 
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+.btn-outline { 
+    border-color: var(--color-border-solid) !important; 
+}
+.btn-outline:hover { 
+    background: rgba(217, 4, 41, 0.1) !important; 
+    border-color: var(--color-crimson) !important; 
+    color: var(--color-text-primary) !important; 
+    box-shadow: 0 0 15px rgba(217, 4, 41, 0.25) !important;
+}
+.btn-primary:hover {
+    box-shadow: 0 0 20px rgba(217, 4, 41, 0.4) !important;
+    background-color: var(--color-crimson) !important;
+}
+
+/* Manga Panel Inset Framing for Media Containers (Global) */
+.lunch-image-container, .image-stack, .map-frame-container { 
+    border: 1px solid var(--color-crimson) !important; 
+    border-radius: 0 !important; 
+    position: relative !important; 
+}
+.lunch-image-container::after, .image-stack::after, .map-frame-container::after { 
+    content: ''; 
+    position: absolute; 
+    top: 6px; 
+    left: 6px; 
+    right: -6px; 
+    bottom: -6px; 
+    border: 1px solid rgba(223, 193, 147, 0.25); 
+    pointer-events: none; 
+    z-index: 2; 
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s;
+}
+.lunch-image-container:hover::after, .image-stack:hover::after, .map-frame-container:hover::after {
+    transform: translate(-3px, -3px);
+    border-color: var(--color-crimson);
+}
+
+/* Ambience Philosophy Section Grid & Image Stack Styles (Global) */
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+}
+.intro-text-col {
+    display: flex;
+    flex-direction: column;
+}
+.intro-body {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+.stats-row {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(223, 193, 147, 0.1);
+    padding-top: 1.5rem;
+}
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+.stat-number {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--color-gold);
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+}
+.stat-label {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-top: 0.2rem;
+}
+.image-stack {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+.img-front {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+.img-backdrop {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: -15px;
+    bottom: -15px;
+    border: 1px solid rgba(223, 193, 147, 0.15);
+    background-color: rgba(223, 193, 147, 0.01);
+    z-index: 1;
+    pointer-events: none;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s;
+}
+.image-stack:hover .img-backdrop {
+    transform: translate(-6px, -6px);
+    border-color: var(--color-crimson);
+}
+
+/* Premium Usability & UX Interactions (Global) */
+.logo-link:hover .logo-text {
+    letter-spacing: 0.3em;
+}
+.logo-link:hover .logo-text .dot {
+    color: var(--color-crimson);
+    text-shadow: 0 0 8px var(--color-crimson);
+}
+.nav-link {
+    transition: color 0.3s, text-shadow 0.3s !important;
+}
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-crimson);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+.nav-link:hover {
+    color: var(--color-text-primary) !important;
+    text-shadow: 0 0 5px rgba(217, 4, 41, 0.4);
+}
+.nav-link:hover::before {
+    width: 100%;
+    left: 0;
+}
+/* Disable the old gold hover underline style to prevent double lines */
+.nav-link::after {
+    display: none !important;
+}
+
+/* Responsive Overrides */
 @media (max-width: 768px) {
-    body { position: relative; }
-    /* The Spine - Katana / Manga Panel Edge */
-    .mobile-spine { position: fixed; top: 0; left: 15px; width: 1px; height: 100vh; background: linear-gradient(to bottom, transparent, var(--color-crimson) 20%, var(--color-gold) 80%, transparent); z-index: 10; pointer-events: none; opacity: 0.4; }
-    /* Enhanced Spacing */
-    .section-container { padding: 0 var(--space-md) 0 calc(var(--space-md) + 20px); }
-    section { padding: var(--space-xl) 0; }
-    /* Section Numbers - Cyber/Anime Vibe */
-    .section-number { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; color: var(--color-crimson); letter-spacing: 0.3em; text-shadow: 0 0 10px rgba(217,4,41,0.3); }
-    /* Manga/Anime Inset Framing for Images */
-    .dish-image-wrapper, .lounge-image-wrapper { border: 1px solid var(--color-crimson); border-radius: 0; position: relative; }
-    .dish-image-wrapper::after, .lounge-image-wrapper::after { content: ''; position: absolute; top: 4px; left: 4px; right: -4px; bottom: -4px; border: 1px solid rgba(223, 193, 147, 0.3); pointer-events: none; z-index: 2; }
-    /* Typography Scaling */
-    .section-title { font-size: clamp(2.2rem, 8vw, 3rem); line-height: 1.1; font-weight: 500; }
-    .intro-lead-text { font-size: 1.6rem; font-weight: 400; }
-    /* Buttons - Sharper Edge */
-    .btn { border-radius: 0; letter-spacing: 0.3em; }
-    .btn-outline { border-color: var(--color-border-solid); }
-    .btn-outline:hover { background: rgba(217, 4, 41, 0.1); border-color: var(--color-crimson); color: var(--color-text-primary); }
+    .katana-spine-left { 
+        left: 15px; 
+    }
+    .katana-spine-right { 
+        right: 15px; 
+    }
+    .section-container { 
+        padding: 0 calc(var(--space-md) + 15px) !important; 
+    }
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    .stats-row {
+        gap: 2rem;
+        justify-content: space-between;
+    }
 }
 
