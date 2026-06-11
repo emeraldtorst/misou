@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 6. Scroll Reveals (Intersection Observer) ---
     initScrollReveals();
 
-    // --- 7. Menu Modals & Tabs ---
-    initMenuModals();
+    // --- 7. Inline Menu Tabs ---
+    initInlineMenu();
 
 
 
@@ -233,26 +233,14 @@ function initScrollReveals() {
     });
 }
 
-// --- 7. Menu Modals & Tabs ---
-function initMenuModals() {
-    const modal = document.getElementById('menuModal');
-    const triggers = document.querySelectorAll('.menu-trigger-btn');
-    const closeBtn = document.getElementById('menuCloseBtn');
+// --- 7. Inline Menu Tabs ---
+function initInlineMenu() {
     const tabs = document.querySelectorAll('.menu-tab-btn');
     const panels = document.querySelectorAll('.menu-panel-content');
+    const triggers = document.querySelectorAll('.menu-trigger-btn');
+    const menuSection = document.getElementById('menu');
 
-    if (!modal || !closeBtn) return;
-
-    const openMenuModal = (menuType) => {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        switchTab(menuType);
-    };
-
-    const closeMenuModal = () => {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-    };
+    if (tabs.length === 0) return;
 
     const switchTab = (tabId) => {
         tabs.forEach(tab => {
@@ -272,22 +260,7 @@ function initMenuModals() {
         });
     };
 
-    // Event listeners
-    triggers.forEach(trigger => {
-        trigger.addEventListener('click', () => {
-            const menuType = trigger.getAttribute('data-menu') || 'food';
-            openMenuModal(menuType);
-        });
-    });
-
-    closeBtn.addEventListener('click', closeMenuModal);
-    
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeMenuModal();
-        }
-    });
-
+    // Tab buttons click listeners
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const target = tab.getAttribute('data-target');
@@ -295,11 +268,17 @@ function initMenuModals() {
         });
     });
 
-    // Escape key listener
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeMenuModal();
-        }
+    // Outer triggers (View Full Menu, Explore Drinks, View Lunch Menu)
+    triggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            const targetMenu = trigger.getAttribute('data-menu') || 'food';
+            switchTab(targetMenu);
+            
+            if (menuSection) {
+                // Let anchor behavior handle hash scroll, or force smooth scroll if browser overrides
+                menuSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
     });
 }
 

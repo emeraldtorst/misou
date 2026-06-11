@@ -178,8 +178,11 @@
                 </div>
 
                 <div class="hero-actions animate-fade">
-                    <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank"
-                        rel="noopener noreferrer" class="btn btn-primary btn-large" id="heroBookBtn">Book Experience</a>
+                    <div class="hero-btn-group">
+                        <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-primary btn-large" id="heroBookBtn">Reserve a Table</a>
+                        <a href="#menu" class="btn btn-outline btn-large" id="heroMenuBtn">View Full Menu</a>
+                    </div>
                     <a href="#ambience" class="explore-btn-link" id="exploreBtn" aria-label="Scroll to introduction">
                         <span class="explore-text">Explore the Journey</span>
                         <div class="scroll-arrow-line"></div>
@@ -280,248 +283,34 @@
                 </div>
 
                 <div class="highlights-footer scroll-reveal">
-                    <button class="btn btn-outline menu-trigger-btn" data-menu="food" id="foodMenuBtn">View Full
-                        Menu</button>
+                    <a href="#menu" class="btn btn-outline menu-trigger-btn" data-menu="food" id="foodMenuBtn">View Full Menu</a>
                 </div>
             </div>
         </section>
 
-        <!-- Wine and Drinks Lounge -->
-        <section class="lounge-section" id="lounge">
-            <div class="lounge-bg-wrapper">
-                <div class="lounge-parallax-bg" style="background-image: url('images/wine_lounge.png');"></div>
-                <div class="lounge-overlay"></div>
-            </div>
-
+        
+        <!-- Section 03: The Full Menu (Inline) -->
+        <section class="menu-section" id="menu">
             <div class="section-container">
-                <div class="lounge-content-layout">
-                    <div class="lounge-text-panel scroll-reveal">
-                        <span class="section-number text-gold">03</span>
-                        <h2 class="section-title">The Lounge & Libations</h2>
-                        <p class="lounge-lead">
-                            An evening dining experience extends far beyond the plate. Our lounge offers a quiet
-                            sanctuary of smoked glass, warm metal accents, and rare vintages.
-                        </p>
-                        <p class="lounge-body">
-                            Our cellar bridges continents. Discover an extraordinary selection of organic Austrian
-                            wines, Grand Cru Champagnes, and small-batch Japanese sakes sourced directly from boutique
-                            brewers in Kyoto and Niigata. Each sake is selected for its clean minerality to complement
-                            our rich fusion flavors.
-                        </p>
-
-                        <div class="lounge-features">
-                            <div class="lounge-feature-item">
-                                <span class="feature-title">East-West Pairings</span>
-                                <span class="feature-desc">Curated sake & wine flights adjusted weekly.</span>
-                            </div>
-                            <div class="lounge-feature-item">
-                                <span class="feature-title">Botanical Cocktails</span>
-                                <span class="feature-desc">House infusions using fresh shiso leaf, yuzu juice, and
-                                    smoked wood.</span>
-                            </div>
-                        </div>
-
-                        <button class="btn btn-outline btn-gold menu-trigger-btn" data-menu="drinks"
-                            id="drinksMenuBtn">Explore Drinks</button>
+                <div class="section-header scroll-reveal">
+                    <div class="header-number-wrap">
+                        <span class="section-number">03</span>
+                        <h2 class="section-title">The Culinary Archives</h2>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Lunch Menu Highlight -->
-        <section class="lunch-section" id="lunch">
-            <div class="section-container">
-                <div class="lunch-layout">
-                    <div class="lunch-image-col scroll-reveal">
-                        <div class="lunch-image-container">
-                            <img src="images/lunch_box.png" alt="Premium modern bento-style lunch lunch box"
-                                class="lunch-img">
-                            <div class="lunch-image-frame"></div>
-                        </div>
-                    </div>
-
-                    <div class="lunch-text-col scroll-reveal">
-                        <span class="section-number">04</span>
-                        <h2 class="section-title">The Midday Escape</h2>
-                        <span class="lunch-tag">Weekday Lunch Ritual</span>
-                        <p class="lunch-desc">
-                            Designed for the Viennese professional, our midday lunch offers elevated speed without
-                            compromising culinary integrity. A curated rotation of refined bento sets, dynamic hand
-                            rolls, and warm bowls.
-                        </p>
-
-                        <div class="lunch-preview-box">
-                            <h4 class="lunch-preview-title">This Week's Selection</h4>
-                            <ul class="lunch-preview-list">
-                                <li>
-                                    <span class="lunch-dish">Salmon A La Miso Bento Set</span>
-                                    <span class="lunch-price">€ 19.00</span>
-                                </li>
-                                <li>
-                                    <span class="lunch-dish">Veggie Udon & Gyoza Combo</span>
-                                    <span class="lunch-price">€ 14.50</span>
-                                </li>
-                                <li>
-                                    <span class="lunch-dish">Bulgogi Beef Bento Set</span>
-                                    <span class="lunch-price">€ 16.50</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="lunch-actions">
-                            <button class="btn btn-outline menu-trigger-btn" data-menu="lunch" id="lunchMenuBtn">View
-                                Lunch Menu</button>
-                            <span class="lunch-time-info">Served Monday–Friday, 11:11 – 15:00</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Reservation CTA -->
-        <section class="booking-cta-section">
-            <div class="booking-cta-overlay"></div>
-            <div class="section-container">
-                <div class="booking-cta-content scroll-reveal">
-                    <span class="booking-sub">EXPERIENCE MISO·U</span>
-                    <h2 class="booking-title">Secure Your Seat at the Table</h2>
-                    <p class="booking-text">
-                        Due to intimate seating layout, we highly recommend planning your reservation in advance. Enjoy
-                        custom-tailored dinner tasting journeys or custom drink pairings.
-                    </p>
-                    <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank"
-                        rel="noopener noreferrer" class="btn btn-primary btn-large" id="ctaBookBtn">Create
-                        Reservation</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact, Location & Hours -->
-        <section class="contact-section" id="contact">
-            <div class="section-container">
-                <div class="contact-layout">
-
-                    <!-- Left: Details -->
-                    <div class="contact-details-col scroll-reveal">
-                        <span class="section-number">05</span>
-                        <h2 class="section-title">Location & Contact</h2>
-
-                        <div class="contact-block">
-                            <span class="contact-label">Address</span>
-                            <a href="https://maps.google.com/?q=Marc+Aurel+Straße+2A,+1010+Wien" target="_blank"
-                                rel="noopener noreferrer" class="contact-value link-underline">
-                                Marc Aurel Straße 2A<br>1010 Wien, Austria
-                            </a>
-                        </div>
-
-                        <div class="contact-block">
-                            <span class="contact-label">Reservations & Enquiries</span>
-                            <a href="tel:+436601288953" class="contact-value link-underline">+43 660 12 88 953</a>
-                            <a href="mailto:office@misou.online"
-                                class="contact-value link-underline">office@misou.online</a>
-                        </div>
-
-                        <div class="contact-block">
-                            <span class="contact-label">Opening Hours</span>
-                            <div class="hours-grid">
-                                <span class="hours-days">Sunday – Thursday</span>
-                                <span class="hours-time">11:11 – 22:22</span>
-                                <span class="hours-days">Friday – Saturday</span>
-                                <span class="hours-time">11:11 – 23:23</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right: Styled Dark Map Frame -->
-                    <div class="contact-map-col scroll-reveal">
-                        <div class="map-frame-container">
-                            <!-- High-fidelity aesthetic vector representation of 1st district layout -->
-                            <div class="map-placeholder">
-                                <svg class="map-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <radialGradient id="mapGlow" cx="50%" cy="50%" r="50%">
-                                            <stop offset="0%" stop-color="#dfc193" stop-opacity="0.3" />
-                                            <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0" />
-                                        </radialGradient>
-                                    </defs>
-                                    <!-- Stylized abstract streets -->
-                                    <path d="M 50 0 L 120 400" stroke="#1d1d1d" stroke-width="3" fill="none" />
-                                    <path d="M 150 0 L 220 400" stroke="#1d1d1d" stroke-width="2" fill="none" />
-                                    <path d="M 300 0 L 350 400" stroke="#1d1d1d" stroke-width="3.5" fill="none" />
-                                    <path d="M 0 100 L 400 130" stroke="#1d1d1d" stroke-width="3" fill="none" />
-                                    <path d="M 0 220 L 400 180" stroke="#1d1d1d" stroke-width="4.5" fill="none" />
-                                    <path d="M 0 320 L 400 350" stroke="#1d1d1d" stroke-width="2" fill="none" />
-
-                                    <!-- Danube Canal curve -->
-                                    <path d="M 0 40 Q 200 80 400 30" stroke="#162a22" stroke-width="8" fill="none"
-                                        opacity="0.6" />
-                                    <path d="M 0 40 Q 200 80 400 30" stroke="#cca06a" stroke-width="1" fill="none"
-                                        opacity="0.3" />
-
-                                    <!-- Marc Aurel Strasse -->
-                                    <path class="target-street" d="M 180 50 L 210 240" stroke="#cca06a" stroke-width="3"
-                                        fill="none" opacity="0.7" />
-
-                                    <!-- Ringstrasse indicator -->
-                                    <path d="M 10 380 Q 200 300 390 380" stroke="#2a2a2a" stroke-width="5" fill="none"
-                                        stroke-dasharray="10 5" />
-
-                                    <!-- Spot Highlight -->
-                                    <circle cx="197" cy="148" r="40" fill="url(#mapGlow)" />
-                                    <circle class="map-pulse" cx="197" cy="148" r="8" fill="#dfc193" />
-                                    <circle cx="197" cy="148" r="4" fill="#0a0a0a" />
-                                </svg>
-                                <div class="map-label">
-                                    <span class="map-label-title">MISO•U</span>
-                                    <span class="map-label-desc">Marc Aurel Straße 2A</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="section-container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <span class="footer-logo">MISO•U</span>
-                    <p class="footer-copy-text">
-                        © 2026 MISO·U. All rights reserved. Finest Asian Fusion dining in Vienna.
+                    <p class="section-subtitle">
+                        Explore our comprehensive archives of hand-crafted Asian fusion plates, organic wine pairings, and midday lunch sets.
                     </p>
                 </div>
 
-                <div class="footer-links">
-                    <button class="footer-link link-underline" id="imprintLink"
-                        style="background:none; border:none; padding:0; cursor:pointer;">Imprint</button>
-                    <button class="footer-link link-underline" id="privacyLink"
-                        style="background:none; border:none; padding:0; cursor:pointer;">Privacy Policy</button>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                        class="footer-link link-underline">Instagram</a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
-                        class="footer-link link-underline">Facebook</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+                <div class="menu-inline-container scroll-reveal">
+                    <div class="menu-inline-tabs">
+                        <button class="menu-tab-btn active" data-target="food">Food Menu</button>
+                        <button class="menu-tab-btn" data-target="drinks">Drinks & Wine</button>
+                        <button class="menu-tab-btn" data-target="lunch">Lunch Bento</button>
+                    </div>
 
-    <!-- Interactive Menu Modals -->
-    <div class="menu-modal-overlay" id="menuModal">
-        <div class="menu-modal-container">
-            <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close menu modal">&times;</button>
-            <div class="menu-modal-tabs">
-                <button class="menu-tab-btn" data-target="food">Food</button>
-                <button class="menu-tab-btn" data-target="drinks">Wine & Drinks</button>
-                <button class="menu-tab-btn" data-target="lunch">Lunch</button>
-            </div>
-
-            <div class="menu-modal-content">
-                <!-- Food Menu -->
+                    <div class="menu-inline-content">
+                        <!-- Food Menu -->
                 <div class="menu-panel-content" id="menu-food">
                     <!-- Section: Starters -->
                     <div class="menu-category-section">
@@ -1059,10 +848,271 @@
 
             </div>
         </div>
-    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Wine and Drinks Lounge -->
+        <section class="lounge-section" id="lounge">
+            <div class="lounge-bg-wrapper">
+                <div class="lounge-parallax-bg" style="background-image: url('images/wine_lounge.png');"></div>
+                <div class="lounge-overlay"></div>
+            </div>
 
+            <div class="section-container">
+                <div class="lounge-content-layout">
+                    <div class="lounge-text-panel scroll-reveal">
+                        <span class="section-number text-gold">04</span>
+                        <h2 class="section-title">The Lounge & Libations</h2>
+                        <p class="lounge-lead">
+                            An evening dining experience extends far beyond the plate. Our lounge offers a quiet
+                            sanctuary of smoked glass, warm metal accents, and rare vintages.
+                        </p>
+                        <p class="lounge-body">
+                            Our cellar bridges continents. Discover an extraordinary selection of organic Austrian
+                            wines, Grand Cru Champagnes, and small-batch Japanese sakes sourced directly from boutique
+                            brewers in Kyoto and Niigata. Each sake is selected for its clean minerality to complement
+                            our rich fusion flavors.
+                        </p>
 
+                        <div class="lounge-features">
+                            <div class="lounge-feature-item">
+                                <span class="feature-title">East-West Pairings</span>
+                                <span class="feature-desc">Curated sake & wine flights adjusted weekly.</span>
+                            </div>
+                            <div class="lounge-feature-item">
+                                <span class="feature-title">Botanical Cocktails</span>
+                                <span class="feature-desc">House infusions using fresh shiso leaf, yuzu juice, and
+                                    smoked wood.</span>
+                            </div>
+                        </div>
+
+                        <a href="#menu" class="btn btn-outline btn-gold menu-trigger-btn" data-menu="drinks" id="drinksMenuBtn">Explore Drinks</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lunch Menu Highlight -->
+        <section class="lunch-section" id="lunch">
+            <div class="section-container">
+                <div class="lunch-layout">
+                    <div class="lunch-image-col scroll-reveal">
+                        <div class="lunch-image-container">
+                            <img src="images/lunch_box.png" alt="Premium modern bento-style lunch lunch box"
+                                class="lunch-img">
+                            <div class="lunch-image-frame"></div>
+                        </div>
+                    </div>
+
+                    <div class="lunch-text-col scroll-reveal">
+                        <span class="section-number">05</span>
+                        <h2 class="section-title">The Midday Escape</h2>
+                        <span class="lunch-tag">Weekday Lunch Ritual</span>
+                        <p class="lunch-desc">
+                            Designed for the Viennese professional, our midday lunch offers elevated speed without
+                            compromising culinary integrity. A curated rotation of refined bento sets, dynamic hand
+                            rolls, and warm bowls.
+                        </p>
+
+                        <div class="lunch-preview-box">
+                            <h4 class="lunch-preview-title">This Week's Selection</h4>
+                            <ul class="lunch-preview-list">
+                                <li>
+                                    <span class="lunch-dish">Salmon A La Miso Bento Set</span>
+                                    <span class="lunch-price">€ 19.00</span>
+                                </li>
+                                <li>
+                                    <span class="lunch-dish">Veggie Udon & Gyoza Combo</span>
+                                    <span class="lunch-price">€ 14.50</span>
+                                </li>
+                                <li>
+                                    <span class="lunch-dish">Bulgogi Beef Bento Set</span>
+                                    <span class="lunch-price">€ 16.50</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="lunch-actions">
+                            <a href="#menu" class="btn btn-outline menu-trigger-btn" data-menu="lunch" id="lunchMenuBtn">View Lunch Menu</a>
+                            <span class="lunch-time-info">Served Monday–Friday, 11:11 – 15:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservation CTA -->
+        <section class="booking-cta-section">
+            <div class="booking-cta-overlay"></div>
+            <div class="section-container">
+                <div class="booking-cta-content scroll-reveal">
+                    <span class="booking-sub">EXPERIENCE MISO·U</span>
+                    <h2 class="booking-title">Secure Your Seat at the Table</h2>
+                    <p class="booking-text">
+                        Due to intimate seating layout, we highly recommend planning your reservation in advance. Enjoy
+                        custom-tailored dinner tasting journeys or custom drink pairings.
+                    </p>
+                    <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank"
+                        rel="noopener noreferrer" class="btn btn-primary btn-large" id="ctaBookBtn">Create
+                        Reservation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact, Location & Hours -->
+        <section class="contact-section" id="contact">
+            <div class="section-container">
+                <div class="contact-layout">
+
+                    <!-- Left: Details -->
+                    <div class="contact-details-col scroll-reveal">
+                        <span class="section-number">06</span>
+                        <h2 class="section-title">Location & Contact</h2>
+
+                        <div class="contact-block">
+                            <span class="contact-label">Address</span>
+                            <a href="https://maps.google.com/?q=Marc+Aurel+Straße+2A,+1010+Wien" target="_blank"
+                                rel="noopener noreferrer" class="contact-value link-underline">
+                                Marc Aurel Straße 2A<br>1010 Wien, Austria
+                            </a>
+                        </div>
+
+                        <div class="contact-block">
+                            <span class="contact-label">Reservations & Enquiries</span>
+                            <a href="tel:+436601288953" class="contact-value link-underline">+43 660 12 88 953</a>
+                            <a href="mailto:office@misou.online"
+                                class="contact-value link-underline">office@misou.online</a>
+                        </div>
+
+                        <div class="contact-block">
+                            <span class="contact-label">Opening Hours</span>
+                            <div class="hours-grid">
+                                <span class="hours-days">Sunday – Thursday</span>
+                                <span class="hours-time">11:11 – 22:22</span>
+                                <span class="hours-days">Friday – Saturday</span>
+                                <span class="hours-time">11:11 – 23:23</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Styled Dark Map Frame -->
+                    <div class="contact-map-col scroll-reveal">
+                        <div class="map-frame-container">
+                            <!-- High-fidelity aesthetic vector representation of 1st district layout -->
+                            <div class="map-placeholder">
+                                <svg class="map-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <radialGradient id="mapGlow" cx="50%" cy="50%" r="50%">
+                                            <stop offset="0%" stop-color="#dfc193" stop-opacity="0.3" />
+                                            <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0" />
+                                        </radialGradient>
+                                    </defs>
+                                    <!-- Stylized abstract streets -->
+                                    <path d="M 50 0 L 120 400" stroke="#1d1d1d" stroke-width="3" fill="none" />
+                                    <path d="M 150 0 L 220 400" stroke="#1d1d1d" stroke-width="2" fill="none" />
+                                    <path d="M 300 0 L 350 400" stroke="#1d1d1d" stroke-width="3.5" fill="none" />
+                                    <path d="M 0 100 L 400 130" stroke="#1d1d1d" stroke-width="3" fill="none" />
+                                    <path d="M 0 220 L 400 180" stroke="#1d1d1d" stroke-width="4.5" fill="none" />
+                                    <path d="M 0 320 L 400 350" stroke="#1d1d1d" stroke-width="2" fill="none" />
+
+                                    <!-- Danube Canal curve -->
+                                    <path d="M 0 40 Q 200 80 400 30" stroke="#162a22" stroke-width="8" fill="none"
+                                        opacity="0.6" />
+                                    <path d="M 0 40 Q 200 80 400 30" stroke="#cca06a" stroke-width="1" fill="none"
+                                        opacity="0.3" />
+
+                                    <!-- Marc Aurel Strasse -->
+                                    <path class="target-street" d="M 180 50 L 210 240" stroke="#cca06a" stroke-width="3"
+                                        fill="none" opacity="0.7" />
+
+                                    <!-- Ringstrasse indicator -->
+                                    <path d="M 10 380 Q 200 300 390 380" stroke="#2a2a2a" stroke-width="5" fill="none"
+                                        stroke-dasharray="10 5" />
+
+                                    <!-- Spot Highlight -->
+                                    <circle cx="197" cy="148" r="40" fill="url(#mapGlow)" />
+                                    <circle class="map-pulse" cx="197" cy="148" r="8" fill="#dfc193" />
+                                    <circle cx="197" cy="148" r="4" fill="#0a0a0a" />
+                                </svg>
+                                <div class="map-label">
+                                    <span class="map-label-title">MISO•U</span>
+                                    <span class="map-label-desc">Marc Aurel Straße 2A</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="section-container">
+            <div class="footer-grid-luxury">
+                
+                <!-- Brand / Story Info -->
+                <div class="footer-col brand-col">
+                    <span class="footer-logo">MISO<span class="dot">•</span>U</span>
+                    <p class="footer-tagline">Elevated Asian Fusion dining in the historic heart of Vienna’s 1st District.</p>
+                    <div class="footer-socials">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="social-icon">IG</span></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span class="social-icon">FB</span></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Hours -->
+                <div class="footer-col">
+                    <h5 class="footer-col-title">Hours</h5>
+                    <div class="footer-hours-list">
+                        <div class="hours-item">
+                            <span class="days">Sunday – Thursday</span>
+                            <span class="time">11:11 – 22:22</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="days">Friday – Saturday</span>
+                            <span class="time">11:11 – 23:23</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Location -->
+                <div class="footer-col">
+                    <h5 class="footer-col-title">Location</h5>
+                    <p class="footer-address">
+                        Marc Aurel Straße 2A<br>
+                        1010 Wien, Austria
+                    </p>
+                    <a href="https://maps.google.com/?q=Marc+Aurel+Straße+2A,+1010+Wien" target="_blank" rel="noopener noreferrer" class="footer-map-link link-underline">Get Directions</a>
+                </div>
+
+                <!-- Column 4: Reservations -->
+                <div class="footer-col">
+                    <h5 class="footer-col-title">Inquiries</h5>
+                    <a href="tel:+436601288953" class="footer-contact-link link-underline">+43 660 12 88 953</a>
+                    <a href="mailto:office@misou.online" class="footer-contact-link link-underline">office@misou.online</a>
+                    <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-gold btn-sm footer-book-btn">Book Table</a>
+                </div>
+
+            </div>
+
+            <!-- Bottom Subfooter -->
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 MISO·U. All rights reserved. YUNA GMBH.</p>
+                <div class="legal-links">
+                    <button class="footer-link link-underline" id="imprintLink">Imprint / Impressum</button>
+                    <button class="footer-link link-underline" id="privacyLink">Privacy Policy / DSGVO</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Menu Modals -->
     <!-- Legal Modal (Privacy & Imprint) -->
     <div class="legal-modal-overlay" id="legalModal">
         <div class="legal-modal-container">
