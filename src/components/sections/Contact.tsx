@@ -14,7 +14,7 @@ export const Contact: React.FC = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="section-number">05</span>
+            <span className="section-number">06</span>
             <h2 className="section-title">Location & Contact</h2>
 
             <div className="contact-block">

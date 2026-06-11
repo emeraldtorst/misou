@@ -29,6 +29,7 @@ export const Header: React.FC = () => {
             <a href="#menu" className="nav-link">Menu</a>
             <a href="#lounge" className="nav-link">Drinks Lounge</a>
             <a href="#lunch" className="nav-link">Midday</a>
+            <a href="#reviews" className="nav-link">Reviews</a>
             <a href="#contact" className="nav-link">Details</a>
           </nav>
 
@@ -82,6 +83,7 @@ export const Header: React.FC = () => {
                 { name: 'The Menu', href: '#menu' },
                 { name: 'Wine & Drinks', href: '#lounge' },
                 { name: 'Lunch Menu', href: '#lunch' },
+                { name: 'Guest Reviews', href: '#reviews' },
                 { name: 'Hours & Location', href: '#contact' },
               ].map((link, i) => (
                 <motion.a 

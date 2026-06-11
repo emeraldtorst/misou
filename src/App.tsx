@@ -7,6 +7,7 @@ import { Ambience } from './components/sections/Ambience';
 import { Menu } from './components/sections/Menu';
 import { Lounge } from './components/sections/Lounge';
 import { Midday } from './components/sections/Midday';
+import { Reviews } from './components/sections/Reviews';
 import { Contact } from './components/sections/Contact';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Menu />
         <Lounge />
         <Midday />
+        <Reviews />
         <section className="booking-cta-section">
           <div className="booking-cta-overlay"></div>
           <div className="section-container">
