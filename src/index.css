@@ -19,6 +19,7 @@
     --color-gold-hover: #f1ddbd;    /* Bright champagne */
     --color-jade: #162a22;          /* Deep jade */
     --color-amber: #cca06a;         /* Soft amber */
+    --color-crimson: #d90429;       /* Anime red / katana accent */
     --color-border: rgba(223, 193, 147, 0.15); /* Muted gold border */
     --color-border-solid: rgba(223, 193, 147, 0.3);
     
@@ -2520,16 +2521,24 @@ body {
 .scroll-story-content {
     position: absolute;
     inset: 0;
+    /* No flex centering here — each line is position:absolute centered via left/top */
+}
+
+/* Container that stacks all story lines on top of each other, centered */
+.scroll-story-lines-container {
+    position: absolute;
+    inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
 }
 
 .scroll-story-line {
+    /* Position all lines in exactly the same center spot.
+       Framer Motion animates opacity, scale, y — none of these conflict
+       with the flexbox centering on the parent. */
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
     max-width: 700px;
     padding: 0 3rem;
@@ -2683,7 +2692,7 @@ body {
 }
 
 .marquee-track-reverse .marquee-inner {
-    justify-content: flex-end;
+    /* Reverse row drifts the opposite direction via JS; no flex override needed */
 }
 
 .marquee-track-reverse .marquee-item {

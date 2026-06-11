@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { useScroll, useTransform, motion } from 'framer-motion';
+import { useScroll, useTransform, motion, MotionValue } from 'framer-motion';
 
 interface MosaicImage {
   src: string;
@@ -82,50 +82,26 @@ const images: MosaicImage[] = [
   },
 ];
 
-export const PhotoMosaic: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start end', 'end start'],
-  });
-
-  return (
-    <div className="photo-mosaic-wrapper" ref={containerRef}>
-      <div className="photo-mosaic-sticky">
-        {/* Central headline text */}
-        <motion.div
-          className="photo-mosaic-headline"
-          style={{
-            opacity: useTransform(scrollYProgress, [0.1, 0.4, 0.8, 1], [0, 1, 1, 0]),
-            scale: useTransform(scrollYProgress, [0.1, 0.4], [0.8, 1]),
-          }}
-        >
-          <span className="mosaic-eyebrow">The Experience</span>
-          <h2 className="mosaic-title">Every plate.<br/>Every moment.</h2>
-        </motion.div>
-
-        {/* Floating images */}
-        {images.map((img, i) => (
-          <MosaicImage key={i} img={img} scrollYProgress={scrollYProgress} index={i} total={images.length} />
-        ))}
-      </div>
-    </div>
-  );
-};
-
+// ─── Sub-component: each individual mosaic image ─────────────────────────────
+// Hooks are correctly at the component top level (not inside JSX callbacks)
 const MosaicImage: React.FC<{
   img: MosaicImage;
-  scrollYProgress: ReturnType<typeof useScroll>['scrollYProgress'];
+  scrollYProgress: MotionValue<number>;
   index: number;
-  total: number;
 }> = ({ img, scrollYProgress, index }) => {
-  const delay = index * 0.06;
-  
-  const x = useTransform(scrollYProgress, [0.05 + delay, 0.4 + delay], [img.initialX, 0]);
-  const y = useTransform(scrollYProgress, [0.05 + delay, 0.4 + delay], [img.initialY, 0]);
-  const opacity = useTransform(scrollYProgress, [0.05 + delay, 0.35 + delay, 0.85, 1], [0, 1, 1, 0]);
-  const rotate = useTransform(scrollYProgress, [0.05 + delay, 0.4 + delay], [img.initialRotate, 0]);
-  const scale = useTransform(scrollYProgress, [0.05 + delay, 0.4 + delay], [0.8, 1]);
+  // Stagger each image by 0.05 so they arrive slightly after each other.
+  // Keep all keyframes within [0, 0.75] so no image overshoots its fade-out at 0.88.
+  const delay = index * 0.04;
+  const inStart  = 0.05 + delay;
+  const inEnd    = 0.35 + delay;
+  const outStart = 0.75;
+  const outEnd   = 0.92;
+
+  const x       = useTransform(scrollYProgress, [inStart, inEnd], [img.initialX, 0]);
+  const y       = useTransform(scrollYProgress, [inStart, inEnd], [img.initialY, 0]);
+  const opacity = useTransform(scrollYProgress, [inStart, inEnd, outStart, outEnd], [0, 1, 1, 0]);
+  const rotate  = useTransform(scrollYProgress, [inStart, inEnd], [img.initialRotate, 0]);
+  const scale   = useTransform(scrollYProgress, [inStart, inEnd], [0.75, 1]);
 
   return (
     <motion.div
@@ -145,5 +121,47 @@ const MosaicImage: React.FC<{
     >
       <img src={img.src} alt={img.alt} />
     </motion.div>
+  );
+};
+
+// ─── Sub-component: the central headline ─────────────────────────────────────
+const MosaicHeadline: React.FC<{ scrollYProgress: MotionValue<number> }> = ({ scrollYProgress }) => {
+  const opacity = useTransform(scrollYProgress, [0.1, 0.35, 0.82, 0.95], [0, 1, 1, 0]);
+  const scale   = useTransform(scrollYProgress, [0.1, 0.35], [0.85, 1]);
+
+  return (
+    <motion.div
+      className="photo-mosaic-headline"
+      style={{ opacity, scale }}
+    >
+      <span className="mosaic-eyebrow">The Experience</span>
+      <h2 className="mosaic-title">Every plate.<br />Every moment.</h2>
+    </motion.div>
+  );
+};
+
+// ─── Main export ──────────────────────────────────────────────────────────────
+export const PhotoMosaic: React.FC = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start end', 'end start'],
+  });
+
+  return (
+    <div className="photo-mosaic-wrapper" ref={containerRef}>
+      <div className="photo-mosaic-sticky">
+        <MosaicHeadline scrollYProgress={scrollYProgress} />
+
+        {images.map((img, i) => (
+          <MosaicImage
+            key={i}
+            img={img}
+            scrollYProgress={scrollYProgress}
+            index={i}
+          />
+        ))}
+      </div>
+    </div>
   );
 };

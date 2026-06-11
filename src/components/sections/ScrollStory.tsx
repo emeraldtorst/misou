@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { useScroll, useTransform, motion } from 'framer-motion';
+import { useScroll, useTransform, motion, MotionValue } from 'framer-motion';
 
 const lines = [
   "There is a moment.",
@@ -17,14 +17,29 @@ const lines = [
   "It was remembered.",
 ];
 
-const ScrollLine: React.FC<{ text: string; index: number; total: number; scrollYProgress: ReturnType<typeof useScroll>['scrollYProgress'] }> = ({ text, index, total, scrollYProgress }) => {
-  const start = index / (total + 2);
-  const mid = (index + 1) / (total + 2);
-  const end = (index + 2) / (total + 2);
+// Each line gets its own component so hooks are always at top-level
+const ScrollLine: React.FC<{
+  text: string;
+  index: number;
+  total: number;
+  scrollYProgress: MotionValue<number>;
+}> = ({ text, index, total, scrollYProgress }) => {
+  // Spread lines evenly across 0.05–0.95 of scroll progress
+  // Each line occupies a "window" of 2 / (total + 2) width
+  const window = 1 / (total + 1);
+  const start  = index * window * 0.8;         // fade in starts
+  const mid    = start + window * 0.5;          // fully visible
+  const end    = mid + window * 0.5;            // fade out ends
 
-  const opacity = useTransform(scrollYProgress, [start, mid, end], [0, 1, 0]);
-  const y = useTransform(scrollYProgress, [start, mid], [40, 0]);
-  const scale = useTransform(scrollYProgress, [start, mid, end], [0.9, 1, 0.95]);
+  // Clamp to [0, 1]
+  const s = Math.min(start, 0.95);
+  const m = Math.min(mid,   0.97);
+  const e = Math.min(end,   0.99);
+
+  const opacity = useTransform(scrollYProgress, [s, m, e], [0, 1, 0]);
+  // y: slides up into view, no conflict with centering (centering is done by CSS flexbox on parent)
+  const y       = useTransform(scrollYProgress, [s, m], [30, 0]);
+  const scale   = useTransform(scrollYProgress, [s, m, e], [0.92, 1, 0.96]);
 
   return (
     <motion.p
@@ -47,7 +62,8 @@ export const ScrollStory: React.FC = () => {
     <div className="scroll-story-wrapper" ref={containerRef}>
       <div className="scroll-story-sticky">
         <div className="scroll-story-bg" />
-        <div className="scroll-story-content">
+        {/* Each line is stacked absolutely over each other in the center */}
+        <div className="scroll-story-lines-container">
           {lines.map((line, i) => (
             <ScrollLine
               key={i}
