@@ -36,6 +36,10 @@ export const Header: React.FC = () => {
           </nav>
 
           <div className="header-cta">
+            <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" className="btn btn-outline">{t('nav.reserve')}</a>
+          </div>
+
+          <div className="header-actions" style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', zIndex: 10 }}>
             {/* Language Switcher Toggle */}
             <div className="lang-switcher" style={{ display: 'flex', gap: '0.5rem', fontFamily: 'var(--font-sans)', fontSize: '0.8rem', fontWeight: 500, letterSpacing: '0.05em' }}>
               <button 
@@ -69,17 +73,16 @@ export const Header: React.FC = () => {
               </button>
             </div>
 
-            <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" className="btn btn-outline">{t('nav.reserve')}</a>
+            <button 
+              className={`mobile-menu-toggle ${mobileMenuOpen ? 'active' : ''}`}
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              style={{ zIndex: 100 }}
+            >
+              <span className="burger-line"></span>
+              <span className="burger-line"></span>
+              <span className="burger-line"></span>
+            </button>
           </div>
-
-          <button 
-            className={`mobile-menu-toggle ${mobileMenuOpen ? 'active' : ''}`}
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            <span className="burger-line"></span>
-            <span className="burger-line"></span>
-            <span className="burger-line"></span>
-          </button>
         </div>
       </header>
 
@@ -137,41 +140,7 @@ export const Header: React.FC = () => {
                 </motion.a>
               ))}
 
-              {/* Mobile Language Switcher */}
-              <motion.div 
-                className="mobile-lang-switcher"
-                variants={{
-                  hidden: { opacity: 0, y: 15 },
-                  visible: { opacity: 1, y: 0 }
-                }}
-                style={{ display: 'flex', gap: '1rem', marginTop: '2rem', fontFamily: 'var(--font-sans)', fontSize: '0.9rem', justifyContent: 'center' }}
-              >
-                <button 
-                  onClick={() => { setLanguage('en'); closeMenu(); }}
-                  style={{ 
-                    background: 'none', 
-                    border: 'none', 
-                    color: language === 'en' ? 'var(--color-gold)' : 'var(--color-text-secondary)',
-                    fontWeight: language === 'en' ? 700 : 400,
-                    cursor: 'pointer'
-                  }}
-                >
-                  EN
-                </button>
-                <span style={{ color: 'rgba(255,255,255,0.2)' }}>|</span>
-                <button 
-                  onClick={() => { setLanguage('de'); closeMenu(); }}
-                  style={{ 
-                    background: 'none', 
-                    border: 'none', 
-                    color: language === 'de' ? 'var(--color-gold)' : 'var(--color-text-secondary)',
-                    fontWeight: language === 'de' ? 700 : 400,
-                    cursor: 'pointer'
-                  }}
-                >
-                  DE
-                </button>
-              </motion.div>
+
 
               <motion.a 
                 href="https://www.quandoo.at/en/place/miso-u-103470/menu" 
