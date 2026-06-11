@@ -456,6 +456,7 @@ body.mouse-active .custom-cursor-dot {
     height: 115%; /* Extra height for translation */
     background-size: cover;
     background-position: center;
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
