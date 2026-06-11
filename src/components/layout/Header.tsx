@@ -54,16 +54,66 @@ export const Header: React.FC = () => {
             initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
             animate={{ opacity: 1, backdropFilter: "blur(20px)" }}
             exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
-            style={{ display: 'flex', visibility: 'visible' }}
+            style={{ display: 'flex', visibility: 'visible', position: 'fixed', top: 0, left: 0, width: '100%', height: '100vh', zIndex: 99, background: 'rgba(6, 6, 6, 0.9)' }}
           >
-            <nav className="mobile-nav-links">
-              <a href="#ambience" className="mobile-nav-link" onClick={closeMenu}>The Ambience</a>
-              <a href="#menu" className="mobile-nav-link" onClick={closeMenu}>The Menu</a>
-              <a href="#lounge" className="mobile-nav-link" onClick={closeMenu}>Wine & Drinks</a>
-              <a href="#lunch" className="mobile-nav-link" onClick={closeMenu}>Lunch Menu</a>
-              <a href="#contact" className="mobile-nav-link" onClick={closeMenu}>Hours & Location</a>
-              <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" className="btn btn-primary" onClick={closeMenu}>Reserve Table</a>
-            </nav>
+            {/* Anime/Katana slash background accent */}
+            <motion.div 
+              initial={{ height: 0 }}
+              animate={{ height: '100vh' }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              style={{ position: 'absolute', left: '10%', width: '1px', background: 'linear-gradient(to bottom, #d90429, transparent)', opacity: 0.5, zIndex: 0 }}
+            />
+            <motion.nav 
+              className="mobile-nav-links"
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: 1,
+                  transition: { staggerChildren: 0.1, delayChildren: 0.2 }
+                }
+              }}
+              style={{ zIndex: 1 }}
+            >
+              {[
+                { name: 'The Ambience', href: '#ambience' },
+                { name: 'The Menu', href: '#menu' },
+                { name: 'Wine & Drinks', href: '#lounge' },
+                { name: 'Lunch Menu', href: '#lunch' },
+                { name: 'Hours & Location', href: '#contact' },
+              ].map((link, i) => (
+                <motion.a 
+                  key={i}
+                  href={link.href} 
+                  className="mobile-nav-link" 
+                  onClick={closeMenu}
+                  variants={{
+                    hidden: { opacity: 0, x: -30 },
+                    visible: { opacity: 1, x: 0, transition: { type: 'spring', stiffness: 100 } }
+                  }}
+                  style={{ position: 'relative' }}
+                >
+                  <span style={{ fontSize: '0.6rem', color: '#d90429', position: 'absolute', left: '-20px', top: '10px', opacity: 0.5 }}>0{i+1}</span>
+                  {link.name}
+                </motion.a>
+              ))}
+              <motion.a 
+                href="https://www.quandoo.at/en/place/miso-u-103470/menu" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-outline" 
+                style={{ borderColor: '#d90429', color: '#f5f5f3', marginTop: '2rem' }}
+                onClick={closeMenu}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 }
+                }}
+              >
+                Reserve Table
+              </motion.a>
+            </motion.nav>
           </motion.div>
         )}
       </AnimatePresence>

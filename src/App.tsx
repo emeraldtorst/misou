@@ -15,6 +15,7 @@ function App() {
       {/* Ambient Lighting & Layered Background */}
       <div className="ambient-glow" id="glow1"></div>
       <div className="ambient-glow" id="glow2"></div>
+      <div className="mobile-spine"></div>
       <div className="noise-overlay"></div>
 
       <CustomCursor />

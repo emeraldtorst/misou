@@ -2156,3 +2156,27 @@ body.mouse-active .custom-cursor-dot {
 
 /* Enhanced UX Interactions */
 .menu-item { transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s; padding: 1rem; border-radius: 8px; cursor: pointer; border: 1px solid transparent; } .menu-item:hover { transform: translateY(-5px); background-color: rgba(223, 193, 147, 0.03); border-color: rgba(223, 193, 147, 0.1); } .menu-item:hover .item-name { color: var(--color-gold); }
+
+/* --- NEO-ASIAN / ANIME ELEGANT MOBILE UPGRADES --- */
+:root { --color-crimson: #d90429; --color-neon-red: #ff2a2a; }
+@media (max-width: 768px) {
+    body { position: relative; }
+    /* The Spine - Katana / Manga Panel Edge */
+    .mobile-spine { position: fixed; top: 0; left: 15px; width: 1px; height: 100vh; background: linear-gradient(to bottom, transparent, var(--color-crimson) 20%, var(--color-gold) 80%, transparent); z-index: 10; pointer-events: none; opacity: 0.4; }
+    /* Enhanced Spacing */
+    .section-container { padding: 0 var(--space-md) 0 calc(var(--space-md) + 20px); }
+    section { padding: var(--space-xl) 0; }
+    /* Section Numbers - Cyber/Anime Vibe */
+    .section-number { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; color: var(--color-crimson); letter-spacing: 0.3em; text-shadow: 0 0 10px rgba(217,4,41,0.3); }
+    /* Manga/Anime Inset Framing for Images */
+    .dish-image-wrapper, .lounge-image-wrapper { border: 1px solid var(--color-crimson); border-radius: 0; position: relative; }
+    .dish-image-wrapper::after, .lounge-image-wrapper::after { content: ''; position: absolute; top: 4px; left: 4px; right: -4px; bottom: -4px; border: 1px solid rgba(223, 193, 147, 0.3); pointer-events: none; z-index: 2; }
+    /* Typography Scaling */
+    .section-title { font-size: clamp(2.2rem, 8vw, 3rem); line-height: 1.1; font-weight: 500; }
+    .intro-lead-text { font-size: 1.6rem; font-weight: 400; }
+    /* Buttons - Sharper Edge */
+    .btn { border-radius: 0; letter-spacing: 0.3em; }
+    .btn-outline { border-color: var(--color-border-solid); }
+    .btn-outline:hover { background: rgba(217, 4, 41, 0.1); border-color: var(--color-crimson); color: var(--color-text-primary); }
+}
+
