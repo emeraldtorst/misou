@@ -484,8 +484,8 @@
                 </div>
 
                 <div class="footer-links">
-                    <a href="#imprint" class="footer-link link-underline">Imprint</a>
-                    <a href="#privacy" class="footer-link link-underline">Privacy Policy</a>
+                    <button class="footer-link link-underline" id="imprintLink" style="background:none; border:none; padding:0; cursor:pointer;">Imprint</button>
+                    <button class="footer-link link-underline" id="privacyLink" style="background:none; border:none; padding:0; cursor:pointer;">Privacy Policy</button>
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
                         class="footer-link link-underline">Instagram</a>
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
@@ -1106,6 +1106,107 @@
                 </div>
 
             </form>
+        </div>
+    </div>
+
+    <!-- Legal Modal (Privacy & Imprint) -->
+    <div class="legal-modal-overlay" id="legalModal">
+        <div class="legal-modal-container">
+            <button class="legal-close-btn" id="legalCloseBtn" aria-label="Close legal panel">&times;</button>
+            
+            <div class="legal-modal-tabs">
+                <button class="legal-tab-btn active" data-target="privacy">Datenschutzerklärung</button>
+                <button class="legal-tab-btn" data-target="imprint">Impressum</button>
+            </div>
+            
+            <div class="legal-modal-content">
+                <!-- Privacy Content -->
+                <div class="legal-panel-content active" id="legal-privacy">
+                    <h2>Erklärung zur Informationspflicht</h2>
+                    <h3 class="text-gold" style="font-family:var(--font-serif); font-style:italic; font-size:1.4rem; margin:15px 0;">Datenschutzerklärung</h3>
+                    <p>In folgender Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Webseite. Wir erheben und verarbeiten personenbezogene Daten nur auf Grundlage der gesetzlichen Bestimmungen (Datenschutzgrundverordnung, Telekommunikationsgesetz 2003).</p>
+                    <p>Sobald Sie als Benutzer auf unsere Webseite zugreifen oder diese besuchen wird Ihre IP-Adresse, Beginn sowie Beginn und Ende der Sitzung erfasst. Dies ist technisch bedingt und stellt somit ein berechtigtes Interesse iSv Art 6 Abs 1 lit f DSGVO.</p>
+
+                    <h3>Kontakt mit uns</h3>
+                    <p>Wenn Sie uns, entweder über unser Kontaktformular auf unserer Webseite, oder per Email kontaktieren, dann werden die von Ihnen an uns übermittelten Daten zwecks Bearbeitung Ihrer Anfrage oder für den Fall von weiteren Anschlussfragen für sechs Monate bei uns gespeichert. Es erfolgt, ohne Ihre Einwilligung, keine Weitergabe Ihrer übermittelten Daten.</p>
+
+                    <h3>Cookies</h3>
+                    <p>Unsere Website verwendet so genannte Cookies. Dabei handelt es sich um kleine Textdateien, die mit Hilfe des Browsers auf Ihrem Endgerät abgelegt werden. Sie richten keinen Schaden an. Wir nutzen Cookies dazu, unser Angebot nutzerfreundlich zu gestalten. Einige Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Sie ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen. Wenn Sie dies nicht wünschen, so können Sie Ihren Browser so einrichten, dass er Sie über das Setzen von Cookies informiert und Sie dies nur im Einzelfall erlauben. Bei der Deaktivierung von Cookies kann die Funktionalität unserer Website eingeschränkt sein.</p>
+
+                    <h3>Google Maps</h3>
+                    <p>Unsere Website verwendet Funktionen des Webkartendienstes „Google Maps“. Der Dienstanbieter dieser Funktion ist:
+                    <br><strong>Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. Tel: +353 1 543 1000</strong></p>
+                    <p>Im Zuge der Nutzung von Google Maps ist es notwendig Ihre IP-Adresse zu speichern und zu verarbeiten. Google überträgt in der Regel an einen Server in den USA und speichert die Daten dort. Die Verarbeitung geschieht durch den Diensteanbieter (oben genannt), der Betreiber dieser Homepage hat keinen Einfluss auf die Übertragung der Daten.</p>
+                    <p>Die Datenverarbeitung erfolgt auf Basis der gesetzlichen Bestimmungen des § 96 Abs 3 TKG sowie des Art 6 Abs 1 lit f (berechtigtes Interesse) der DSGVO. Die Nutzung von Google Maps erhöht die Auffindbarkeit der Orte, welche auf unserer Webseite bereitgestellt werden.</p>
+                    <p>Weitere Informationen über den Umgang mit Nutzerdaten des Diensteanbieters „Google“ können Sie der Datenschutzerklärung entnehmen:
+                    <br><a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer" class="link-underline">https://policies.google.com/privacy?hl=de</a>.</p>
+                    <p>Google verarbeitet die Daten auch in den USA, hat sich jedoch dem EU-US Privacy-Shield unterworfen:
+                    <br><a href="https://www.privacyshield.gov/EU-US-Framework" target="_blank" rel="noopener noreferrer" class="link-underline">https://www.privacyshield.gov/EU-US-Framework</a>.</p>
+
+                    <h3>Google Fonts</h3>
+                    <p>Unsere Website verwendet Schriftarten von „Google Fonts“. Der Dienstanbieter dieser Funktion ist:
+                    <br><strong>Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. Tel: +353 1 543 1000</strong></p>
+                    <p>Beim Aufrufen dieser Webseite lädt Ihr Browser Schriftarten und speichert diese in den Cache. Da Sie, als Besucher der Webseite, Daten des Dienstanbieters empfangen kann Google unter Umständen Cookies auf Ihrem Rechner setzen oder analysieren.</p>
+                    <p>Die Nutzung von „Google-Fonts“ dient der Optimierung unserer Dienstleistung und der einheitlichen Darstellung von Inhalten. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.</p>
+                    <p>Weitere Informationen zu Google Fonts erhalten Sie unter folgendem Link:
+                    <br><a href="https://developers.google.com/fonts/faq" target="_blank" rel="noopener noreferrer" class="link-underline">https://developers.google.com/fonts/faq</a>.
+                    <br>Weitere Informationen über den Umgang mit Nutzerdaten von Google können Sie der Datenschutzerklärung entnehmen:
+                    <br><a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer" class="link-underline">https://policies.google.com/privacy?hl=de</a>.
+                    <br>Google verarbeitet die Daten auch in den USA, hat sich jedoch dem EU-US Privacy-Shield unterworfen:
+                    <br><a href="https://www.privacyshield.gov/EU-US-Framework" target="_blank" rel="noopener noreferrer" class="link-underline">https://www.privacyshield.gov/EU-US-Framework</a>.</p>
+
+                    <h3>Server-Log Files</h3>
+                    <p>Diese Webseite und der damit verbundene Provider erhebt im Zuge der Webseitennutzung automatisch Informationen im Rahmen sogenannter „Server-Log Files“. Dies betrifft insbesondere:</p>
+                    <ul style="margin: 10px 0 20px 20px; line-height: 1.8; color: var(--color-text-secondary); font-size: 0.9rem;">
+                        <li>IP-Adresse oder Hostname</li>
+                        <li>den verwendeten Browser</li>
+                        <li>Aufenthaltsdauer auf der Webseite sowie Datum und Uhrzeit</li>
+                        <li>aufgerufene Seiten der Webseite</li>
+                        <li>Spracheinstellungen und Betriebssystem</li>
+                        <li>„Leaving-Page“ (auf welcher URL hat der Benutzer die Webseite verlassen)</li>
+                        <li>ISP (Internet Service Provider)</li>
+                    </ul>
+                    <p>Diese erhobenen Informationen werden nicht personenbezogen verarbeitet oder mit personenbezogenen Daten in Verbindung gebracht.</p>
+                    <p>Der Webseitenbetreiber behält es sich vor, im Falle von Bekanntwerden rechtswidriger Tätigkeiten, diese Daten auszuwerten oder zu überprüfen.</p>
+
+                    <h3>Ihre Rechte als Betroffener</h3>
+                    <p>Sie als Betroffener haben bezüglich Ihrer Daten, welche bei uns gespeichert sind grundsätzlich ein Recht auf:</p>
+                    <ul style="margin: 10px 0 20px 20px; line-height: 1.8; color: var(--color-text-secondary); font-size: 0.9rem;">
+                        <li>Auskunft</li>
+                        <li>Löschung der Daten</li>
+                        <li>Berichtigung der Daten</li>
+                        <li>Übertragbarkeit der Daten</li>
+                        <li>Wiederruf und Widerspruch zur Datenverarbeitung</li>
+                        <li>Einschränkung</li>
+                    </ul>
+                    <p>Wenn sie vermuten, dass im Zuge der Verarbeitung Ihrer Daten Verstöße gegen das Datenschutzrecht passiert sind, so haben Sie die Möglichkeit sich bei uns (<a href="mailto:office@misou.online" class="link-underline">office@misou.online</a>) oder der Datenschutzbehörde zu beschweren.</p>
+                </div>
+
+                <!-- Imprint Content -->
+                <div class="legal-panel-content" id="legal-imprint">
+                    <h2>Impressum</h2>
+                    <h3 class="text-gold" style="font-family:var(--font-serif); font-style:italic; font-size:1.4rem; margin:15px 0;">Informationen und Offenlegung gemäß §5 (1) ECG, § 25 MedienG, § 63 GewO und § 14 UGB</h3>
+                    <p><strong>Webseitenbetreiber:</strong> YUNA GMBH</p>
+                    <p><strong>Firmenbuchnummer:</strong> FN 579185 v</p>
+                    <p><strong>Firmenbuchgericht:</strong> HANDELSGERICHT WIEN</p>
+                    <p><strong>Anschrift:</strong> MARC AUREL STRASSE 2A, 1010 Wien</p>
+                    <p><strong>Gewerbeaufsichtsbehörde:</strong> MAGISTRAT WIEN</p>
+                    <p><strong>Mitgliedschaften:</strong> MITGLIED BEI DER WKO</p>
+                    
+                    <h3 class="text-gold" style="font-family:var(--font-serif); font-style:italic; font-size:1.4rem; margin:25px 0 15px 0;">Kontaktdaten</h3>
+                    <p><strong>Telefon:</strong> <a href="tel:066022834765" class="link-underline">066022834765</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:office@misou.online" class="link-underline">office@misou.online</a></p>
+                    
+                    <h3 class="text-gold" style="font-family:var(--font-serif); font-style:italic; font-size:1.4rem; margin:25px 0 15px 0;">Rechtliche Hinweise</h3>
+                    <p><strong>Anwendbare Rechtsvorschrift:</strong> <a href="https://www.ris.bka.gv.at" target="_blank" rel="noopener noreferrer" class="link-underline">www.ris.bka.gv.at</a></p>
+                    <p style="margin-top: 15px;"><strong>Online Streitbeilegung:</strong> Verbraucher, welche in Österreich oder in einem sonstigen Vertragsstaat der ODR-VO niedergelassen sind, haben die Möglichkeit Probleme bezüglich dem entgeltlichen Kauf von Waren oder Dienstleistungen im Rahmen einer Online-Streitbeilegung (nach OS, AStG) zu lösen. Die Europäische Kommission stellt eine Plattform hierfür bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" class="link-underline">https://ec.europa.eu/consumers/odr</a></p>
+                    
+                    <p style="margin-top: 15px;"><strong>Urheberrecht:</strong> Die Inhalte dieser Webseite unterliegen, soweit dies rechtlich möglich ist, diversen Schutzrechten (z.B dem Urheberrecht). Jegliche Verwendung/Verbreitung von bereitgestelltem Material, welche urheberrechtlich untersagt ist, bedarf schriftlicher Zustimmung des Webseitenbetreibers.</p>
+                    
+                    <p style="margin-top: 15px;"><strong>Haftungsausschluss:</strong> Trotz sorgfältiger inhaltlicher Kontrolle übernimmt der Webseitenbetreiber dieser Webseite keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich. Sollten Sie dennoch auf ausgehende Links aufmerksam werden, welche auf eine Webseite mit rechtswidriger Tätigkeit/Information verweisen, ersuchen wir um dementsprechenden Hinweis, um diese nach § 17 Abs. 2 ECG umgehend zu entfernen.</p>
+                    <p style="margin-top: 15px;">Die Urheberrechte Dritter werden vom Betreiber dieser Webseite mit größter Sorgfalt beachtet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden derartiger Rechtsverletzungen werden wir den betroffenen Inhalt umgehend entfernen.</p>
+                </div>
+            </div>
         </div>
     </div>
 

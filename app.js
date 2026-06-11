@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 8. Booking Reservation Wizard ---
     initBookingWizard();
+
+    // --- 9. Legal Modals (Privacy & Imprint) ---
+    initLegalModals();
 });
 
 /* ==========================================================================
@@ -459,6 +462,82 @@ function initBookingWizard() {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
             closeBookingModal();
+        }
+    });
+}
+
+// --- 9. Legal Modals (Privacy & Imprint) ---
+function initLegalModals() {
+    const modal = document.getElementById('legalModal');
+    const imprintLink = document.getElementById('imprintLink');
+    const privacyLink = document.getElementById('privacyLink');
+    const closeBtn = document.getElementById('legalCloseBtn');
+    const tabs = document.querySelectorAll('.legal-tab-btn');
+    const panels = document.querySelectorAll('.legal-panel-content');
+
+    if (!modal || !closeBtn) return;
+
+    const openLegalModal = (tabType) => {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        switchTab(tabType);
+    };
+
+    const closeLegalModal = () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+
+    const switchTab = (tabId) => {
+        tabs.forEach(tab => {
+            if (tab.getAttribute('data-target') === tabId) {
+                tab.classList.add('active');
+            } else {
+                tab.classList.remove('active');
+            }
+        });
+
+        panels.forEach(panel => {
+            if (panel.id === `legal-${tabId}`) {
+                panel.classList.add('active');
+            } else {
+                panel.classList.remove('active');
+            }
+        });
+    };
+
+    if (imprintLink) {
+        imprintLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            openLegalModal('imprint');
+        });
+    }
+
+    if (privacyLink) {
+        privacyLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            openLegalModal('privacy');
+        });
+    }
+
+    closeBtn.addEventListener('click', closeLegalModal);
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeLegalModal();
+        }
+    });
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.getAttribute('data-target');
+            switchTab(target);
+        });
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeLegalModal();
         }
     });
 }
