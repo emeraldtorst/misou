@@ -15,7 +15,7 @@ interface MosaicImage {
 
 const images: MosaicImage[] = [
   {
-    src: 'images/hero_ambient.png',
+    src: 'images/japan1.jpeg',
     alt: 'MISO·U interior with Japanese parasols',
     top: '8vh',
     left: '5vw',
@@ -26,7 +26,7 @@ const images: MosaicImage[] = [
     initialRotate: -4,
   },
   {
-    src: 'images/dish_tartare.png',
+    src: 'images/f3.jpeg',
     alt: 'Tartare dish',
     top: '4vh',
     left: '34vw',
@@ -37,7 +37,7 @@ const images: MosaicImage[] = [
     initialRotate: 2,
   },
   {
-    src: 'images/wine_lounge.png',
+    src: 'images/bar1.jpeg',
     alt: 'Wine selection',
     top: '5vh',
     left: '68vw',
@@ -48,7 +48,7 @@ const images: MosaicImage[] = [
     initialRotate: 5,
   },
   {
-    src: 'images/dish_cod.png',
+    src: 'images/f4.jpeg',
     alt: 'Black cod dish',
     top: '44vh',
     left: '12vw',
@@ -59,7 +59,7 @@ const images: MosaicImage[] = [
     initialRotate: -6,
   },
   {
-    src: 'images/lunch_box.png',
+    src: 'images/f5.jpeg',
     alt: 'Premium bento lunch box',
     top: '46vh',
     left: '38vw',
@@ -70,7 +70,7 @@ const images: MosaicImage[] = [
     initialRotate: 1,
   },
   {
-    src: 'images/dish_duck.png',
+    src: 'images/f6.jpeg',
     alt: 'Duck main course',
     top: '42vh',
     left: '68vw',

@@ -12,7 +12,7 @@ export const Lounge: React.FC = () => {
         <motion.div 
           className="lounge-parallax-bg" 
           style={{ 
-            backgroundImage: "url('images/wine_lounge.png')", 
+            backgroundImage: "url('images/bar2.jpeg')", 
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             position: 'absolute',
