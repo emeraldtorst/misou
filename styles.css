@@ -675,9 +675,19 @@ body.mouse-active .custom-cursor-dot {
 /* --- Section: Philosophy (Intro) --- */
 .intro-section {
     padding: var(--space-xl) 0;
-    background-color: var(--color-bg-base);
+    background: radial-gradient(circle at 85% 30%, rgba(22, 42, 34, 0.15) 0%, var(--color-bg-base) 70%);
     position: relative;
     z-index: 2;
+}
+.intro-section::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 5%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(223, 193, 147, 0.08) 30%, rgba(223, 193, 147, 0.08) 70%, transparent);
+    pointer-events: none;
 }
 .intro-layout {
     display: grid;
@@ -719,9 +729,19 @@ body.mouse-active .custom-cursor-dot {
 /* --- Section: Culinary Highlights --- */
 .highlights-section {
     padding: var(--space-xl) 0;
-    background-color: var(--color-bg-surface);
+    background: radial-gradient(circle at 15% 20%, rgba(204, 160, 106, 0.04) 0%, var(--color-bg-surface) 60%), linear-gradient(to bottom, #0c0c0c, #070707);
     position: relative;
     z-index: 2;
+}
+.highlights-section::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    right: 5%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(223, 193, 147, 0.08) 30%, rgba(223, 193, 147, 0.08) 70%, transparent);
+    pointer-events: none;
 }
 
 .dish-showcase {
@@ -871,7 +891,7 @@ body.mouse-active .custom-cursor-dot {
 }
 
 .lounge-text-panel {
-    background-color: var(--color-bg-glass);
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.85) 0%, rgba(10, 10, 10, 0.95) 100%);
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
     border: 1px solid var(--color-border);
@@ -928,8 +948,20 @@ body.mouse-active .custom-cursor-dot {
 .lunch-section {
     padding: var(--space-xl) 0;
     background-color: var(--color-bg-base);
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M76 0h1v80h-1V0zM3 0h1v80H3V0zM0 76v1h80v-1H0zM0 3v1h80V3H0z' fill='%23dfc193' fill-opacity='0.008' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-attachment: fixed;
     position: relative;
     z-index: 2;
+}
+.lunch-section::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 5%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(223, 193, 147, 0.08) 30%, rgba(223, 193, 147, 0.08) 70%, transparent);
+    pointer-events: none;
 }
 .lunch-layout {
     display: grid;
@@ -1043,11 +1075,29 @@ body.mouse-active .custom-cursor-dot {
 .booking-cta-section {
     position: relative;
     padding: var(--space-xl) 0;
-    background-color: var(--color-bg-surface);
+    background: radial-gradient(circle at 50% 50%, rgba(223, 193, 147, 0.05) 0%, var(--color-bg-surface) 75%);
     overflow: hidden;
     text-align: center;
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
+}
+.booking-cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(223, 193, 147, 0.15), transparent);
+}
+.booking-cta-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(223, 193, 147, 0.15), transparent);
 }
 .booking-cta-content {
     max-width: 750px;
@@ -1084,8 +1134,20 @@ body.mouse-active .custom-cursor-dot {
 .contact-section {
     padding: var(--space-xl) 0;
     background-color: var(--color-bg-base);
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M76 0h1v80h-1V0zM3 0h1v80H3V0zM0 76v1h80v-1H0zM0 3v1h80V3H0z' fill='%23dfc193' fill-opacity='0.008' fill-rule='evenodd'/%3E%3C/svg%3E"), radial-gradient(circle at 10% 80%, rgba(22, 42, 34, 0.12) 0%, var(--color-bg-base) 75%);
+    background-attachment: fixed, scroll;
     position: relative;
     z-index: 2;
+}
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    right: 5%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(223, 193, 147, 0.08) 30%, rgba(223, 193, 147, 0.08) 70%, transparent);
+    pointer-events: none;
 }
 .contact-layout {
     display: grid;
