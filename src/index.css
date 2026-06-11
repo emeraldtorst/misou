@@ -2488,3 +2488,226 @@ body {
     }
 }
 
+/* ==========================================================================
+   SCROLL EXPERIENCE SYSTEM (11elevenbar-inspired)
+   ========================================================================== */
+
+/* --- ScrollStory: Pinned text reveal section --- */
+.scroll-story-wrapper {
+    position: relative;
+    height: 400vh;
+    background: var(--color-bg-base);
+    overflow: clip;
+}
+
+.scroll-story-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.scroll-story-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(217, 4, 41, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.scroll-story-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-story-line {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 700px;
+    padding: 0 3rem;
+    text-align: center;
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color-text-primary);
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    pointer-events: none;
+    will-change: opacity, transform;
+}
+
+.scroll-story-skip {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.scroll-story-skip-btn {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+}
+
+.scroll-story-skip-btn:hover {
+    color: var(--color-crimson);
+    border-color: var(--color-crimson);
+}
+
+/* --- PhotoMosaic: Floating image assembly section --- */
+.photo-mosaic-wrapper {
+    position: relative;
+    height: 300vh;
+    background: var(--color-bg-base);
+    overflow: clip;
+}
+
+.photo-mosaic-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.photo-mosaic-headline {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    gap: 0.8rem;
+}
+
+.mosaic-eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--color-crimson);
+    text-shadow: 0 0 10px rgba(217, 4, 41, 0.4);
+}
+
+.mosaic-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-text-primary);
+    line-height: 1.1;
+    mix-blend-mode: difference;
+}
+
+.mosaic-image-item {
+    overflow: hidden;
+    will-change: transform, opacity;
+}
+
+.mosaic-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    filter: brightness(0.8) contrast(1.1);
+    transition: filter 0.6s ease;
+}
+
+.mosaic-image-item:hover img {
+    filter: brightness(1) contrast(1.1);
+}
+
+/* --- ScrollMarquee: Velocity-driven text ticker --- */
+.scroll-marquee-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 4rem 0;
+    background: var(--color-bg-base);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.marquee-track {
+    width: 100%;
+    overflow: hidden;
+}
+
+.marquee-inner {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    white-space: nowrap;
+    width: max-content;
+    will-change: transform;
+}
+
+.marquee-item {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    flex-shrink: 0;
+    transition: color 0.3s ease;
+}
+
+.marquee-dot {
+    color: var(--color-crimson) !important;
+    font-size: 1.2rem;
+    text-shadow: 0 0 8px rgba(217, 4, 41, 0.5);
+}
+
+.marquee-track-reverse .marquee-inner {
+    justify-content: flex-end;
+}
+
+.marquee-track-reverse .marquee-item {
+    color: rgba(255, 255, 255, 0.08);
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    letter-spacing: 0.4em;
+}
+
+/* Mobile simplifications for scroll effects */
+@media (max-width: 768px) {
+    .scroll-story-line {
+        font-size: clamp(1.3rem, 5.5vw, 2rem);
+        padding: 0 2rem;
+    }
+
+    .photo-mosaic-wrapper {
+        display: none; /* mosaic too complex on small screens */
+    }
+
+    .scroll-marquee-wrapper {
+        padding: 2.5rem 0;
+    }
+
+    .marquee-item {
+        font-size: 1.1rem;
+    }
+}
