@@ -49,42 +49,16 @@ export const Contact: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="map-frame-container">
-              <div className="map-placeholder">
-                <svg className="map-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <radialGradient id="mapGlow" cx="50%" cy="50%" r="50%">
-                      <stop offset="0%" stopColor="#dfc193" stopOpacity="0.3" />
-                      <stop offset="100%" stopColor="#0a0a0a" stopOpacity="0" />
-                    </radialGradient>
-                  </defs>
-                  <path d="M 50 0 L 120 400" stroke="#1d1d1d" strokeWidth="3" fill="none" />
-                  <path d="M 150 0 L 220 400" stroke="#1d1d1d" strokeWidth="2" fill="none" />
-                  <path d="M 300 0 L 350 400" stroke="#1d1d1d" strokeWidth="3.5" fill="none" />
-                  <path d="M 0 100 L 400 130" stroke="#1d1d1d" strokeWidth="3" fill="none" />
-                  <path d="M 0 220 L 400 180" stroke="#1d1d1d" strokeWidth="4.5" fill="none" />
-                  <path d="M 0 320 L 400 350" stroke="#1d1d1d" strokeWidth="2" fill="none" />
-
-                  <path d="M 0 40 Q 200 80 400 30" stroke="#162a22" strokeWidth="8" fill="none" opacity="0.6" />
-                  <path d="M 0 40 Q 200 80 400 30" stroke="#cca06a" strokeWidth="1" fill="none" opacity="0.3" />
-
-                  <path className="target-street" d="M 180 50 L 210 240" stroke="#cca06a" strokeWidth="3" fill="none" opacity="0.7" />
-
-                  <path d="M 10 380 Q 200 300 390 380" stroke="#2a2a2a" strokeWidth="5" fill="none" strokeDasharray="10 5" />
-
-                  <circle cx="197" cy="148" r="40" fill="url(#mapGlow)" />
-                  <motion.circle 
-                    className="map-pulse" 
-                    cx="197" cy="148" r="8" fill="#dfc193" 
-                    animate={{ scale: [1, 1.5, 1], opacity: [1, 0, 1] }}
-                    transition={{ repeat: Infinity, duration: 2 }}
-                  />
-                  <circle cx="197" cy="148" r="4" fill="#0a0a0a" />
-                </svg>
-                <div className="map-label">
-                  <span className="map-label-title">MISO•U</span>
-                  <span className="map-label-desc">Marc Aurel Straße 2A</span>
-                </div>
-              </div>
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.7495574548483!2d16.371283677274092!3d48.21183184534164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d079e0a0d421d%3A0xe54d4ff46b9d62d2!2sMarc-Aurel-Stra%C3%9Fe%202A%2C%201010%20Wien!5e0!3m2!1sen!2sat!4v1718131364539!5m2!1sen!2sat"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="MISO·U Location Map"
+              ></iframe>
             </div>
           </motion.div>
 
