@@ -207,6 +207,15 @@ body.mouse-active .custom-cursor-dot {
     background-color: rgba(223, 193, 147, 0.08);
     border-color: var(--color-gold-hover);
 }
+.custom-cursor.clicked {
+    transform: translate(-50%, -50%) scale(0.8);
+    background-color: rgba(223, 193, 147, 0.15);
+    border-color: var(--color-gold-hover);
+}
+.custom-cursor-dot.clicked {
+    transform: translate(-50%, -50%) scale(1.6);
+    background-color: var(--color-gold-hover);
+}
 
 @media (pointer: coarse) {
     /* Disable custom cursor on mobile touch screens */

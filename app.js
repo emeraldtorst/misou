@@ -120,6 +120,17 @@ function initCustomCursor() {
             cursor.classList.remove('hovered');
         }
     });
+
+    // Click micro-animations
+    window.addEventListener('mousedown', () => {
+        cursor.classList.add('clicked');
+        cursorDot.classList.add('clicked');
+    });
+
+    window.addEventListener('mouseup', () => {
+        cursor.classList.remove('clicked');
+        cursorDot.classList.remove('clicked');
+    });
 }
 
 // --- 3. Scroll-Aware Header ---
@@ -127,13 +138,16 @@ function initScrollHeader() {
     const header = document.getElementById('mainHeader');
     if (!header) return;
 
-    window.addEventListener('scroll', () => {
+    const checkScroll = () => {
         if (window.scrollY > 40) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
-    }, { passive: true });
+    };
+
+    window.addEventListener('scroll', checkScroll, { passive: true });
+    checkScroll(); // Run once on initialization
 }
 
 // --- 4. Mobile Menu Navigation ---
@@ -167,36 +181,40 @@ function initParallax() {
     const heroBg = document.querySelector('.hero-parallax-bg');
     const loungeBg = document.querySelector('.lounge-parallax-bg');
 
-    // Performant Scroll Parallax
+    const updateParallax = () => {
+        const scrolled = window.scrollY;
+
+        // 1. Hero Parallax
+        if (heroBg && scrolled < window.innerHeight) {
+            heroBg.style.transform = `translateY(${scrolled * 0.35}px) scale(${1 + scrolled * 0.00015})`;
+        }
+
+        // 2. Lounge Section Parallax
+        if (loungeBg) {
+            const rect = loungeBg.parentElement.getBoundingClientRect();
+            const viewHeight = window.innerHeight;
+            
+            // Check if parent container is visible inside viewport
+            if (rect.top < viewHeight && rect.bottom > 0) {
+                const relativeScroll = (viewHeight - rect.top) / (viewHeight + rect.height);
+                const translateVal = (relativeScroll - 0.5) * 120; // range of translation
+                loungeBg.style.transform = `translateY(${translateVal}px)`;
+            }
+        }
+    };
+
     let tick = false;
     window.addEventListener('scroll', () => {
         if (!tick) {
             window.requestAnimationFrame(() => {
-                const scrolled = window.scrollY;
-
-                // 1. Hero Parallax
-                if (heroBg && scrolled < window.innerHeight) {
-                    heroBg.style.transform = `translateY(${scrolled * 0.35}px) scale(${1 + scrolled * 0.00015})`;
-                }
-
-                // 2. Lounge Section Parallax
-                if (loungeBg) {
-                    const rect = loungeBg.parentElement.getBoundingClientRect();
-                    const viewHeight = window.innerHeight;
-                    
-                    // Check if parent container is visible inside viewport
-                    if (rect.top < viewHeight && rect.bottom > 0) {
-                        const relativeScroll = (viewHeight - rect.top) / (viewHeight + rect.height);
-                        const translateVal = (relativeScroll - 0.5) * 120; // range of translation
-                        loungeBg.style.transform = `translateY(${translateVal}px)`;
-                    }
-                }
-                
+                updateParallax();
                 tick = false;
             });
             tick = true;
         }
     }, { passive: true });
+
+    updateParallax(); // Run once on initialization
 }
 
 // --- 6. Scroll Reveals (Intersection Observer) ---
@@ -271,11 +289,11 @@ function initInlineMenu() {
     // Outer triggers (View Full Menu, Explore Drinks, View Lunch Menu)
     triggers.forEach(trigger => {
         trigger.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent standard instant anchor jump
             const targetMenu = trigger.getAttribute('data-menu') || 'food';
             switchTab(targetMenu);
             
             if (menuSection) {
-                // Let anchor behavior handle hash scroll, or force smooth scroll if browser overrides
                 menuSection.scrollIntoView({ behavior: 'smooth' });
             }
         });
