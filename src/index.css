@@ -2718,7 +2718,43 @@ body {
     }
 
     .photo-mosaic-wrapper {
-        display: none; /* mosaic too complex on small screens */
+        height: auto;
+        padding: var(--space-xl) 0;
+        background: var(--color-bg-base);
+        overflow: visible;
+    }
+
+    .photo-mosaic-sticky {
+        position: relative;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
+        padding: 0 var(--space-md);
+    }
+
+    .photo-mosaic-headline {
+        position: relative;
+        inset: auto;
+        margin-bottom: var(--space-md);
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .mosaic-title {
+        mix-blend-mode: normal;
+        color: var(--color-text-primary);
+    }
+
+    .mosaic-image-item {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        height: 280px !important;
+        transform: none !important;
+        opacity: 1 !important;
+        margin-bottom: var(--space-sm);
     }
 
     .scroll-marquee-wrapper {
