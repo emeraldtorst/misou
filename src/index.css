@@ -2582,7 +2582,7 @@ body {
 /* --- PhotoMosaic: Floating image assembly section --- */
 .photo-mosaic-wrapper {
     position: relative;
-    height: 300vh;
+    height: 200vh;
     background: var(--color-bg-base);
     overflow: clip;
 }

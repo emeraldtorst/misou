@@ -90,16 +90,13 @@ const MosaicImage: React.FC<{
   index: number;
 }> = ({ img, scrollYProgress, index }) => {
   // Stagger each image by 0.05 so they arrive slightly after each other.
-  // Keep all keyframes within [0, 0.75] so no image overshoots its fade-out at 0.88.
   const delay = index * 0.04;
   const inStart  = 0.05 + delay;
   const inEnd    = 0.35 + delay;
-  const outStart = 0.75;
-  const outEnd   = 0.92;
 
   const x       = useTransform(scrollYProgress, [inStart, inEnd], [img.initialX, 0]);
   const y       = useTransform(scrollYProgress, [inStart, inEnd], [img.initialY, 0]);
-  const opacity = useTransform(scrollYProgress, [inStart, inEnd, outStart, outEnd], [0, 1, 1, 0]);
+  const opacity = useTransform(scrollYProgress, [inStart, inEnd], [0, 1]);
   const rotate  = useTransform(scrollYProgress, [inStart, inEnd], [img.initialRotate, 0]);
   const scale   = useTransform(scrollYProgress, [inStart, inEnd], [0.75, 1]);
 
@@ -126,7 +123,7 @@ const MosaicImage: React.FC<{
 
 // ─── Sub-component: the central headline ─────────────────────────────────────
 const MosaicHeadline: React.FC<{ scrollYProgress: MotionValue<number> }> = ({ scrollYProgress }) => {
-  const opacity = useTransform(scrollYProgress, [0.1, 0.35, 0.82, 0.95], [0, 1, 1, 0]);
+  const opacity = useTransform(scrollYProgress, [0.1, 0.35], [0, 1]);
   const scale   = useTransform(scrollYProgress, [0.1, 0.35], [0.85, 1]);
 
   return (
