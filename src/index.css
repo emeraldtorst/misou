@@ -492,7 +492,7 @@ body.mouse-active .custom-cursor-dot {
     position: relative;
     z-index: 3;
     max-width: 1000px;
-    padding: 0 var(--space-md);
+    padding: 25vh var(--space-md) 0 var(--space-md);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -1963,6 +1963,10 @@ body.mouse-active .custom-cursor-dot {
     
     .mobile-menu-toggle {
         display: flex;
+    }
+
+    .hero-content-container {
+        padding: 15vh var(--space-md) 0 var(--space-md);
     }
 
     .header-container {
