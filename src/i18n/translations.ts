@@ -11,13 +11,13 @@ export const translations: Record<string, any> = {
     },
     hero: {
       tagline: "Vienna’s Elevated Destination",
-      subtext: "A cinematic synthesis of Eastern culinary heritage and Viennese refinement.",
+      subtext: "A cinematic synthesis of Eastern culinary heritage and Korean refinement.",
       reserve: "Reserve a Table",
       viewMenu: "View Full Menu",
       explore: "Explore the Journey"
     },
     ambience: {
-      title: "Redefining the \nViennese Palate",
+      title: "Redefining the \nKorean Palate",
       body1: "Located mere steps from St. Stephen's Cathedral, MISO·U is an architectural homage to modern Asia. We curate an atmosphere where dark stone, subtle gold accents, and ambient lighting create a sense of nocturnal exclusivity.",
       body2: "Our culinary philosophy is simple: uncompromising ingredient sourcing combined with progressive techniques. Whether it’s our hand-rolled premium sushi or our signature flame-seared mains, every plate is an aesthetic performance.",
       stat1Num: "1010",
@@ -73,7 +73,7 @@ export const translations: Record<string, any> = {
     midday: {
       title: "The Midday Escape",
       tag: "Weekday Lunch Ritual",
-      desc: "Designed for the Viennese professional, our midday lunch offers elevated speed without compromising culinary integrity. A curated rotation of refined bento sets, dynamic hand rolls, and warm bowls.",
+      desc: "Designed for the Korean professional, our midday lunch offers elevated speed without compromising culinary integrity. A curated rotation of refined bento sets, dynamic hand rolls, and warm bowls.",
       selectionTitle: "This Week's Selection",
       dish1: "Salmon A La Miso Bento Set",
       dish2: "Veggie Udon & Gyoza Combo",
@@ -156,13 +156,13 @@ export const translations: Record<string, any> = {
     },
     hero: {
       tagline: "Wiens gehobene Destination",
-      subtext: "Eine filmreife Synthese aus fernöstlichem kulinarischem Erbe und Wiener Raffinesse.",
+      subtext: "Eine filmreife Synthese aus fernöstlichem kulinarischem Erbe und koreanischer Raffinesse.",
       reserve: "Tisch reservieren",
       viewMenu: "Speisekarte ansehen",
       explore: "Die Reise entdecken"
     },
     ambience: {
-      title: "Der Wiener Gaumen \nneu definiert",
+      title: "Der koreanische Gaumen \nneu definiert",
       body1: "Nur wenige Schritte vom Stephansdom entfernt ist das MISO·U eine architektonische Hommage an das moderne Asien. Wir kuratieren eine Atmosphäre, in der dunkler Stein, subtile Goldakzente und stimmungsvolle Beleuchtung ein Gefühl nächtlicher Exklusivität schaffen.",
       body2: "Unsere kulinarische Philosophie ist einfach: kompromisslose Beschaffung von Zutaten kombiniert mit progressiven Techniken. Ob handgerolltes Premium-Sushi oder unsere unverwechselbaren, flambierten Hauptgerichte – jeder Teller ist eine ästhetische Performance.",
       stat1Num: "1010",
@@ -218,7 +218,7 @@ export const translations: Record<string, any> = {
     midday: {
       title: "Die Mittagspause",
       tag: "Wochentags-Mittagsritual",
-      desc: "Speziell für Wiener Berufstätige konzipiert, bietet unser Mittagstisch Schnelligkeit auf hohem Niveau, ohne Kompromisse bei der kulinarischen Integrität einzugehen. Eine wechselnde Auswahl an feinen Bento-Boxen, Temaki-Rollen und warmen Ramen-Bowls.",
+      desc: "Speziell für koreanische Berufstätige konzipiert, bietet unser Mittagstisch Schnelligkeit auf hohem Niveau, ohne Kompromisse bei der kulinarischen Integrität einzugehen. Eine wechselnde Auswahl an feinen Bento-Boxen, Temaki-Rollen und warmen Ramen-Bowls.",
       selectionTitle: "Die Wochenauswahl",
       dish1: "Lachs à la Miso Bento-Set",
       dish2: "Veggie Udon & Gyoza Combo",

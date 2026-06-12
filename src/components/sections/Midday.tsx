@@ -37,7 +37,7 @@ export const Midday: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="lunch-image-container">
-              <img src="images/f5.jpeg" alt="Premium modern bento-style lunch box" className="lunch-img" />
+              <img src="images/f5.jpeg" alt="Premium modern bento-style lunch box" className="lunch-img" loading="lazy" />
               <div className="lunch-image-frame"></div>
             </div>
           </motion.div>

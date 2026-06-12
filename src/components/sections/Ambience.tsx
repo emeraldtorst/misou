@@ -53,7 +53,7 @@ export const Ambience: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="image-stack">
-              <img src="images/res3.jpeg" alt={t('ambience.imgAlt')} className="img-front" />
+              <img src="images/res3.jpeg" alt={t('ambience.imgAlt')} className="img-front" loading="lazy" />
               <div className="img-backdrop"></div>
             </div>
           </motion.div>

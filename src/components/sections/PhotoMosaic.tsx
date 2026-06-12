@@ -183,7 +183,7 @@ const MosaicImage: React.FC<{
         scale,
       }}
     >
-      <img src={img.src} alt={img.alt} />
+      <img src={img.src} alt={img.alt} loading="lazy" />
     </motion.div>
   );
 };

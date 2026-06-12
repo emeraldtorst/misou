@@ -510,8 +510,6 @@ body.mouse-active .custom-cursor-dot {
     color: var(--color-gold);
     display: block;
     margin-bottom: var(--space-sm);
-    opacity: 0;
-    transform: translateY(20px);
 }
 .hero-title {
     font-family: var(--font-display);
@@ -520,8 +518,6 @@ body.mouse-active .custom-cursor-dot {
     letter-spacing: 0.3em;
     line-height: 1;
     margin-bottom: var(--space-md);
-    opacity: 0;
-    transform: translateY(30px);
 }
 .hero-title span {
     display: inline-block;
@@ -536,8 +532,6 @@ body.mouse-active .custom-cursor-dot {
     color: var(--color-text-secondary);
     max-width: 750px;
     margin: 0 auto;
-    opacity: 0;
-    transform: translateY(20px);
 }
 
 .hero-actions {
@@ -545,8 +539,6 @@ body.mouse-active .custom-cursor-dot {
     flex-direction: column;
     align-items: center;
     gap: 3rem;
-    opacity: 0;
-    transform: translateY(20px);
 }
 .explore-btn-link {
     display: flex;

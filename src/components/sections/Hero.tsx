@@ -9,7 +9,7 @@ export const Hero: React.FC = () => {
   return (
     <section className="hero-section" id="hero">
       <div className="hero-bg-wrapper">
-        <video autoPlay loop muted playsInline className="hero-parallax-bg">
+        <video autoPlay loop muted playsInline preload="metadata" poster="images/bar2.jpeg" className="hero-parallax-bg">
           <source src="videos/hero_bg.mp4" type="video/mp4" />
         </video>
         <div className="hero-overlay"></div>
