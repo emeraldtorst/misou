@@ -2724,13 +2724,12 @@ body {
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 3.5rem 0;
+    padding: 2.2rem 0;
     background: linear-gradient(to bottom, #090909 0%, #060606 50%, #090909 100%);
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
 }
 
 .marquee-track {
@@ -2745,7 +2744,7 @@ body {
     gap: 3rem;
     white-space: nowrap;
     width: max-content;
-    animation: marqueeForward 35s linear infinite;
+    animation: marqueeForward 45s linear infinite;
     will-change: transform;
 }
 
@@ -2755,7 +2754,7 @@ body {
     gap: 3rem;
     white-space: nowrap;
     width: max-content;
-    animation: marqueeReverse 35s linear infinite;
+    animation: marqueeReverse 45s linear infinite;
     will-change: transform;
 }
 
@@ -2781,8 +2780,8 @@ body {
 
 .marquee-item-outline {
     color: transparent !important;
-    -webkit-text-stroke: 1.5px rgba(245, 245, 243, 0.4);
-    text-shadow: none !important;
+    -webkit-text-stroke: 1.2px var(--color-crimson);
+    text-shadow: 0 0 5px rgba(217, 4, 41, 0.4) !important;
 }
 
 .marquee-dot {
