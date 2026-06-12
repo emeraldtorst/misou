@@ -94,8 +94,8 @@ export const translations: Record<string, any> = {
       timeInfo: "Served Monday–Friday, 11:11 – 15:00"
     },
     marquee: {
-      items1: ["Modern Asian Fusion", "Sushi Artistry", "Korean Soul", "Japanese Precision", "Craft Cocktails"],
-      items2: ["Premium Ingredients", "Warm Hospitality", "Shared Experiences", "Refined Flavors", "Unforgettable Moments"]
+      items1: ["Truffle Tuna Roll", "Black Cod Miso", "Flame-Seared Salmon", "Wagyu Ribeye", "Bluefin Sashimi"],
+      items2: ["Signature Cocktails", "Uji Matcha Mochi", "Premium Sake Flights", "Aromatic Duck Gyoza", "Seared Tuna Tartare"]
     },
     reviews: {
       title: "The Guest Chronicles",
@@ -251,8 +251,8 @@ export const translations: Record<string, any> = {
       timeInfo: "Serviert Montag–Freitag, 11:11 – 15:00"
     },
     marquee: {
-      items1: ["Moderne Asian Fusion", "Sushi-Kunsthandwerk", "Koreanische Seele", "Japanische Präzision", "Handgemachte Cocktails"],
-      items2: ["Erstklassige Zutaten", "Herzliche Gastfreundschaft", "Gemeinsame Erlebnisse", "Raffinierte Aromen", "Unvergessliche Momente"]
+      items1: ["Trüffel-Thunfisch-Rolle", "Schwarzer Kohlenfisch Miso", "Flambierter Lachs", "Wagyu Ribeye", "Blauflossen-Sashimi"],
+      items2: ["Signature-Cocktails", "Uji Matcha Mochi", "Premium Sake-Flüge", "Enten-Gyoza", "Thunfisch-Tatar"]
     },
     reviews: {
       title: "Gästebewertungen",
