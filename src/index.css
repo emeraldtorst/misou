@@ -2724,54 +2724,82 @@ body {
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 4rem 0;
-    background: var(--color-bg-base);
+    padding: 3.5rem 0;
+    background: linear-gradient(to bottom, #090909 0%, #060606 50%, #090909 100%);
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .marquee-track {
     width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
-.marquee-inner {
+.marquee-inner-forward {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 3rem;
     white-space: nowrap;
     width: max-content;
+    animation: marqueeForward 35s linear infinite;
     will-change: transform;
+}
+
+.marquee-inner-reverse {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    white-space: nowrap;
+    width: max-content;
+    animation: marqueeReverse 35s linear infinite;
+    will-change: transform;
+}
+
+.marquee-track:hover .marquee-inner-forward,
+.marquee-track:hover .marquee-inner-reverse {
+    animation-play-state: paused;
 }
 
 .marquee-item {
     font-family: var(--font-display);
-    font-size: clamp(1.4rem, 3vw, 2rem);
-    font-weight: 400;
-    letter-spacing: 0.25em;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 500;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
     flex-shrink: 0;
     transition: color 0.3s ease;
 }
 
+.marquee-item-gold {
+    color: var(--color-gold) !important;
+}
+
+.marquee-item-outline {
+    color: transparent !important;
+    -webkit-text-stroke: 1.5px rgba(245, 245, 243, 0.4);
+    text-shadow: none !important;
+}
+
 .marquee-dot {
     color: var(--color-crimson) !important;
-    font-size: 1.2rem;
-    text-shadow: 0 0 8px rgba(217, 4, 41, 0.5);
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px var(--color-crimson), 0 0 20px var(--color-crimson);
+    margin: 0 1rem;
 }
 
-.marquee-track-reverse .marquee-inner {
-    /* Reverse row drifts the opposite direction via JS; no flex override needed */
+@keyframes marqueeForward {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
 }
 
-.marquee-track-reverse .marquee-item {
-    color: rgba(255, 255, 255, 0.08);
-    font-size: clamp(1rem, 2vw, 1.4rem);
-    letter-spacing: 0.4em;
+@keyframes marqueeReverse {
+    0% { transform: translate3d(-50%, 0, 0); }
+    100% { transform: translate3d(0, 0, 0); }
 }
 
 /* Mobile simplifications for scroll effects */
