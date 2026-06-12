@@ -165,7 +165,7 @@ export const Menu: React.FC = () => {
             href="/menu.pdf" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="btn btn-outline btn-large"
+            className="btn btn-primary btn-large"
             style={{ display: 'inline-flex', gap: '10px' }}
           >
             {t('menu.viewPdf')}
