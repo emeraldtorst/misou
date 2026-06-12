@@ -29,7 +29,10 @@ export const Menu: React.FC = () => {
         { name: "Edamame Sea Salt", price: "€ 6.50", desc: t('menu.items.edamame') },
         { name: "Crispy Gyoza", price: "€ 8.50", desc: t('menu.items.gyoza') },
         { name: "Tartare Duo", price: "€ 16.00", desc: t('menu.items.tartare') },
-        { name: "Truffle Edamame", price: "€ 8.00", desc: t('menu.items.truffleEdamame') }
+        { name: "Truffle Edamame", price: "€ 8.00", desc: t('menu.items.truffleEdamame') },
+        { name: "Summerroll Shrimps", price: "€ 7.00", desc: t('menu.items.summerrollShrimps') },
+        { name: "Tteokbokki", price: "€ 7.00", desc: t('menu.items.tteokbokki') },
+        { name: "Crispy Wan Tan", price: "€ 7.00", desc: t('menu.items.crispyWanTan') }
       ]
     },
     {
@@ -39,7 +42,10 @@ export const Menu: React.FC = () => {
         { name: "Flamed Salmon Roll", price: "€ 18.00", desc: t('menu.items.flamedSalmon') },
         { name: "Truffle Tuna Roll", price: "€ 19.50", desc: t('menu.items.truffleTuna') },
         { name: "Premium Sashimi Mix", price: "€ 29.00", desc: t('menu.items.sashimi') },
-        { name: "Dragon Roll", price: "€ 21.00", desc: t('menu.items.dragon') }
+        { name: "Dragon Roll", price: "€ 21.00", desc: t('menu.items.dragon') },
+        { name: "Chong Li Masterplate", price: "€ 59.00", desc: t('menu.items.chongLiMasterplate') },
+        { name: "Spicy Tuna Tempura", price: "€ 18.00", desc: t('menu.items.spicyTunaTempura') },
+        { name: "Rainbow Roll", price: "€ 15.00", desc: t('menu.items.rainbowRoll') }
       ]
     },
     {
@@ -49,7 +55,10 @@ export const Menu: React.FC = () => {
         { name: "Black Cod Miso", price: "€ 32.00", desc: t('menu.items.cod') },
         { name: "Flame-Seared Beef Ribs", price: "€ 28.50", desc: t('menu.items.ribs') },
         { name: "Crispy Duck Breast", price: "€ 24.50", desc: t('menu.items.duck') },
-        { name: "Truffle Ribeye Steak", price: "€ 38.00", desc: t('menu.items.ribeye') }
+        { name: "Truffle Ribeye Steak", price: "€ 38.00", desc: t('menu.items.ribeye') },
+        { name: "Bulgogi Beef", price: "€ 16.00", desc: t('menu.items.bulgogiBeef') },
+        { name: "Korean Fried Chicken", price: "€ 15.00", desc: t('menu.items.koreanFriedChicken') },
+        { name: "Bibimbap Beef", price: "€ 15.00", desc: t('menu.items.bibimbapBeef') }
       ]
     },
     {
@@ -59,7 +68,10 @@ export const Menu: React.FC = () => {
         { name: "Botanical Yuzu Sour", price: "€ 14.50", desc: t('menu.items.yuzuSour') },
         { name: "Shiso Mojito", price: "€ 12.00", desc: t('menu.items.mojito') },
         { name: "Matcha Mochi Duo", price: "€ 7.50", desc: t('menu.items.mochi') },
-        { name: "Chocolate Lava Cake", price: "€ 9.50", desc: t('menu.items.cake') }
+        { name: "Chocolate Lava Cake", price: "€ 9.50", desc: t('menu.items.cake') },
+        { name: "Matcha Tiramisu", price: "€ 9.00", desc: t('menu.items.matchaTiramisu') },
+        { name: "Seoul Meets Tequila", price: "€ 12.00", desc: t('menu.items.seoulMeetsTequila') },
+        { name: "Genmaicha Sour", price: "€ 12.00", desc: t('menu.items.genmaichaSour') }
       ]
     }
   ];

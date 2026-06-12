@@ -57,7 +57,19 @@ export const translations: Record<string, any> = {
         yuzuSour: "Japanese gin, fresh yuzu juice, shiso simple syrup, egg white.",
         mojito: "White rum, lime, muddled shiso leaf, club soda.",
         mochi: "Sweet rice cakes filled with premium Uji matcha ice cream.",
-        cake: "Warm cake with a molten core, served with black sesame ice cream."
+        cake: "Warm cake with a molten core, served with black sesame ice cream.",
+        summerrollShrimps: "Rice paper, rice noodles, shrimp, cilantro, mint.",
+        tteokbokki: "Fish cake, rice cake, onion, egg, sweet & spicy gochujang sauce.",
+        crispyWanTan: "Crispy homemade dumplings filled with chicken, shrimp, and shiitake.",
+        chongLiMasterplate: "Chef's selection sharing platter for two, served with 2 miso soups or edamame (36 pieces).",
+        spicyTunaTempura: "Deep-fried sushi roll with spicy tuna, cucumber, and unagi glaze.",
+        rainbowRoll: "Surimi, cucumber, and avocado, wrapped with assorted fresh raw fish.",
+        bulgogiBeef: "Stir-fried beef, onion, carrots, mushrooms, and zucchini. Served with rice.",
+        koreanFriedChicken: "Crispy double-fried chicken glazed in sweet cheese or chili garlic sauce. Served with rice.",
+        bibimbapBeef: "Rice bowl topped with seasoned beef, carrots, bean sprouts, spinach, radish, mushrooms, and a fried egg.",
+        matchaTiramisu: "Layers of ladyfinger biscuits, mascarpone cream, white chocolate, and premium Uji matcha.",
+        seoulMeetsTequila: "Tequila, soju, blue curacao, lime juice, simple syrup.",
+        genmaichaSour: "Whisky, house-infused roasted brown rice green tea, fresh lemon juice, egg white."
       }
     },
     lounge: {
@@ -202,7 +214,19 @@ export const translations: Record<string, any> = {
         yuzuSour: "Japanischer Gin, frischer Yuzusaft, Shiso-Sirup, Eiweiß.",
         mojito: "Weißer Rum, Limette, gemörserte Shisoblätter, Soda.",
         mochi: "Süße Reiskuchen gefüllt mit erstklassigem Uji-Matcha-Eis.",
-        cake: "Warmes Schokoladenküchlein mit flüssigem Kern, serviert mit schwarzem Sesameis."
+        cake: "Warmes Schokoladenküchlein mit flüssigem Kern, serviert mit schwarzem Sesameis.",
+        summerrollShrimps: "Reispapier, Reisnudeln, Garnelen, Koriander, Minze.",
+        tteokbokki: "Fischkuchen, Reiskuchen, Zwiebel, Ei in süß-scharfer Gochujang-Sauce.",
+        crispyWanTan: "Knusprige hausgemachte Teigtaschen gefüllt mit Hühnerfleisch, Garnelen und Shiitake.",
+        chongLiMasterplate: "Chefkoch-Auswahl-Platte für zwei Personen, serviert mit 2 Miso-Suppen oder Edamame (36 Stück).",
+        spicyTunaTempura: "Frittierte Sushi-Rolle mit scharfem Thunfisch, Gurke und Unagi-Glasur.",
+        rainbowRoll: "Surimi, Gurke und Avocado, umhüllt mit verschiedenen frischen rohen Fischsorten.",
+        bulgogiBeef: "Gebratenes Rindfleisch, Zwiebeln, Karotten, Champignons und Zucchini. Serviert mit Reis.",
+        koreanFriedChicken: "Knuspriges, doppelt frittiertes Hühnerfleisch mit süßem Käse oder Chili-Knoblauch-Glasur. Serviert mit Reis.",
+        bibimbapBeef: "Reisschale mit mariniertem Rindfleisch, Karotten, Sojasprossen, Spinat, Rettich, Champignons und einem Spiegelei.",
+        matchaTiramisu: "Schichten aus Biskotten, Mascarpone-Creme, weißer Schokolade und erstklassigem Uji-Matcha.",
+        seoulMeetsTequila: "Tequila, Soju, Blue Curacao, Limettensaft, Sirup.",
+        genmaichaSour: "Whisky, hausgemachter Genmaicha-Tee-Aufguss, frischer Limettensaft, Eiweiß."
       }
     },
     lounge: {
