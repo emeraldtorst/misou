@@ -1965,6 +1965,58 @@ body.mouse-active .custom-cursor-dot {
         display: flex;
     }
 
+    .header-container {
+        padding: 1rem 1.5rem;
+    }
+    .main-header.scrolled .header-container {
+        padding: 0.6rem 1.5rem;
+    }
+
+    /* Mobile Nav Overlay Footer Details */
+    .mobile-nav-links {
+        gap: 1.5rem !important;
+        height: 85vh;
+        justify-content: space-between;
+        padding: 2rem 0;
+    }
+    .mobile-nav-info-panel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px dashed rgba(223, 193, 147, 0.15);
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+    .mobile-nav-info-title {
+        font-family: var(--font-display);
+        font-size: 0.65rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--color-gold);
+        margin-bottom: 0.2rem;
+    }
+    .mobile-nav-info-text {
+        font-size: 0.75rem;
+        color: var(--color-text-secondary);
+        line-height: 1.4;
+    }
+    .mobile-nav-info-link {
+        font-size: 0.75rem;
+        color: var(--color-text-primary);
+        text-decoration: none;
+        border-bottom: 1px solid var(--color-border);
+        padding-bottom: 2px;
+        transition: var(--transition-fast);
+    }
+    .mobile-nav-info-link:hover {
+        color: var(--color-gold);
+        border-color: var(--color-gold);
+    }
+
     .lounge-text-panel {
         padding: var(--space-md);
     }
@@ -1979,12 +2031,25 @@ body.mouse-active .custom-cursor-dot {
     }
 
     .menu-inline-tabs {
-        gap: 0.5rem;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+        gap: 1rem;
+        padding-bottom: 0.8rem;
         margin-bottom: var(--space-md);
+        scrollbar-width: none; /* Firefox */
+        border-bottom: 1px solid var(--color-border);
+    }
+    .menu-inline-tabs::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
     }
     .menu-tab-btn {
         font-size: 0.85rem;
-        padding: 0.6rem 0.8rem;
+        padding: 0.6rem 0.4rem;
+        white-space: nowrap;
+        flex-shrink: 0;
     }
 
     .booking-modal-container {

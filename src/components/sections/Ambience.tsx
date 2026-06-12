@@ -14,7 +14,7 @@ export const Ambience: React.FC = () => {
             className="intro-text-col"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.8 }}
           >
             <div className="section-number text-gold">01</div>
@@ -49,7 +49,7 @@ export const Ambience: React.FC = () => {
             className="intro-image-col"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.8 }}
           >
             <div className="image-stack">

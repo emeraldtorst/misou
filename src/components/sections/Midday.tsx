@@ -33,7 +33,7 @@ export const Midday: React.FC = () => {
             className="lunch-image-col"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.8 }}
           >
             <div className="lunch-image-container">
@@ -46,7 +46,7 @@ export const Midday: React.FC = () => {
             className="lunch-text-col"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <span className="section-number text-gold">04</span>

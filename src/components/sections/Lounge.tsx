@@ -34,7 +34,7 @@ export const Lounge: React.FC = () => {
             className="lounge-text-panel"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.8 }}
           >
             <span className="section-number text-gold">03</span>

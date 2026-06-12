@@ -147,7 +147,7 @@ export const Header: React.FC = () => {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn btn-outline" 
-                style={{ borderColor: '#d90429', color: '#f5f5f3', marginTop: '2rem' }}
+                style={{ borderColor: '#d90429', color: '#f5f5f3', marginTop: '1.5rem' }}
                 onClick={closeMenu}
                 variants={{
                   hidden: { opacity: 0, y: 20 },
@@ -156,6 +156,20 @@ export const Header: React.FC = () => {
               >
                 {t('nav.reserve')}
               </motion.a>
+
+              {/* Mobile Info Panel */}
+              <motion.div
+                className="mobile-nav-info-panel"
+                variants={{
+                  hidden: { opacity: 0, y: 15 },
+                  visible: { opacity: 1, y: 0 }
+                }}
+              >
+                <span className="mobile-nav-info-title">Location</span>
+                <span className="mobile-nav-info-text">Marc Aurel Straße 2A, 1010 Vienna</span>
+                <span className="mobile-nav-info-title" style={{ marginTop: '0.8rem' }}>Opening Hours</span>
+                <span className="mobile-nav-info-text">Tue–Fri: 11:00 am – 10:00 pm<br />Sat–Sun: 12:00 pm – 10:00 pm</span>
+              </motion.div>
             </motion.nav>
           </motion.div>
         )}
