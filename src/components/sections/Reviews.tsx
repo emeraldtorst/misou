@@ -122,7 +122,7 @@ export const Reviews: React.FC = () => {
           style={{ textAlign: 'center', marginTop: '4rem' }}
         >
           <a 
-            href="https://www.google.com/maps/place/Miso%E2%80%A2U+Restaurant/@48.2115145,16.3725534!16s%2Fg%2F11mc9fkfh3" 
+            href="https://www.google.com/maps/place/Miso%E2%80%A2U+Restaurant/@48.211518,16.3699785,17z/data=!4m8!3m7!1s0x476d072f7ddc7e19:0x994f1ded4a0433eb!8m2!3d48.2115145!4d16.3725534!9m1!1b1!16s%2Fg%2F11mc9fkfh3?entry=ttu&g_ep=EgoyMDI2MDYwOS4wIKXMDSoASAFQAw%3D%3D" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn btn-outline"
