@@ -16,20 +16,6 @@ export const Hero: React.FC = () => {
       </div>
 
       <div className="hero-content-container">
-        <motion.div 
-          className="hero-branding"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-        >
-          <span className="hero-tagline">{t('hero.tagline')}</span>
-          <h1 className="hero-title">
-            <span>MISO<span className="gold-dot">•</span>U</span>
-          </h1>
-          <p className="hero-subtext">
-            {t('hero.subtext')}
-          </p>
-        </motion.div>
 
         <motion.div 
           className="hero-actions"
