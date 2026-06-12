@@ -82,8 +82,8 @@ export const translations: Record<string, any> = {
       timeInfo: "Served Monday–Friday, 11:11 – 15:00"
     },
     marquee: {
-      items1: ["Asia's Finest", "Since 2021", "Elevated Asian Fusion", "Nocturnal Exclusivity", "Curated Wine & Sake"],
-      items2: ["Modern Craftsmanship", "Sensory Dining Experience", "Steps From Stephansdom", "Progressive Techniques", "Curated Atmosphere"]
+      items1: ["Modern Asian Fusion", "Sushi Artistry", "Korean Soul", "Japanese Precision", "Craft Cocktails"],
+      items2: ["Premium Ingredients", "Warm Hospitality", "Shared Experiences", "Refined Flavors", "Unforgettable Moments"]
     },
     reviews: {
       title: "The Guest Chronicles",
@@ -227,8 +227,8 @@ export const translations: Record<string, any> = {
       timeInfo: "Serviert Montag–Freitag, 11:11 – 15:00"
     },
     marquee: {
-      items1: ["Asiens Feinstes", "Seit 2021", "Gehobene Asian Fusion", "Nächtliche Exklusivität", "Kuratiert Wein & Sake"],
-      items2: ["Moderne Handwerkskunst", "Sensorisches Esserlebnis", "Schritte Vom Stephansdom", "Progressive Techniken", "Kuratierte Atmosphäre"]
+      items1: ["Moderne Asian Fusion", "Sushi-Kunsthandwerk", "Koreanische Seele", "Japanische Präzision", "Handgemachte Cocktails"],
+      items2: ["Erstklassige Zutaten", "Herzliche Gastfreundschaft", "Gemeinsame Erlebnisse", "Raffinierte Aromen", "Unvergessliche Momente"]
     },
     reviews: {
       title: "Gästebewertungen",
