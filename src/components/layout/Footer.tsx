@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
         <div className="section-bg-wrapper" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
           <motion.div 
             style={{ 
-              backgroundImage: "url('images/bar3.jpeg')", 
+              backgroundImage: "url('images/bar3_landscape.png')", 
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               position: 'absolute',

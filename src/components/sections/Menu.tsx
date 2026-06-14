@@ -93,6 +93,25 @@ export const Menu: React.FC = () => {
           </p>
         </motion.div>
 
+        {/* PDF Link Button */}
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '3.5rem' }}>
+          <MagneticButton 
+            as="a" 
+            href="/menu.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn btn-primary btn-large"
+            style={{ display: 'inline-flex', gap: '10px' }}
+          >
+            {t('menu.viewPdf')}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </MagneticButton>
+        </div>
+
         {/* Premium Grid Showcase */}
         <motion.div 
           className="menu-grid-container"
@@ -152,25 +171,6 @@ export const Menu: React.FC = () => {
               </div>
             </motion.div>
           </AnimatePresence>
-        </div>
-
-        {/* PDF Link Button */}
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3.5rem' }}>
-          <MagneticButton 
-            as="a" 
-            href="/menu.pdf" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="btn btn-primary btn-large"
-            style={{ display: 'inline-flex', gap: '10px' }}
-          >
-            {t('menu.viewPdf')}
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-              <polyline points="15 3 21 3 21 9"></polyline>
-              <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg>
-          </MagneticButton>
         </div>
 
       </div>
