@@ -1,33 +1,80 @@
-import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import { MagneticButton } from '../ui/MagneticButton';
 
+interface MenuPillar {
+  id: string;
+  category: string;
+  title: string;
+  bgImage: string;
+  items: string[];
+}
+
 export const Menu: React.FC = () => {
   const { t } = useLanguage();
-  const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
+  const [activePillar, setActivePillar] = useState<string>('korean');
+
+  const menuPillars: MenuPillar[] = [
+    {
+      id: 'korean',
+      category: t('menu.categories.mains'),
+      title: 'Korean Tischgrill & Classics',
+      bgImage: 'images/f9.jpeg',
+      items: [
+        'Samgyeopsal Tischgrill',
+        'Budae Jjigae',
+        'Bulgogi Beef',
+        'Korean Fried Chicken'
+      ]
+    },
+    {
+      id: 'sushi',
+      category: t('menu.categories.sushi'),
+      title: 'Premium Sushi & Rolls',
+      bgImage: 'images/f15.jpeg',
+      items: [
+        'MISO·U Signature Plate',
+        'Dragon Roll',
+        'Rainbow Roll',
+        'Spicy Tuna Tempura Roll'
+      ]
+    },
+    {
+      id: 'drinks',
+      category: t('menu.categories.drinks'),
+      title: 'Crafted Libations & Sweets',
+      bgImage: 'images/drink2.jpeg',
+      items: [
+        'Lychee Spritz',
+        'Yuzu Tea Spritz',
+        'Matcha Tiramisu',
+        'Mama Omakase Selection'
+      ]
+    }
+  ];
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.8, ease: [0.25, 1, 0.5, 1] as const }
+    }
+  };
 
   return (
-    <section className="menu-section" id="menu" style={{ position: 'relative', overflow: 'hidden', minHeight: '80vh', display: 'flex', alignItems: 'center' }}>
-      <div className="section-bg-wrapper" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
-        <motion.div 
-          style={{ 
-            backgroundImage: "url('images/menu_background.png')", 
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            position: 'absolute',
-            top: '-10%',
-            left: 0,
-            width: '100%',
-            height: '120%',
-            y 
-          }}
-        />
-        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(6, 6, 6, 0.55)' }}></div>
-      </div>
-
-      <div className="section-container" style={{ padding: '6rem 0', position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
+    <section className="menu-section" id="menu" style={{ position: 'relative', overflow: 'hidden', padding: '8rem 0' }}>
+      <div className="section-container" style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
         
         <motion.div 
           className="section-header"
@@ -46,8 +93,69 @@ export const Menu: React.FC = () => {
           </p>
         </motion.div>
 
+        {/* Premium Grid Showcase */}
+        <motion.div 
+          className="menu-grid-container"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          {menuPillars.map((pillar) => (
+            <motion.div 
+              key={pillar.id}
+              className={`menu-showcase-card ${activePillar === pillar.id ? 'active-card' : ''}`}
+              variants={cardVariants}
+              onClick={() => setActivePillar(pillar.id)}
+            >
+              <div className="menu-card-bg-wrap">
+                <div 
+                  className="menu-card-bg" 
+                  style={{ backgroundImage: `url('${pillar.bgImage}')` }}
+                />
+              </div>
+              <div className="menu-card-overlay" />
+              
+              <div className="menu-card-content">
+                <span className="menu-card-category">{pillar.category}</span>
+                <h3 className="menu-card-title">{pillar.title}</h3>
+                <div className="menu-card-divider" />
+                <div className="menu-card-items">
+                  {pillar.items.map((item, index) => (
+                    <span key={index} className="menu-card-item">{item}</span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Mobile large visual card showing category pictures as big as possible */}
+        <div className="menu-mobile-showcase-container">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activePillar}
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.96 }}
+              transition={{ duration: 0.4 }}
+              className="menu-mobile-large-card"
+              style={{ backgroundImage: `url('${menuPillars.find(p => p.id === activePillar)?.bgImage}')` }}
+            >
+              <div className="menu-mobile-large-overlay" />
+              <div className="menu-mobile-large-content">
+                <div className="menu-mobile-large-items">
+                  {menuPillars.find(p => p.id === activePillar)?.items.map((item, index) => (
+                    <span key={index} className="menu-mobile-large-item">{item}</span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
         {/* PDF Link Button */}
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3.5rem' }}>
           <MagneticButton 
             as="a" 
             href="/menu.pdf" 
