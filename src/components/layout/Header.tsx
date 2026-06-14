@@ -23,7 +23,7 @@ export const Header: React.FC = () => {
         <div className="header-container">
           <a href="#" className="logo-link" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
             <span className="logo-text">MISO<span className="dot">•</span>U</span>
-            <span className="logo-sub">FINEST ASIAN FUSION</span>
+            <span className="logo-sub">KOREAN & PREMIUM SUSHI</span>
           </a>
 
           <nav className="desktop-nav">

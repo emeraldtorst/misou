@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { useScroll, useTransform, motion, MotionValue } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 
 interface MosaicImage {
@@ -150,22 +150,12 @@ const images: MosaicImage[] = [
 ];
 
 // ─── Sub-component: each individual mosaic image ─────────────────────────────
-// Hooks are correctly at the component top level (not inside JSX callbacks)
 const MosaicImage: React.FC<{
   img: MosaicImage;
-  scrollYProgress: MotionValue<number>;
   index: number;
-}> = ({ img, scrollYProgress, index }) => {
-  // Stagger each image by 0.05 so they arrive slightly after each other.
-  const delay = index * 0.04;
-  const inStart  = 0.05 + delay;
-  const inEnd    = 0.35 + delay;
-
-  const x       = useTransform(scrollYProgress, [inStart, inEnd], [img.initialX, 0]);
-  const y       = useTransform(scrollYProgress, [inStart, inEnd], [img.initialY, 0]);
-  const opacity = useTransform(scrollYProgress, [inStart, inEnd], [0, 1]);
-  const rotate  = useTransform(scrollYProgress, [inStart, inEnd], [img.initialRotate, 0]);
-  const scale   = useTransform(scrollYProgress, [inStart, inEnd], [0.75, 1]);
+}> = ({ img, index }) => {
+  // Stagger entry animation based on index
+  const delay = Math.min(index * 0.05, 0.4);
 
   return (
     <motion.div
@@ -176,11 +166,17 @@ const MosaicImage: React.FC<{
         left: img.left,
         width: img.width,
         height: img.height,
-        x,
-        y,
-        opacity,
-        rotate,
-        scale,
+        transformOrigin: 'center',
+      }}
+      initial={{ opacity: 0, scale: 0.92, rotate: img.initialRotate }}
+      whileInView={{ opacity: 1, scale: 1, rotate: img.initialRotate }}
+      whileHover={{ scale: 1.06, rotate: 0, zIndex: 50 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ 
+        opacity: { duration: 0.6, delay },
+        scale: { duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] },
+        rotate: { duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] },
+        default: { duration: 0.3 }
       }}
     >
       <img src={img.src} alt={img.alt} loading="lazy" />
@@ -189,15 +185,16 @@ const MosaicImage: React.FC<{
 };
 
 // ─── Sub-component: the central headline ─────────────────────────────────────
-const MosaicHeadline: React.FC<{ scrollYProgress: MotionValue<number> }> = ({ scrollYProgress }) => {
+const MosaicHeadline: React.FC = () => {
   const { t } = useLanguage();
-  const opacity = useTransform(scrollYProgress, [0.1, 0.35], [0, 1]);
-  const scale   = useTransform(scrollYProgress, [0.1, 0.35], [0.85, 1]);
 
   return (
     <motion.div
       className="photo-mosaic-headline"
-      style={{ opacity, scale }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
     >
       <span className="mosaic-eyebrow">{t('mosaic.eyebrow')}</span>
       <h2 className="mosaic-title">
@@ -231,22 +228,15 @@ const MosaicHeadline: React.FC<{ scrollYProgress: MotionValue<number> }> = ({ sc
 
 // ─── Main export ──────────────────────────────────────────────────────────────
 export const PhotoMosaic: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end end'],
-  });
-
   return (
-    <div className="photo-mosaic-wrapper" ref={containerRef}>
+    <div className="photo-mosaic-wrapper">
       <div className="photo-mosaic-sticky">
-        <MosaicHeadline scrollYProgress={scrollYProgress} />
+        <MosaicHeadline />
 
         {images.map((img, i) => (
           <MosaicImage
             key={i}
             img={img}
-            scrollYProgress={scrollYProgress}
             index={i}
           />
         ))}

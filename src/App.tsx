@@ -13,6 +13,7 @@ import { Lounge } from './components/sections/Lounge';
 import { Midday } from './components/sections/Midday';
 import { Reviews } from './components/sections/Reviews';
 import { Contact } from './components/sections/Contact';
+import { FloatingDock } from './components/ui/FloatingDock';
 
 function AppContent() {
   const { t } = useLanguage();
@@ -73,6 +74,8 @@ function AppContent() {
       </main>
 
       <Footer />
+
+      <FloatingDock />
     </>
   );
 }

@@ -43,7 +43,7 @@ export const Menu: React.FC = () => {
         { name: "Truffle Tuna Roll", price: "€ 19.50", desc: t('menu.items.truffleTuna') },
         { name: "Premium Sashimi Mix", price: "€ 29.00", desc: t('menu.items.sashimi') },
         { name: "Dragon Roll", price: "€ 21.00", desc: t('menu.items.dragon') },
-        { name: "Chong Li Masterplate", price: "€ 59.00", desc: t('menu.items.chongLiMasterplate') },
+        { name: "MISO·U Signature Plate", price: "€ 59.00", desc: t('menu.items.misoUSignaturePlate') },
         { name: "Spicy Tuna Tempura", price: "€ 18.00", desc: t('menu.items.spicyTunaTempura') },
         { name: "Rainbow Roll", price: "€ 15.00", desc: t('menu.items.rainbowRoll') }
       ]

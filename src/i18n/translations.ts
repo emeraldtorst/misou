@@ -11,14 +11,14 @@ export const translations: Record<string, any> = {
     },
     hero: {
       tagline: "Vienna’s Elevated Destination",
-      subtext: "A cinematic synthesis of Eastern culinary heritage and Korean refinement.",
+      subtext: "A cinematic synthesis of traditional Korean gastronomy and premium sushi craftsmanship.",
       reserve: "Reserve a Table",
       viewMenu: "View Full Menu",
       explore: "Explore the Journey"
     },
     ambience: {
       title: "Redefining the \nKorean Palate",
-      body1: "Located mere steps from St. Stephen's Cathedral, MISO·U is an architectural homage to modern Asia. We curate an atmosphere where dark stone, subtle gold accents, and ambient lighting create a sense of nocturnal exclusivity.",
+      body1: "Located mere steps from St. Stephen's Cathedral, MISO·U is an architectural homage to modern Seoul and Tokyo aesthetics. We curate an atmosphere where dark stone, subtle gold accents, and ambient lighting create a sense of nocturnal exclusivity.",
       body2: "Our culinary philosophy is simple: uncompromising ingredient sourcing combined with progressive techniques. Whether it’s our hand-rolled premium sushi or our signature flame-seared mains, every plate is an aesthetic performance.",
       stat1Num: "1010",
       stat1Label: "District Location",
@@ -33,7 +33,7 @@ export const translations: Record<string, any> = {
     },
     menu: {
       title: "The Culinary Archives",
-      subtitle: "Explore our curated selections of hand-crafted Asian fusion plates, signature sushi, and premium cocktails.",
+      subtitle: "Explore our curated selections of hand-crafted Korean classics, premium signature sushi, and elevated cocktails.",
       viewPdf: "View Full PDF Menu",
       categories: {
         starters: "Starters",
@@ -43,7 +43,7 @@ export const translations: Record<string, any> = {
       },
       items: {
         edamame: "Steamed soybeans, Maldon sea salt flakes, lime zest.",
-        gyoza: "Handmade chicken dumplings, sweet chili soy, spring onion.",
+        gyoza: "Handmade chicken mandu, sweet chili soy, spring onion.",
         tartare: "Seared tuna & salmon tartare, avocado mousse, shiso chips.",
         truffleEdamame: "Steamed soybeans tossed in premium white truffle oil and sea salt.",
         flamedSalmon: "Avocado, cucumber, wrapped with flame-seared salmon, teriyaki, spicy mayo.",
@@ -52,7 +52,7 @@ export const translations: Record<string, any> = {
         dragon: "Crispy tempura prawn, cucumber, wrapped in avocado slices and unagi sauce.",
         cod: "Sweet white miso marinade, baby bok choy, pickled ginger sprout.",
         ribs: "Slow-cooked beef ribs, sweet soy glaze, wasabi potato purée.",
-        duck: "Seared duck, orange-hoisin glaze, roasted root vegetables.",
+        duck: "Seared duck breast, sweet plum-gochujang glaze, roasted root vegetables.",
         ribeye: "Grilled prime ribeye, Japanese black pepper sauce, roasted mushrooms.",
         yuzuSour: "Japanese gin, fresh yuzu juice, shiso simple syrup, egg white.",
         mojito: "White rum, lime, muddled shiso leaf, club soda.",
@@ -61,7 +61,7 @@ export const translations: Record<string, any> = {
         summerrollShrimps: "Rice paper, rice noodles, shrimp, cilantro, mint.",
         tteokbokki: "Fish cake, rice cake, onion, egg, sweet & spicy gochujang sauce.",
         crispyWanTan: "Crispy homemade dumplings filled with chicken, shrimp, and shiitake.",
-        chongLiMasterplate: "Chef's selection sharing platter for two, served with 2 miso soups or edamame (36 pieces).",
+        misoUSignaturePlate: "Chef's selection sharing platter for two, served with 2 miso soups or edamame (36 pieces).",
         spicyTunaTempura: "Deep-fried sushi roll with spicy tuna, cucumber, and unagi glaze.",
         rainbowRoll: "Surimi, cucumber, and avocado, wrapped with assorted fresh raw fish.",
         bulgogiBeef: "Stir-fried beef, onion, carrots, mushrooms, and zucchini. Served with rice.",
@@ -75,7 +75,7 @@ export const translations: Record<string, any> = {
     lounge: {
       title: "The Lounge & Libations",
       lead: "An evening dining experience extends far beyond the plate. Our lounge offers a quiet sanctuary of smoked glass, warm metal accents, and rare vintages.",
-      body: "Our cellar bridges continents. Discover an extraordinary selection of organic Austrian wines, Grand Cru Champagnes, and small-batch Japanese sakes sourced directly from boutique brewers in Kyoto and Niigata. Each sake is selected for its clean minerality to complement our rich fusion flavors.",
+      body: "Our cellar bridges continents. Discover an extraordinary selection of organic Austrian wines, Grand Cru Champagnes, and small-batch Japanese sakes sourced directly from boutique brewers in Kyoto and Niigata. Each sake is selected for its clean minerality to complement our rich Korean and sushi flavors.",
       feature1Title: "East-West Pairings",
       feature1Desc: "Curated sake & wine flights adjusted weekly.",
       feature2Title: "Botanical Cocktails",
@@ -99,15 +99,13 @@ export const translations: Record<string, any> = {
     },
     reviews: {
       title: "The Guest Chronicles",
-      subtitle: "Hear from our guests who have experienced our modern Asian dining journey in the heart of Vienna.",
+      subtitle: "Hear from our guests who have experienced our modern Korean & premium sushi dining journey in the heart of Vienna.",
       readMore: "Read All Google Reviews",
       r1: "Uncompromising quality. The sushi mix and flamed mains were outstanding. The dark, modern interior with the glowing moon accent is absolutely stunning.",
       r1Role: "Google Local Guide",
       r1Date: "1 week ago",
-      r2: "Mere steps from St. Stephen's. Incredible service, extremely attentive staff, and the sake pairing was a revelation. A perfect fine-dining fusion experience in Vienna.",
-      r2Role: "Google Reviews",
-      r2Date: "2 weeks ago",
-      r3: "A masterpiece of Asian fusion. The beef ramen has incredible depth of flavor and the chicken dumplings were handmade perfection. Highly recommended!",
+      r2: "Mere steps from St. Stephen's. Incredible service, extremely attentive staff, and the sake pairing was a revelation. A perfect Korean & sushi fine-dining experience in Vienna.",
+      r3: "A masterpiece of modern Korean dining and sushi. The beef ramen has incredible depth of flavor and the chicken mandu were handmade perfection. Highly recommended!",
       r3Role: "Google Reviews",
       r3Date: "3 weeks ago",
       r4: "Elegant, intimate, and modern. We sat in the lovely outdoor street terrace. Everything from the sushi rice to the matcha dessert was executed flawlessly.",
@@ -133,7 +131,7 @@ export const translations: Record<string, any> = {
       closed: "Closed"
     },
     footer: {
-      tagline: "Elevated Asian Fusion dining in the historic heart of Vienna’s 1st District.",
+      tagline: "Elevated Korean dining & premium sushi in the historic heart of Vienna’s 1st District.",
       imprint: "Imprint / Impressum",
       privacy: "Privacy Policy / DSGVO",
       copyright: "© 2026 MISO·U. All rights reserved. YUNA GMBH.",
@@ -168,14 +166,14 @@ export const translations: Record<string, any> = {
     },
     hero: {
       tagline: "Wiens gehobene Destination",
-      subtext: "Eine filmreife Synthese aus fernöstlichem kulinarischem Erbe und koreanischer Raffinesse.",
+      subtext: "Eine filmreife Synthese aus traditioneller koreanischer Küche und feinster Sushi-Kunst.",
       reserve: "Tisch reservieren",
       viewMenu: "Speisekarte ansehen",
       explore: "Die Reise entdecken"
     },
     ambience: {
       title: "Der koreanische Gaumen \nneu definiert",
-      body1: "Nur wenige Schritte vom Stephansdom entfernt ist das MISO·U eine architektonische Hommage an das moderne Asien. Wir kuratieren eine Atmosphäre, in der dunkler Stein, subtile Goldakzente und stimmungsvolle Beleuchtung ein Gefühl nächtlicher Exklusivität schaffen.",
+      body1: "Nur wenige Schritte vom Stephansdom entfernt ist das MISO·U eine architektonische Hommage an die Ästhetik des modernen Seoul und Tokio. Wir kuratieren eine Atmosphäre, in der dunkler Stein, subtile Goldakzente und stimmungsvolle Beleuchtung ein Gefühl nächtlicher Exklusivität schaffen.",
       body2: "Unsere kulinarische Philosophie ist einfach: kompromisslose Beschaffung von Zutaten kombiniert mit progressiven Techniken. Ob handgerolltes Premium-Sushi oder unsere unverwechselbaren, flambierten Hauptgerichte – jeder Teller ist eine ästhetische Performance.",
       stat1Num: "1010",
       stat1Label: "Innere Stadt",
@@ -190,7 +188,7 @@ export const translations: Record<string, any> = {
     },
     menu: {
       title: "Die kulinarischen Archive",
-      subtitle: "Entdecken Sie unsere kuratierte Auswahl an handgefertigten Asian-Fusion-Gerichten, Signature-Sushi und Premium-Cocktails.",
+      subtitle: "Entdecken Sie unsere kuratierte Auswahl an handgefertigten koreanischen Spezialitäten, Signature-Sushi und Premium-Cocktails.",
       viewPdf: "Komplette PDF-Karte",
       categories: {
         starters: "Vorspeisen",
@@ -200,7 +198,7 @@ export const translations: Record<string, any> = {
       },
       items: {
         edamame: "Gedämpfte Sojabohnen, Maldon-Meersalzflocken, Limettenabrieb.",
-        gyoza: "Hausgemachte Hühnerteigtaschen, süße Chili-Sojasauce, Frühlingszwiebeln.",
+        gyoza: "Hausgemachte Hühner-Mandu, süße Chili-Sojasauce, Frühlingszwiebeln.",
         tartare: "Scharf angebratenes Thunfisch- & Lachstatar, Avocadomousse, Shisochips.",
         truffleEdamame: "Gedämpfte Sojabohnen, verfeinert mit feinstem weißen Trüffelöl und Meersalz.",
         flamedSalmon: "Avocado, Gurke, umhüllt mit flambiertem Lachs, Teriyaki, Spicy-Mayonnaise.",
@@ -209,7 +207,7 @@ export const translations: Record<string, any> = {
         dragon: "Knusprige Tempura-Garnele, Gurke, umhüllt von Avocadoscheiben und Unagi-Sauce.",
         cod: "Süße weiße Miso-Marinade, Baby-Pak-Choi, eingelegter Ingwerling.",
         ribs: "Langsam gegarte Rinderrippen, süße Sojaglasur, Wasabi-Kartoffelpüree.",
-        duck: "Knusprige Entenbrust, Orangen-Hoisin-Glasur, geröstetes Wurzelgemüse.",
+        duck: "Knusprige Entenbrust, süße Pflaumen-Gochujang-Glasur, geröstetes Wurzelgemüse.",
         ribeye: "Gegrilltes Prime-Ribeye-Steak, japanische schwarze Pfeffersauce, geröstete Pilze.",
         yuzuSour: "Japanischer Gin, frischer Yuzusaft, Shiso-Sirup, Eiweiß.",
         mojito: "Weißer Rum, Limette, gemörserte Shisoblätter, Soda.",
@@ -218,7 +216,7 @@ export const translations: Record<string, any> = {
         summerrollShrimps: "Reispapier, Reisnudeln, Garnelen, Koriander, Minze.",
         tteokbokki: "Fischkuchen, Reiskuchen, Zwiebel, Ei in süß-scharfer Gochujang-Sauce.",
         crispyWanTan: "Knusprige hausgemachte Teigtaschen gefüllt mit Hühnerfleisch, Garnelen und Shiitake.",
-        chongLiMasterplate: "Chefkoch-Auswahl-Platte für zwei Personen, serviert mit 2 Miso-Suppen oder Edamame (36 Stück).",
+        misoUSignaturePlate: "Chefkoch-Auswahl-Platte für zwei Personen, serviert mit 2 Miso-Suppen oder Edamame (36 Stück).",
         spicyTunaTempura: "Frittierte Sushi-Rolle mit scharfem Thunfisch, Gurke und Unagi-Glasur.",
         rainbowRoll: "Surimi, Gurke und Avocado, umhüllt mit verschiedenen frischen rohen Fischsorten.",
         bulgogiBeef: "Gebratenes Rindfleisch, Zwiebeln, Karotten, Champignons und Zucchini. Serviert mit Reis.",
@@ -232,7 +230,7 @@ export const translations: Record<string, any> = {
     lounge: {
       title: "Lounge & Libationen",
       lead: "Ein abendliches kulinarisches Erlebnis geht weit über den Teller hinaus. Unsere Lounge bietet einen ruhigen Zufluchtsort aus Rauchglas, warmen Metallakzenten und seltenen Jahrgängen.",
-      body: "Unser Keller schlägt Brücken zwischen Kontinenten. Entdecken Sie eine außergewöhnliche Auswahl an biologischen österreichischen Weinen, Grand Cru Champagnern und handverlesenen japanischen Sakes, direkt von Boutique-Brauereien in Kyoto und Niigata bezogen. Jeder Sake wurde nach seiner feinen Mineralität ausgewählt, um unsere reichhaltigen Fusionsaromen zu ergänzen.",
+      body: "Unser Keller schlägt Brücken zwischen Kontinenten. Entdecken Sie eine außergewöhnliche Auswahl an biologischen österreichischen Weinen, Grand Cru Champagnern und handverlesenen japanischen Sakes, direkt von Boutique-Brauereien in Kyoto und Niigata bezogen. Jeder Sake wurde nach seiner feinen Mineralität ausgewählt, um unsere feinen koreanischen und Sushi-Kreationen zu ergänzen.",
       feature1Title: "Ost-West-Pairings",
       feature1Desc: "Kuratiert abgestimmte Sake- & Weinflüge, wöchentlich neu angepasst.",
       feature2Title: "Botanische Cocktails",
@@ -256,15 +254,13 @@ export const translations: Record<string, any> = {
     },
     reviews: {
       title: "Gästebewertungen",
-      subtitle: "Stimmen unserer Gäste, die unsere moderne Asian-Fusion-Reise im Herzen Wiens erlebt haben.",
+      subtitle: "Stimmen unserer Gäste, die unsere moderne koreanische & Sushi-Reise im Herzen Wiens erlebt haben.",
       readMore: "Alle Google-Bewertungen lesen",
       r1: "Kompromisslose Qualität. Der Sushi-Mix und die flambierten Hauptgerichte waren hervorragend. Das dunkle, moderne Interieur mit dem leuchtenden Mond-Akzent ist absolut atemberaubend.",
       r1Role: "Google Local Guide",
       r1Date: "Vor 1 Woche",
-      r2: "Nur wenige Schritte vom Stephansdom entfernt. Unglaublicher Service, äußerst aufmerksames Personal und das Sake-Pairing war eine Offenbarung. Ein perfektes Fine-Dining-Fusion-Erlebnis in Wien.",
-      r2Role: "Google-Bewertungen",
-      r2Date: "Vor 2 Wochen",
-      r3: "Ein Meisterwerk der Asian Fusion. Die Rinder-Ramen haben eine unglaubliche Geschmackstiefe und die Hühnerteigtaschen waren handgemachte Perfektion. Sehr zu empfehlen!",
+      r2: "Nur wenige Schritte vom Stephansdom entfernt. Unglaublicher Service, äußerst aufmerksames Personal und das Sake-Pairing war eine Offenbarung. Ein perfektes koreanisches & Sushi Fine-Dining-Erlebnis in Wien.",
+      r3: "Ein Meisterwerk der modernen koreanischen Küche und Sushi-Kunst. Die Rinder-Ramen haben eine unglaubliche Geschmackstiefe und die Hühner-Mandu waren handgemachte Perfektion. Sehr zu empfehlen!",
       r3Role: "Google-Bewertungen",
       r3Date: "Vor 3 Wochen",
       r4: "Elegant, intim und modern. Wir saßen auf der schönen Außenterrasse. Alles, vom Sushi-Reis bis zum Matcha-Dessert, war makellos ausgeführt.",
@@ -290,7 +286,7 @@ export const translations: Record<string, any> = {
       closed: "Geschlossen"
     },
     footer: {
-      tagline: "Gehobenes Asian-Fusion-Dining im historischen Herzen des 1. Wiener Bezirks.",
+      tagline: "Gehobenes koreanisches Dining & Premium-Sushi im historischen Herzen des 1. Wiener Bezirks.",
       imprint: "Impressum / Imprint",
       privacy: "Datenschutzerklärung / DSGVO",
       copyright: "© 2026 MISO·U. Alle Rechte vorbehalten. YUNA GMBH.",
