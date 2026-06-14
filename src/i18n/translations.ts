@@ -94,8 +94,8 @@ export const translations: Record<string, any> = {
       timeInfo: "Served Monday–Friday, 11:11 – 15:00"
     },
     marquee: {
-      items1: ["Truffle Tuna Roll", "Black Cod Miso", "Flame-Seared Salmon", "Wagyu Ribeye", "Bluefin Sashimi"],
-      items2: ["Signature Cocktails", "Uji Matcha Mochi", "Premium Sake Flights", "Aromatic Duck Gyoza", "Seared Tuna Tartare"]
+      items1: ["Chong Li Masterplate", "Samgyeopsal Tischgrill", "Budae Jjigae", "Korean Fried Chicken", "Bulgogi", "Surf'n Turf Roll", "Rainbow Roll"],
+      items2: ["Lychee Spritz", "Yuzu Tea Spritz", "Matcha Tiramisu", "Sharing is Caring Plate", "Sake Sashimi", "Spicy Tuna Tempura Roll", "Dragon Roll", "Mama Omakase"]
     },
     reviews: {
       title: "The Guest Chronicles",
@@ -249,8 +249,8 @@ export const translations: Record<string, any> = {
       timeInfo: "Serviert Montag–Freitag, 11:11 – 15:00"
     },
     marquee: {
-      items1: ["Trüffel-Thunfisch-Rolle", "Schwarzer Kohlenfisch Miso", "Flambierter Lachs", "Wagyu Ribeye", "Blauflossen-Sashimi"],
-      items2: ["Signature-Cocktails", "Uji Matcha Mochi", "Premium Sake-Flüge", "Enten-Gyoza", "Thunfisch-Tatar"]
+      items1: ["Chong Li Masterplate", "Samgyeopsal Tischgrill", "Budae Jjigae", "Korean Fried Chicken", "Bulgogi", "Surf'n Turf Roll", "Rainbow Roll"],
+      items2: ["Lychee Spritz", "Yuzu Tea Spritz", "Matcha Tiramisu", "Sharing is Caring Plate", "Sake Sashimi", "Spicy Tuna Tempura Roll", "Dragon Roll", "Mama Omakase"]
     },
     reviews: {
       title: "Gästebewertungen",
