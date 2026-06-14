@@ -24,7 +24,7 @@ export const Hero: React.FC = () => {
         </video>
         */}
         <motion.img 
-          src="images/bar3_landscape.png" 
+          src="images/res5.jpeg" 
           alt="Hero background" 
           className="hero-parallax-bg"
           style={{ y }}
