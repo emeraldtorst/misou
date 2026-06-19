@@ -15,13 +15,16 @@ export const translations: Record<string, any> = {
       explore: "Explore the Journey"
     },
     ambience: {
-      title: "Redefining the \nKorean Palate",
-      body1: "Located mere steps from St. Stephen's Cathedral, MISO·U is an architectural homage to modern Seoul and Tokyo aesthetics. We curate an atmosphere where dark stone, subtle gold accents, and ambient lighting create a sense of nocturnal exclusivity.",
-      body2: "Our culinary philosophy is simple: uncompromising ingredient sourcing combined with progressive techniques. Whether it’s our hand-rolled premium sushi or our signature flame-seared mains, every plate is an aesthetic performance.",
+      title: "The Korean Taste \nin Vienna",
+      body1: "Just steps away from St. Stephen's Cathedral, MISO·U invites you to discover modern Korean and Japanese cuisine in a relaxed atmosphere.",
+      body2: "We place great value on fresh ingredients, authentic flavors, and lovingly prepared dishes. From hand-rolled sushi to our popular specialties – every dish is served with care and passion.",
+      body3: "Whether for a relaxed lunch, a dinner with friends, or a special occasion – everyone is warmly welcome.",
       stat1Num: "1010",
-      stat1Label: "District Location",
+      stat1Label: "Vienna · Innere Stadt",
       stat2Num: "40+",
-      stat2Label: "Curated Wines",
+      stat2Label: "selected wines",
+      stat3Num: "Asia",
+      stat3Label: "Cuisine with Heart",
       imgAlt: "MISO·U elegant interior dining area"
     },
     mosaic: {
@@ -147,13 +150,16 @@ export const translations: Record<string, any> = {
       explore: "Die Reise entdecken"
     },
     ambience: {
-      title: "Der koreanische Gaumen \nneu definiert",
-      body1: "Nur wenige Schritte vom Stephansdom entfernt ist das MISO·U eine architektonische Hommage an die Ästhetik des modernen Seoul und Tokio. Wir kuratieren eine Atmosphäre, in der dunkler Stein, subtile Goldakzente und stimmungsvolle Beleuchtung ein Gefühl nächtlicher Exklusivität schaffen.",
-      body2: "Unsere kulinarische Philosophie ist einfach: kompromisslose Beschaffung von Zutaten kombiniert mit progressiven Techniken. Ob handgerolltes Premium-Sushi oder unsere unverwechselbaren, flambierten Hauptgerichte – jeder Teller ist eine ästhetische Performance.",
+      title: "Der koreanische Geschmack \nin Wien",
+      body1: "Nur wenige Schritte vom Stephansdom entfernt lädt MISO·U dazu ein, die moderne koreanische und japanische Küche in entspannter Atmosphäre zu entdecken.",
+      body2: "Wir legen Wert auf frische Zutaten, authentische Aromen und liebevoll zubereitete Gerichte. Von handgerolltem Sushi bis zu unseren beliebten Spezialitäten – jedes Gericht wird mit Sorgfalt und Leidenschaft serviert.",
+      body3: "Ob für ein entspanntes Mittagessen, ein Dinner mit Freunden oder einen besonderen Anlass – bei uns sind alle herzlich willkommen.",
       stat1Num: "1010",
-      stat1Label: "Innere Stadt",
+      stat1Label: "Wien · Innere Stadt",
       stat2Num: "40+",
-      stat2Label: "Erlesene Weine",
+      stat2Label: "ausgewählte Weine",
+      stat3Num: "Asia",
+      stat3Label: "Küche mit Herz",
       imgAlt: "MISO·U elegantes Interieur Restaurant"
     },
     mosaic: {

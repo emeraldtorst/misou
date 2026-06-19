@@ -32,6 +32,11 @@ export const Ambience: React.FC = () => {
             <p className="intro-body">
               {t('ambience.body2')}
             </p>
+            {t('ambience.body3') && (
+              <p className="intro-body">
+                {t('ambience.body3')}
+              </p>
+            )}
             
             <div className="stats-row">
               <div className="stat-item">
@@ -42,6 +47,12 @@ export const Ambience: React.FC = () => {
                 <span className="stat-number">{t('ambience.stat2Num')}</span>
                 <span className="stat-label">{t('ambience.stat2Label')}</span>
               </div>
+              {t('ambience.stat3Num') && (
+                <div className="stat-item">
+                  <span className="stat-number">{t('ambience.stat3Num')}</span>
+                  <span className="stat-label">{t('ambience.stat3Label')}</span>
+                </div>
+              )}
             </div>
           </motion.div>
 
