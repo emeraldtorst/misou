@@ -29,8 +29,6 @@ export const Header: React.FC = () => {
           <nav className="desktop-nav">
             <a href="#ambience" className="nav-link">{t('nav.ambience')}</a>
             <a href="#menu" className="nav-link">{t('nav.menu')}</a>
-            <a href="#lounge" className="nav-link">{t('nav.lounge')}</a>
-            <a href="#lunch" className="nav-link">{t('nav.lunch')}</a>
             <a href="#reviews" className="nav-link">{t('nav.reviews')}</a>
             <a href="#contact" className="nav-link">{t('nav.details')}</a>
           </nav>
@@ -119,8 +117,6 @@ export const Header: React.FC = () => {
               {[
                 { name: t('nav.ambience'), href: '#ambience' },
                 { name: t('nav.menu'), href: '#menu' },
-                { name: t('nav.lounge'), href: '#lounge' },
-                { name: t('nav.lunch'), href: '#lunch' },
                 { name: t('nav.reviews'), href: '#reviews' },
                 { name: t('nav.details'), href: '#contact' },
               ].map((link, i) => (

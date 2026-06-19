@@ -3,8 +3,6 @@ export const translations: Record<string, any> = {
     nav: {
       ambience: "Ambience",
       menu: "Menu",
-      lounge: "Drinks Lounge",
-      lunch: "Midday",
       reviews: "Reviews",
       details: "Details",
       reserve: "Reserve a Table"
@@ -72,27 +70,6 @@ export const translations: Record<string, any> = {
         genmaichaSour: "Whisky, house-infused roasted brown rice green tea, fresh lemon juice, egg white."
       }
     },
-    lounge: {
-      title: "The Lounge & Libations",
-      lead: "An evening dining experience extends far beyond the plate. Our lounge offers a quiet sanctuary of smoked glass, warm metal accents, and rare vintages.",
-      body: "Our cellar bridges continents. Discover an extraordinary selection of organic Austrian wines, Grand Cru Champagnes, and small-batch Japanese sakes sourced directly from boutique brewers in Kyoto and Niigata. Each sake is selected for its clean minerality to complement our rich Korean and sushi flavors.",
-      feature1Title: "East-West Pairings",
-      feature1Desc: "Curated sake & wine flights adjusted weekly.",
-      feature2Title: "Botanical Cocktails",
-      feature2Desc: "House infusions using fresh shiso leaf, yuzu juice, and smoked wood.",
-      explore: "Explore Drinks"
-    },
-    midday: {
-      title: "The Midday Escape",
-      tag: "Weekday Lunch Ritual",
-      desc: "Designed for the Korean professional, our midday lunch offers elevated speed without compromising culinary integrity. A curated rotation of refined bento sets, dynamic hand rolls, and warm bowls.",
-      selectionTitle: "This Week's Selection",
-      dish1: "Salmon A La Miso Bento Set",
-      dish2: "Veggie Udon & Gyoza Combo",
-      dish3: "Bulgogi Beef Bento Set",
-      viewMenu: "View Lunch Menu",
-      timeInfo: "Served Monday–Friday, 11:11 – 15:00"
-    },
     marquee: {
       items1: ["Chong Li Masterplate", "Samgyeopsal Tischgrill", "Budae Jjigae", "Korean Fried Chicken", "Bulgogi", "Surf'n Turf Roll", "Rainbow Roll"],
       items2: ["Lychee Spritz", "Yuzu Tea Spritz", "Matcha Tiramisu", "Sharing is Caring Plate", "Sake Sashimi", "Spicy Tuna Tempura Roll", "Dragon Roll", "Mama Omakase"]
@@ -158,8 +135,6 @@ export const translations: Record<string, any> = {
     nav: {
       ambience: "Ambiente",
       menu: "Speisekarte",
-      lounge: "Drinks Lounge",
-      lunch: "Mittagstisch",
       reviews: "Bewertungen",
       details: "Kontakt",
       reserve: "Tisch reservieren"
@@ -226,27 +201,6 @@ export const translations: Record<string, any> = {
         seoulMeetsTequila: "Tequila, Soju, Blue Curacao, Limettensaft, Sirup.",
         genmaichaSour: "Whisky, hausgemachter Genmaicha-Tee-Aufguss, frischer Limettensaft, Eiweiß."
       }
-    },
-    lounge: {
-      title: "Lounge & Libationen",
-      lead: "Ein abendliches kulinarisches Erlebnis geht weit über den Teller hinaus. Unsere Lounge bietet einen ruhigen Zufluchtsort aus Rauchglas, warmen Metallakzenten und seltenen Jahrgängen.",
-      body: "Unser Keller schlägt Brücken zwischen Kontinenten. Entdecken Sie eine außergewöhnliche Auswahl an biologischen österreichischen Weinen, Grand Cru Champagnern und handverlesenen japanischen Sakes, direkt von Boutique-Brauereien in Kyoto und Niigata bezogen. Jeder Sake wurde nach seiner feinen Mineralität ausgewählt, um unsere feinen koreanischen und Sushi-Kreationen zu ergänzen.",
-      feature1Title: "Ost-West-Pairings",
-      feature1Desc: "Kuratiert abgestimmte Sake- & Weinflüge, wöchentlich neu angepasst.",
-      feature2Title: "Botanische Cocktails",
-      feature2Desc: "Hauseigene Kreationen mit frischen Shisoblättern, Yuzusaft und geräuchertem Holz.",
-      explore: "Drinks Entdecken"
-    },
-    midday: {
-      title: "Die Mittagspause",
-      tag: "Wochentags-Mittagsritual",
-      desc: "Speziell für koreanische Berufstätige konzipiert, bietet unser Mittagstisch Schnelligkeit auf hohem Niveau, ohne Kompromisse bei der kulinarischen Integrität einzugehen. Eine wechselnde Auswahl an feinen Bento-Boxen, Temaki-Rollen und warmen Ramen-Bowls.",
-      selectionTitle: "Die Wochenauswahl",
-      dish1: "Lachs à la Miso Bento-Set",
-      dish2: "Veggie Udon & Gyoza Combo",
-      dish3: "Bulgogi Rindfleisch Bento-Set",
-      viewMenu: "Mittagskarte ansehen",
-      timeInfo: "Serviert Montag–Freitag, 11:11 – 15:00"
     },
     marquee: {
       items1: ["Chong Li Masterplate", "Samgyeopsal Tischgrill", "Budae Jjigae", "Korean Fried Chicken", "Bulgogi", "Surf'n Turf Roll", "Rainbow Roll"],

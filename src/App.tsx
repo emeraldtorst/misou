@@ -9,8 +9,6 @@ import { Hero } from './components/sections/Hero';
 import { PhotoMosaic } from './components/sections/PhotoMosaic';
 import { Ambience } from './components/sections/Ambience';
 import { Menu } from './components/sections/Menu';
-import { Lounge } from './components/sections/Lounge';
-import { Midday } from './components/sections/Midday';
 import { Reviews } from './components/sections/Reviews';
 import { Contact } from './components/sections/Contact';
 import { FloatingDock } from './components/ui/FloatingDock';
@@ -39,8 +37,6 @@ function AppContent() {
         <Ambience />
         <PhotoMosaic />
         <Menu />
-        <Lounge />
-        <Midday />
         <Reviews />
         <section className="booking-cta-section" style={{ position: 'relative', overflow: 'hidden' }}>
           <div className="section-bg-wrapper" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
