@@ -87,9 +87,9 @@ function AppContent() {
                 className="booking-widget-card" 
                 style={{
                   marginTop: '2.5rem',
-                  background: 'var(--color-crimson)',
+                  background: 'rgba(18, 18, 18, 0.65)',
                   backdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(223, 193, 147, 0.25)',
+                  border: '1px solid rgba(223, 193, 147, 0.2)',
                   borderRadius: '16px',
                   padding: '2rem',
                   boxShadow: '0 20px 40px rgba(0, 0, 0, 0.5)',
@@ -103,7 +103,7 @@ function AppContent() {
                     lang={language} 
                     languages="de,en" 
                     header="false" 
-                    primary-color="#dfc193"
+                    primary-color="#d90429"
                   />
                 </div>
 

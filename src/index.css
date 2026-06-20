@@ -3757,9 +3757,9 @@ body {
    ========================================================================== */
 book-a-table {
     /* Accents & Highlights */
-    --color-primary-500: var(--color-gold); /* Gold active highlights, button bg, links */
-    --color-primary-400: var(--color-gold-hover); /* Hover states */
-    --color-primary-600: #c5ab82; /* Darker gold for active click states */
+    --color-primary-500: var(--color-crimson); /* Red active highlights, button bg, links */
+    --color-primary-400: rgba(217, 4, 41, 0.85); /* Hover states */
+    --color-primary-600: #b00020; /* Darker red for active click states */
     
     /* Backgrounds & Container Aesthetics */
     --color-white: transparent; /* Transparent background to let the glassmorphic card show through */
