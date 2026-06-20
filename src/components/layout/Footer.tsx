@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 
 export const Footer: React.FC = () => {
   const { t, language } = useLanguage();
   const [legalModalOpen, setLegalModalOpen] = useState(false);
   const [legalTab, setLegalTab] = useState<'privacy' | 'imprint'>('privacy');
-  const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
 
   const openModal = (tab: 'privacy' | 'imprint') => {
     setLegalTab(tab);
@@ -18,17 +16,16 @@ export const Footer: React.FC = () => {
     <>
       <footer className="main-footer" style={{ position: 'relative', overflow: 'hidden' }}>
         <div className="section-bg-wrapper" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
-          <motion.div 
+          <div 
             style={{ 
               backgroundImage: "url('images/bar3_landscape.png')", 
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               position: 'absolute',
-              top: '-10%',
+              top: 0,
               left: 0,
               width: '100%',
-              height: '120%',
-              y 
+              height: '100%'
             }}
           />
           <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(6, 6, 6, 0.92)' }}></div>

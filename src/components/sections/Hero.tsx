@@ -1,33 +1,24 @@
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import { MagneticButton } from '../ui/MagneticButton';
 
 export const Hero: React.FC = () => {
   const { t } = useLanguage();
-  const containerRef = useRef<HTMLDivElement>(null);
-  
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end start']
-  });
-  
-  // Create a smooth parallax shift (moving the background slower than the scroll)
-  const y = useTransform(scrollYProgress, [0, 1], ['-12%', '0%']);
 
   return (
-    <section className="hero-section" id="hero" ref={containerRef}>
+    <section className="hero-section" id="hero">
       <div className="hero-bg-wrapper">
         {/* Hiding video background at the moment
         <video autoPlay loop muted playsInline preload="metadata" poster="images/bar2.jpeg" className="hero-parallax-bg">
           <source src="videos/hero_bg.mp4" type="video/mp4" />
         </video>
         */}
-        <motion.img 
+        <img 
           src="images/res5.jpeg" 
           alt="Hero background" 
           className="hero-parallax-bg"
-          style={{ y }}
+          style={{ height: '100%' }}
         />
         <div className="hero-overlay"></div>
       </div>

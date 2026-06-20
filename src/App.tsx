@@ -1,7 +1,5 @@
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
-import { CustomCursor } from './components/ui/CustomCursor';
 import { ScrollMarquee } from './components/ui/ScrollMarquee';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
@@ -35,8 +33,6 @@ declare module 'react' {
 
 function AppContent() {
   const { t, language } = useLanguage();
-  const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
 
   return (
     <>
@@ -46,8 +42,6 @@ function AppContent() {
       <div className="katana-spine katana-spine-left"></div>
       <div className="katana-spine katana-spine-right"></div>
       <div className="noise-overlay"></div>
-
-      <CustomCursor />
       
       <Header />
       
@@ -60,17 +54,16 @@ function AppContent() {
         <Reviews />
         <section className="booking-cta-section" style={{ position: 'relative', overflow: 'hidden' }}>
           <div className="section-bg-wrapper" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
-            <motion.div 
+            <div 
               style={{ 
                 backgroundImage: "url('images/res5.jpeg')", 
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 position: 'absolute',
-                top: '-10%',
+                top: 0,
                 left: 0,
                 width: '100%',
-                height: '120%',
-                y 
+                height: '100%'
               }}
             />
             <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(6, 6, 6, 0.85)' }}></div>

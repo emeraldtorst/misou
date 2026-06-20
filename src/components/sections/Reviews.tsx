@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 
 interface Review {
@@ -12,8 +12,6 @@ interface Review {
 
 export const Reviews: React.FC = () => {
   const { t } = useLanguage();
-  const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
 
   const reviewsData: Review[] = [
     {
@@ -49,17 +47,16 @@ export const Reviews: React.FC = () => {
   return (
     <section className="reviews-section" id="reviews" style={{ position: 'relative', overflow: 'hidden' }}>
       <div className="section-bg-wrapper" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
-        <motion.div 
+        <div 
           style={{ 
             backgroundImage: "url('images/res7.jpeg')", 
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             position: 'absolute',
-            top: '-10%',
+            top: 0,
             left: 0,
             width: '100%',
-            height: '120%',
-            y 
+            height: '100%'
           }}
         />
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(6, 6, 6, 0.88)' }}></div>
