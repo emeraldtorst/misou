@@ -3751,3 +3751,43 @@ body {
         font-size: 0.6rem;
     }
 }
+
+/* ==========================================================================
+   GASTRO.SITE TABLE RESERVATION WIDGET THEME OVERRIDES
+   ========================================================================== */
+book-a-table {
+    /* Accents & Highlights */
+    --color-primary-500: var(--color-gold); /* Gold active highlights, button bg, links */
+    --color-primary-400: var(--color-gold-hover); /* Hover states */
+    --color-primary-600: #c5ab82; /* Darker gold for active click states */
+    
+    /* Backgrounds & Container Aesthetics */
+    --color-white: transparent; /* Transparent background to let the glassmorphic card show through */
+    --color-gray-50: rgba(25, 25, 25, 0.7); /* Background for input dropdowns and calendar highlight tags */
+    --color-gray-100: rgba(35, 35, 35, 0.85); /* Time slot inactive button backgrounds */
+    --color-gray-200: rgba(223, 193, 147, 0.1); /* Dividers & borders */
+    --color-gray-300: rgba(223, 193, 147, 0.18); /* Solid border lines */
+    
+    /* Typography & Contrast */
+    --color-gray-800: var(--color-text-primary); /* Primary text - Soft ivory */
+    --color-gray-900: var(--color-text-primary); /* Bold/heading text - Soft ivory */
+    --color-gray-700: var(--color-text-secondary); /* Secondary text and calendar headers */
+    --color-gray-600: var(--color-text-secondary); /* Sub-headers */
+    --color-gray-500: var(--color-text-muted); /* Muted labels */
+    --color-gray-400: var(--color-text-muted); /* Placeholder text */
+    --color-gray-950: #ffffff; /* Active labels / active selected options */
+    
+    /* Stripping default borders and shadows */
+    --box-shadow: none;
+    --shadows-card: none;
+    
+    /* Fonts */
+    --font-headlines: var(--font-display);
+    --font-body: var(--font-sans);
+}
+
+/* Custom styles for the embedded widget internal selectors to make it premium */
+.booking-widget-card book-a-table {
+    display: block;
+    width: 100%;
+}
