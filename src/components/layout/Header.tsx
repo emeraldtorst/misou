@@ -34,7 +34,7 @@ export const Header: React.FC = () => {
           </nav>
 
           <div className="header-cta">
-            <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" className="btn btn-outline">{t('nav.reserve')}</a>
+            <a href="https://www.gastro.site/reserve?id=BATr49A62nAkQ&details=yes" target="_blank" rel="noopener noreferrer" className="btn btn-outline">{t('nav.reserve')}</a>
           </div>
 
           <div className="header-actions" style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', zIndex: 10 }}>
@@ -139,7 +139,7 @@ export const Header: React.FC = () => {
 
 
               <motion.a 
-                href="https://www.quandoo.at/en/place/miso-u-103470/menu" 
+                href="https://www.gastro.site/reserve?id=BATr49A62nAkQ&details=yes" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn btn-outline" 

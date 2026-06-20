@@ -77,7 +77,7 @@ export const Footer: React.FC = () => {
               <h5 className="footer-col-title">{t('footer.inquiries')}</h5>
               <a href="tel:+436601288953" className="footer-contact-link link-underline">+43 660 12 88 953</a>
               <a href="mailto:office@misou.online" className="footer-contact-link link-underline">office@misou.online</a>
-              <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-gold btn-sm footer-book-btn">{t('footer.book')}</a>
+              <a href="https://www.gastro.site/reserve?id=BATr49A62nAkQ&details=yes" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-gold btn-sm footer-book-btn">{t('footer.book')}</a>
             </div>
           </div>
 

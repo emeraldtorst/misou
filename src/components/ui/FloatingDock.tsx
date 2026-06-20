@@ -31,7 +31,7 @@ export const FloatingDock: React.FC = () => {
         <div className="dock-divider"></div>
 
         {/* Book Table Action (Primary) */}
-        <a href="https://www.quandoo.at/en/place/miso-u-103470/menu" target="_blank" rel="noopener noreferrer" className="floating-dock-btn btn-primary-dock">
+        <a href="https://www.gastro.site/reserve?id=BATr49A62nAkQ&details=yes" target="_blank" rel="noopener noreferrer" className="floating-dock-btn btn-primary-dock">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="dock-icon">
             <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
             <line x1="16" y1="2" x2="16" y2="6"></line>
