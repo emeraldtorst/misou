@@ -15,7 +15,6 @@ export const Hero: React.FC = () => {
           muted 
           playsInline 
           preload="auto" 
-          poster="images/res5.jpeg" 
           className="hero-parallax-bg"
           style={{ height: '100%', objectFit: 'cover' }}
         >
