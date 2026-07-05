@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import { MagneticButton } from '../ui/MagneticButton';
-import deMenu from '../../assets/MENU - MISOU (Deutsch).pdf';
-import enMenu from '../../assets/MENU - MISOU (English).pdf';
 
 interface MenuPillar {
   id: string;
@@ -74,7 +72,7 @@ export const Menu: React.FC = () => {
     }
   };
 
-  const menuPdf = language === 'de' ? deMenu : enMenu;
+  const menuPdf = language === 'de' ? '/menu-de.pdf' : '/menu-en.pdf';
 
   return (
     <section className="menu-section" id="menu" style={{ position: 'relative', overflow: 'hidden', padding: '8rem 0' }}>
