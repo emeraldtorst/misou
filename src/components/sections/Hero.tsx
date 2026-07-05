@@ -4,7 +4,8 @@ import { useLanguage } from '../../context/LanguageContext';
 import { MagneticButton } from '../ui/MagneticButton';
 
 export const Hero: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const menuUrl = language === 'de' ? 'https://www.misou.online/menu-de.pdf' : 'https://www.misou.online/menu-en.pdf';
 
   return (
     <section className="hero-section" id="hero">
@@ -33,7 +34,7 @@ export const Hero: React.FC = () => {
         >
           <div className="hero-btn-group" style={{ display: 'flex', gap: '1.5rem', marginBottom: '2rem' }}>
             <MagneticButton as="a" href="https://www.gastro.site/reserve?id=BATr49A62nAkQ&details=yes" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-large">{t('hero.reserve')}</MagneticButton>
-            <MagneticButton as="a" href="#menu" className="btn btn-outline btn-large">{t('hero.viewMenu')}</MagneticButton>
+            <MagneticButton as="a" href={menuUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-large">{t('hero.viewMenu')}</MagneticButton>
           </div>
           <a href="#ambience" className="explore-btn-link" aria-label="Scroll to introduction">
             <span className="explore-text">{t('hero.explore')}</span>
