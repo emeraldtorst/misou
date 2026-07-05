@@ -10,6 +10,8 @@ import { Menu } from './components/sections/Menu';
 import { Reviews } from './components/sections/Reviews';
 import { Contact } from './components/sections/Contact';
 import { FloatingDock } from './components/ui/FloatingDock';
+import { WelcomeCarpet } from './components/ui/WelcomeCarpet';
+
 declare module 'react' {
   namespace JSX {
     interface IntrinsicElements {
@@ -36,6 +38,8 @@ function AppContent() {
 
   return (
     <>
+      <WelcomeCarpet />
+      
       {/* Ambient Lighting & Layered Background */}
       <div className="ambient-glow" id="glow1"></div>
       <div className="ambient-glow" id="glow2"></div>

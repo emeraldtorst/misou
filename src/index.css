@@ -3791,3 +3791,35 @@ book-a-table {
     display: block;
     width: 100%;
 }
+
+/* Welcome Carpet Interactive Button */
+.welcome-enter-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(223, 193, 147, 0.25) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.welcome-enter-btn:hover {
+    color: var(--color-bg-base) !important;
+    background-color: var(--color-gold) !important;
+    border-color: var(--color-gold) !important;
+    box-shadow: 0 0 25px rgba(223, 193, 147, 0.4);
+    transform: scale(1.05);
+}
+
+.welcome-enter-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.welcome-enter-btn:active {
+    transform: scale(0.98);
+}
