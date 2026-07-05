@@ -7,12 +7,6 @@ export const translations: Record<string, any> = {
       details: "Details",
       reserve: "Reserve a Table"
     },
-    welcomeCarpet: {
-      welcome: "Welcome to MISO·U",
-      tagline: "Korean Tischgrill & Premium Sushi",
-      subtitle: "A cinematic culinary journey in Vienna",
-      enter: "Enter Experience"
-    },
     hero: {
       tagline: "Vienna’s Elevated Destination",
       subtext: "A cinematic synthesis of traditional Korean gastronomy and premium sushi craftsmanship.",
@@ -147,12 +141,6 @@ export const translations: Record<string, any> = {
       reviews: "Bewertungen",
       details: "Kontakt",
       reserve: "Tisch reservieren"
-    },
-    welcomeCarpet: {
-      welcome: "Willkommen bei MISO·U",
-      tagline: "Koreanischer Tischgrill & Premium-Sushi",
-      subtitle: "Eine filmreife kulinarische Reise in Wien",
-      enter: "Erleben"
     },
     hero: {
       tagline: "Wiens gehobene Destination",
