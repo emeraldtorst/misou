@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../../context/LanguageContext';
 import { MagneticButton } from '../ui/MagneticButton';
+import deMenu from '../../assets/MENU - MISOU (Deutsch).pdf';
+import enMenu from '../../assets/MENU - MISOU (English).pdf';
 
 interface MenuPillar {
   id: string;
@@ -12,7 +14,7 @@ interface MenuPillar {
 }
 
 export const Menu: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [activePillar, setActivePillar] = useState<string>('korean');
 
   const menuPillars: MenuPillar[] = [
@@ -72,6 +74,8 @@ export const Menu: React.FC = () => {
     }
   };
 
+  const menuPdf = language === 'de' ? deMenu : enMenu;
+
   return (
     <section className="menu-section" id="menu" style={{ position: 'relative', overflow: 'hidden', padding: '8rem 0' }}>
       <div className="section-container" style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
@@ -97,7 +101,7 @@ export const Menu: React.FC = () => {
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '3.5rem' }}>
           <MagneticButton 
             as="a" 
-            href="/menu.pdf" 
+            href={menuPdf} 
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn btn-primary btn-large"
