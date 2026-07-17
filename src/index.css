@@ -373,6 +373,19 @@ body.mouse-active .custom-cursor-dot {
     color: var(--color-text-primary);
 }
 
+.logo-img {
+    height: 1.6rem;
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition-medium);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.1));
+}
+
+.logo-link:hover .logo-img {
+    transform: translateY(-1px);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.2));
+}
+
 .logo-text {
     font-family: var(--font-display);
     font-size: 1.6rem;

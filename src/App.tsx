@@ -54,7 +54,7 @@ function AppContent() {
         <PhotoMosaic />
         <Menu />
         <Reviews />
-        <section className="booking-cta-section" style={{ position: 'relative', overflow: 'hidden' }}>
+        <section id="booking" className="booking-cta-section" style={{ position: 'relative', overflow: 'hidden' }}>
           <div className="section-bg-wrapper" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
             <div 
               style={{ 

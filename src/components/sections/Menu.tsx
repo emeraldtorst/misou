@@ -72,7 +72,9 @@ export const Menu: React.FC = () => {
     }
   };
 
-  const menuPdf = language === 'de' ? '/menu-de.pdf' : '/menu-en.pdf';
+  const menuPdf = language === 'de' 
+    ? 'https://res.cloudinary.com/b08mrui7/image/upload/v1784304475/menu-de_zzndw2.pdf' 
+    : 'https://res.cloudinary.com/b08mrui7/image/upload/v1784304477/menu-en_x4rczg.pdf';
 
   return (
     <section className="menu-section" id="menu" style={{ position: 'relative', overflow: 'hidden', padding: '8rem 0' }}>

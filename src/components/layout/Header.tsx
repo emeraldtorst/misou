@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
       <header className={`main-header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="header-container">
           <a href="#" className="logo-link" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
-            <span className="logo-text">MISO<span className="dot">•</span>U</span>
+            <img src="images/logo.png" alt="MISO•U" className="logo-img" />
             <span className="logo-sub">KOREAN & PREMIUM SUSHI</span>
           </a>
 
@@ -34,7 +34,7 @@ export const Header: React.FC = () => {
           </nav>
 
           <div className="header-cta">
-            <a href="https://www.gastro.site/reserve?id=BATr49A62nAkQ&details=yes" target="_blank" rel="noopener noreferrer" className="btn btn-outline">{t('nav.reserve')}</a>
+            <a href="#booking" className="btn btn-outline">{t('nav.reserve')}</a>
           </div>
 
           <div className="header-actions" style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', zIndex: 10 }}>
@@ -139,9 +139,7 @@ export const Header: React.FC = () => {
 
 
               <motion.a 
-                href="https://www.gastro.site/reserve?id=BATr49A62nAkQ&details=yes" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+                href="#booking" 
                 className="btn btn-outline" 
                 style={{ borderColor: '#d90429', color: '#f5f5f3', marginTop: '1.5rem' }}
                 onClick={closeMenu}

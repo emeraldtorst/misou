@@ -5,7 +5,9 @@ import { MagneticButton } from '../ui/MagneticButton';
 
 export const Hero: React.FC = () => {
   const { t, language } = useLanguage();
-  const menuUrl = language === 'de' ? 'https://www.misou.online/menu-de.pdf' : 'https://www.misou.online/menu-en.pdf';
+  const menuUrl = language === 'de' 
+    ? 'https://res.cloudinary.com/b08mrui7/image/upload/v1784304475/menu-de_zzndw2.pdf' 
+    : 'https://res.cloudinary.com/b08mrui7/image/upload/v1784304477/menu-en_x4rczg.pdf';
 
   return (
     <section className="hero-section" id="hero">
@@ -19,7 +21,7 @@ export const Hero: React.FC = () => {
           className="hero-parallax-bg"
           style={{ height: '100%', objectFit: 'cover' }}
         >
-          <source src="videos/VIDEO.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/b08mrui7/video/upload/VIDEO_mdfg0b.mp4" type="video/mp4" />
         </video>
         <div className="hero-overlay"></div>
       </div>
@@ -33,7 +35,7 @@ export const Hero: React.FC = () => {
           transition={{ duration: 1, delay: 0.6 }}
         >
           <div className="hero-btn-group" style={{ display: 'flex', gap: '1.5rem', marginBottom: '2rem' }}>
-            <MagneticButton as="a" href="https://www.gastro.site/reserve?id=BATr49A62nAkQ&details=yes" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-large">{t('hero.reserve')}</MagneticButton>
+            <MagneticButton as="a" href="#booking" className="btn btn-primary btn-large">{t('hero.reserve')}</MagneticButton>
             <MagneticButton as="a" href={menuUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-large">{t('hero.viewMenu')}</MagneticButton>
           </div>
           <a href="#ambience" className="explore-btn-link" aria-label="Scroll to introduction">
