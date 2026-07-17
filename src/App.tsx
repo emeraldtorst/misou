@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
 import { ScrollMarquee } from './components/ui/ScrollMarquee';
 import { Header } from './components/layout/Header';
@@ -157,6 +158,7 @@ function App() {
   return (
     <LanguageProvider>
       <AppContent />
+      <Analytics />
     </LanguageProvider>
   );
 }
